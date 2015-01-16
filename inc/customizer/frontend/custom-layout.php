@@ -5,9 +5,8 @@ function courage_css_layout() {
 	// Get Theme Options from Database
 	$theme_options = courage_theme_options();
 		
-	
 	// Switch Sidebar to left
-	if ( isset($theme_options['sidebar']) and $theme_options['sidebar'] == 'left-sidebar' ) :
+	if ( isset($theme_options['layout']) and $theme_options['layout'] == 'left-sidebar' ) :
 	
 		echo '<style type="text/css">
 			@media only screen and (min-width: 60em) {

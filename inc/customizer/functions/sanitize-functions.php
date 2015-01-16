@@ -28,17 +28,6 @@ function courage_sanitize_layout( $value ) {
 }
 
 
-// Sanitize footer content textarea
-function courage_sanitize_footer_text( $value ) {
-
-	if ( current_user_can('unfiltered_html') ) :
-		return $value;
-	else :
-		return stripslashes( wp_filter_post_kses( addslashes($value) ) );
-	endif;
-}
-
-
 // Sanitize the post length value.
 function courage_sanitize_post_length( $value ) {
 

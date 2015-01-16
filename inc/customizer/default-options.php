@@ -31,7 +31,6 @@ function courage_default_options() {
 
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',
-		'footer_text'						=> '',
 		'header_tagline' 					=> false,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
@@ -39,15 +38,9 @@ function courage_default_options() {
 		'post_thumbnails_index'				=> true,
 		'post_thumbnails_single' 			=> true,
 		'excerpt_text' 						=> false,
-		'credit_link' 						=> true,
 		'slider_active_magazine' 			=> false,
 		'slider_active_blog' 				=> false,
-		'slider_animation' 					=> 'horizontal',
-		'text_font' 						=> 'Lato',
-		'title_font' 						=> 'Fjalla One',
-		'navi_font' 						=> 'Lato',
-		'widget_title_font' 				=> 'Lato',
-		'installed_fonts'					=> ''
+		'slider_animation' 					=> 'horizontal'
 	);
 	
 	return $default_options;

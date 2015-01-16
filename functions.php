@@ -35,7 +35,8 @@ function courage_enqueue_scripts() {
 
 	endif;
 
-	
+	// Register and Enqueue Fonts
+	wp_enqueue_style('courage-default-fonts', courage_google_fonts_url(), array(), null );
 
 }
 endif;
@@ -47,6 +48,21 @@ function courage_enqueue_comment_reply() {
 	if( get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+}
+
+// Retrieve Font URL to register default Google Fonts
+function courage_google_fonts_url() {
+    
+	$font_families = array('Lato', 'Fjalla One');
+
+	$query_args = array(
+		'family' => urlencode( implode( '|', $font_families ) ),
+		'subset' => urlencode( 'latin,latin-ext' ),
+	);
+
+	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+
+    return apply_filters( 'courage-fonts-url', $fonts_url );
 }
 
 
@@ -85,6 +101,9 @@ function courage_setup() {
 		'max_posts'  => 20
 		)
 	);
+	
+	// Add Theme Support for Courage Pro Plugin
+	add_theme_support( 'courage-pro' );
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', __('Main Navigation', 'courage') );
@@ -114,7 +133,7 @@ function courage_add_image_sizes() {
 	
 	// Add Category Post Widget image sizes
 	add_image_size( 'category-posts-widget-small', 80, 80, true);
-	add_image_size( 'category-posts-widget-big', 420, 140, true);
+	add_image_size( 'category-posts-widget-big', 540, 180, true);
 	
 	// Add Site Logo Size
 	add_image_size( 'site-logo', 1340, 250);
@@ -149,43 +168,6 @@ function courage_register_sidebars() {
 		'after_title' => '</h3>',
 	));
 
-	//Register Footer Widgets
-	register_sidebar( array(
-		'name' => __( 'Footer Left', 'courage' ),
-		'id' => 'footer-left',
-		'description' => __( 'Appears on footer on the left hand side.', 'courage' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Center Left', 'courage' ),
-		'id' => 'footer-center-left',
-		'description' => __( 'Appears on footer on center left position.', 'courage' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Center Right', 'courage' ),
-		'id' => 'footer-center-right',
-		'description' => __( 'Appears on footer on center right position.', 'courage' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
-	register_sidebar( array(
-		'name' => __( 'Footer Right', 'courage' ),
-		'id' => 'footer-right',
-		'description' => __( 'Appears on footer on the right hand side.', 'courage' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widgettitle">',
-		'after_title' => '</h3>',
-	));
 }
 endif;
 
@@ -229,23 +211,6 @@ function courage_get_featured_content() {
 }
 
 
-// Display Credit Link Function
-function courage_credit_link() {
-	
-	// Get Theme Options from Database
-	$theme_options = courage_theme_options();
-	
-	if ( isset($theme_options['credit_link']) and $theme_options['credit_link'] == true ) :
-	
-		printf(__( 'Powered by %1$s and %2$s.', 'courage' ), 
-				sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'courage' ) ),
-				sprintf( '<a href="http://themezee.com/themes/courage/" title="Courage WordPress Theme">%s</a>', __( 'Courage', 'courage' ) )
-			);
-		
-	endif;
-}
-
-
 // Change Excerpt Length
 add_filter('excerpt_length', 'courage_excerpt_length');
 function courage_excerpt_length($length) {
@@ -255,7 +220,7 @@ function courage_excerpt_length($length) {
 
 // Slideshow Excerpt Length
 function courage_slideshow_excerpt_length($length) {
-    return 60;
+    return 32;
 }
 
 // Frontpage Category Excerpt Length
@@ -346,8 +311,6 @@ require( get_template_directory() . '/inc/customizer/customizer.php' );
 require( get_template_directory() . '/inc/customizer/default-options.php' );
 
 // include Customization Files
-require( get_template_directory() . '/inc/customizer/frontend/custom-colors.php' );
-require( get_template_directory() . '/inc/customizer/frontend/custom-fonts.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-layout.php' );
 require( get_template_directory() . '/inc/customizer/frontend/custom-slider.php' );
 

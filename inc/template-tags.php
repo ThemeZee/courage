@@ -8,6 +8,19 @@
  */
 	
 
+// Display Site Title
+add_action( 'courage_site_title', 'courage_display_site_title' );
+
+function courage_display_site_title() { ?>
+
+	<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+		<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+	</a>
+
+<?php
+}
+
+
 // Display Custom Header
 if ( ! function_exists( 'courage_display_custom_header' ) ):
 	
@@ -162,6 +175,22 @@ if ( ! function_exists( 'courage_display_pagination' ) ):
 	}
 	
 endif;
+
+
+// Display Footer Text
+add_action( 'courage_footer_text', 'courage_display_footer_text' );
+
+function courage_display_footer_text() { ?>
+
+	<span class="credit-link">
+		<?php printf(__( 'Powered by %1$s and %2$s.', 'courage' ), 
+			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'courage' ) ),
+			sprintf( '<a href="http://themezee.com/themes/courage/" title="Courage WordPress Theme">%s</a>', __( 'Courage', 'courage' ) )
+		); ?>
+	</span>
+
+<?php
+}
 
 
 // Display Social Icons

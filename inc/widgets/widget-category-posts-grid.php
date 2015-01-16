@@ -21,7 +21,7 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 
 	public function delete_widget_cache() {
 		
-		delete_transient( $this->id );
+		wp_cache_delete('widget_courage_category_posts_grid', 'widget');
 		
 	}
 	
@@ -30,7 +30,9 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 		$defaults = array(
 			'title'				=> '',
 			'number'			=> 6,
-			'category'			=> 0
+			'category'			=> 0,
+			'thumbnails'		=> false,
+			'category_link'		=> false
 		);
 		
 		return $defaults;
@@ -40,6 +42,25 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 	// Display Widget
 	function widget($args, $instance) {
 
+		$cache = array();
+				
+		// Get Widget Object Cache
+		if ( ! $this->is_preview() ) {
+			$cache = wp_cache_get( 'widget_courage_category_posts_grid', 'widget' );
+		}
+		if ( ! is_array( $cache ) ) {
+			$cache = array();
+		}
+
+		// Display Widget from Cache if exists
+		if ( isset( $cache[ $this->id ] ) ) {
+			echo $cache[ $this->id ];
+			return;
+		}
+		
+		// Start Output Buffering
+		ob_start();
+		
 		// Get Sidebar Arguments
 		extract($args);
 		
@@ -47,77 +68,96 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 		$defaults = $this->default_settings();
 		extract( wp_parse_args( $instance, $defaults ) );
 		
-		// Add Widget Title Filter
-		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
-		
 		// Output
 		echo $before_widget;
 	?>
 		<div id="widget-category-posts-grid" class="widget-category-posts clearfix">
 		
 			<?php // Display Title
-			if( !empty( $widget_title ) ) { echo $before_title . $widget_title . $after_title; }; ?>
+			$this->display_widget_title($args, $instance); ?>
 			
 			<div class="widget-category-posts-content">
 			
-				<?php echo $this->render($instance); ?>
+				<?php $this->render($instance); ?>
 				
 			</div>
 			
 		</div>
 	<?php
 		echo $after_widget;
-	
+		
+		// Set Cache
+		if ( ! $this->is_preview() ) {
+			$cache[ $this->id ] = ob_get_flush();
+			wp_cache_set( 'widget_courage_category_posts_grid', $cache, 'widget' );
+		} else {
+			ob_end_flush();
+		}
+		
 	}
 	
 	// Render Widget Content
 	function render($instance) {
-		
-		// Get Output from Cache
-		$output = get_transient( $this->id );
-		
-		// Generate output if not cached
-		if( $output === false ) :
 
-			// Get Widget Settings
-			$defaults = $this->default_settings();
-			extract( wp_parse_args( $instance, $defaults ) );
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+	
+		// Get latest posts from database
+		$query_arguments = array(
+			'posts_per_page' => (int)$number,
+			'ignore_sticky_posts' => true,
+			'cat' => (int)$category
+		);
+		$posts_query = new WP_Query($query_arguments);
+		$i = 0;
 		
-			// Get latest posts from database
-			$query_arguments = array(
-				'posts_per_page' => (int)$number,
-				'ignore_sticky_posts' => true,
-				'cat' => (int)$category
-			);
-			$posts_query = new WP_Query($query_arguments);
-			$i = 0;
+		// Select Layout of Grid Posts
+		$layout = ( $thumbnails == true ? 'small-post-row' : 'big-post-row' );
+		
+		// Check if there are posts
+		if( $posts_query->have_posts() ) :
+		
+			// Limit the number of words for the excerpt
+			add_filter('excerpt_length', 'courage_frontpage_category_excerpt_length');
+			
+			// Display Posts
+			while( $posts_query->have_posts() ) :
+				
+				$posts_query->the_post(); 
+				
+				 // Open new Row on the Grid
+				 if ( $i % 2 == 0) : ?>
+			
+					<div class="category-posts-grid-row <?php echo $layout; ?> clearfix">
+		
+				<?php // Set Variable row_open to true
+					$row_open = true;
+				endif; ?>
 
-			// Start Output Buffering
-			ob_start();
-			
-			// Check if there are posts
-			if( $posts_query->have_posts() ) :
-			
-				// Limit the number of words for the excerpt
-				add_filter('excerpt_length', 'courage_frontpage_category_excerpt_length');
-				
-				// Display Posts
-				while( $posts_query->have_posts() ) :
-					
-					$posts_query->the_post(); 
-					
-					 // Open new Row on the Grid
-					 if ( $i % 2 == 0) : ?>
-				
-						<div class="category-posts-grid-row clearfix">
-			
-					<?php // Set Variable row_open to true
-						$row_open = true;
+				<?php // Display small posts or big posts grid layout based on options
+				if( $thumbnails == true ) : ?>
+
+					<div class="small-post-wrap">
 						
-					endif; ?>
+						<article id="post-<?php the_ID(); ?>" <?php post_class('small-post clearfix'); ?>>
 
+						<?php if ( '' != get_the_post_thumbnail() ) : ?>
+							<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category-posts-widget-small'); ?></a>
+						<?php endif; ?>
+
+							<div class="small-post-content">
+								<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+								<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+							</div>
+
+						</article>
+						
+					</div>
 					
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php else: ?>
+				
+					<article id="post-<?php the_ID(); ?>" <?php post_class('big-post'); ?>>
 
 						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('category-posts-widget-big'); ?></a>
 
@@ -130,37 +170,28 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 						</div>
 
 					</article>
-
-			
-					<?php // Close Row on the Grid
-					if ( $i % 2 == 1) : ?>
-					
-						</div>
-					
-					<?php // Set Variable row_open to false
-						$row_open = false;
-					
-					endif; $i++;
-					
-				endwhile;
 				
-				// Remove excerpt filter
-				remove_filter('excerpt_length', 'courage_frontpage_category_excerpt_length');
+				<?php endif; ?>
+		
+				<?php // Close Row on the Grid
+				if ( $i % 2 == 1) : ?>
 				
-			endif;
+					</div>
+				
+				<?php // Set Variable row_open to false
+					$row_open = false;
+				
+				endif; $i++;
+				
+			endwhile;
 			
-			// Reset Postdata
-			wp_reset_postdata();
-			
-			// Get Buffer Content
-			$output = ob_get_clean();
-			
-			// Set Cache
-			set_transient( $this->id, $output, YEAR_IN_SECONDS );
+			// Remove excerpt filter
+			remove_filter('excerpt_length', 'courage_frontpage_category_excerpt_length');
 			
 		endif;
 		
-		return $output;
+		// Reset Postdata
+		wp_reset_postdata();
 		
 	}
 	
@@ -184,6 +215,44 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 	<?php endif;
 
 	}
+	
+	// Display Widget Title
+	function display_widget_title($args, $instance) {
+		
+		// Get Sidebar Arguments
+		extract($args);
+		
+		// Get Widget Settings
+		$defaults = $this->default_settings();
+		extract( wp_parse_args( $instance, $defaults ) );
+		
+		// Add Widget Title Filter
+		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
+		
+		if( !empty( $widget_title ) ) :
+		
+			echo $before_title;
+			
+			// Link Category Title
+			if( $category_link == true ) : 
+			
+				$link_title = sprintf( __('View all posts from category %s', 'courage'), get_cat_name( $category ) );
+				$link_url = esc_url( get_category_link( $category ) );
+				
+				echo '<a href="'. $link_url .'" title="'. $link_title . '">'. $widget_title . '</a>';
+				echo '<a class="category-archive-link" href="'. $link_url .'" title="'. $link_title . '"><span class="genericon-expand"></span></a>';
+			
+			else:
+			
+				echo $widget_title;
+			
+			endif;
+			
+			echo $after_title; 
+			
+		endif;
+
+	}
 
 	function update($new_instance, $old_instance) {
 
@@ -191,6 +260,8 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 		$instance['title'] = sanitize_text_field($new_instance['title']);
 		$instance['category'] = (int)$new_instance['category'];
 		$instance['number'] = (int)$new_instance['number'];
+		$instance['thumbnails'] = !empty($new_instance['thumbnails']);
+		$instance['category_link'] = !empty($new_instance['category_link']);
 		
 		$this->delete_widget_cache();
 		
@@ -228,6 +299,20 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 			<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts:', 'courage'); ?>
 				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" />
 				<br/><span class="description"><?php _e('Please chose an even number (2, 4, 6, 8).', 'courage'); ?></span>
+			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('thumbnails'); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $thumbnails ) ; ?> id="<?php echo $this->get_field_id('thumbnails'); ?>" name="<?php echo $this->get_field_name('thumbnails'); ?>" />
+				<?php _e('Display as small posts grid with thumbnails', 'courage'); ?>
+			</label>
+		</p>
+		
+		<p>
+			<label for="<?php echo $this->get_field_id('category_link'); ?>">
+				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
+				<?php _e('Link Widget Title to Category Archive page', 'courage'); ?>
 			</label>
 		</p>
 <?php

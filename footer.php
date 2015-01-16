@@ -1,5 +1,5 @@
 
-	<?php get_sidebar('footer'); ?>
+	<?php do_action('courage_before_footer'); ?>
 
 	<div id="footer-wrap">
 	
@@ -14,21 +14,7 @@
 			</nav>
 			
 			<div id="footer-text">
-			
-			<?php // Display Footer Text
-				
-				// Get Theme Options from Database
-				$theme_options = courage_theme_options();
-
-				if ( isset( $theme_options['footer_text'] ) and $theme_options['footer_text'] <> '' ) :
-					
-					echo do_shortcode(wp_kses_post($theme_options['footer_text']));
-						
-				endif; 
-				
-			?>
-				<span class="credit-link"><?php courage_credit_link(); ?></span>
-			
+				<?php do_action('courage_footer_text'); ?>
 			</div>
 			
 		</footer>

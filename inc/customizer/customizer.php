@@ -13,9 +13,7 @@ require( get_template_directory() . '/inc/customizer/sections/customizer-general
 require( get_template_directory() . '/inc/customizer/sections/customizer-header.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-post.php' );
 require( get_template_directory() . '/inc/customizer/sections/customizer-slider.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-colors.php' );
-require( get_template_directory() . '/inc/customizer/sections/customizer-fonts.php' );
-
+require( get_template_directory() . '/inc/customizer/sections/customizer-upgrade.php' );
 
 // Add Theme Options section to Customizer
 add_action( 'customize_register', 'courage_customize_register_options' );

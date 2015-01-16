@@ -43,6 +43,7 @@ function courage_display_theme_info_page() {
 				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php _e('Changelog', 'courage'); ?></a>
 				<a href="http://preview.themezee.com/courage/" target="_blank"><?php _e('Theme Demo', 'courage'); ?></a>
 				<a href="http://themezee.com/docs/courage-documentation/" target="_blank"><?php _e('Theme Documentation', 'courage'); ?></a>
+				<a href="http://wordpress.org/support/view/theme-reviews/courage?filter=5" target="_blank"><?php _e('Rate this theme', 'courage'); ?></a>
 				
 				<span class="social-icons">
 					<a href="http://themezee.com/newsletter/" target="_blank"><span class="genericon-mail"></span></a>
@@ -78,6 +79,15 @@ function courage_display_theme_info_page() {
 							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php _e('Customize Theme', 'courage'); ?></a>
 						</p>
 					</div>
+					
+					<div class="section">
+						<h4><?php _e( 'Courage Pro', 'courage' ); ?></h4>
+						
+						<p class="about"><?php _e( 'Need more customization options and features? Check out the Courage Pro add-on plugin which adds custom colors, fonts and logo upload.', 'courage' ); ?></p>
+						<p>
+							<a href="http://themezee.com/themes/courage/#CouragePro-1" target="_blank" class="button button-secondary"><?php _e('Learn more about Courage Pro', 'courage'); ?></a>
+						</p>
+					</div>
 
 				</div>
 				
@@ -95,8 +105,9 @@ function courage_display_theme_info_page() {
 		
 		<div id="theme-author">
 			
-			<p><?php printf( __( 'Courage is proudly brought to you by %1s.', 'courage' ), 
-				'<a target="_blank" href="http://themezee.com" title="ThemeZee">ThemeZee</a>'); ?>
+			<p><?php printf( __( 'Courage is proudly brought to you by %1s. If you like this theme, %2s :) ', 'courage' ), 
+				'<a target="_blank" href="http://themezee.com" title="ThemeZee">ThemeZee</a>',
+				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/dynamic-news-lite?filter=5" title="Courage Lite Review">' . __( 'rate it', 'courage' ) . '</a>'); ?>
 			</p>
 		
 		</div>

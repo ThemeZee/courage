@@ -11,7 +11,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
 
 	// Add Sections for Header Content
 	$wp_customize->add_section( 'courage_section_header', array(
-        'title'    => __( 'Header Content', 'courage' ),
+        'title'    => __( 'Header Settings', 'courage' ),
         'priority' => 20,
 		'panel' => 'courage_options_panel' 
 		)
@@ -30,7 +30,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
             'label' => __( 'Header Content', 'courage' ),
             'section' => 'courage_section_header',
             'settings' => 'courage_theme_options[header_content]',
-            'priority' => 1
+            'priority' => 2
             )
         )
     );
@@ -46,7 +46,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
             'label' =>  __( 'The Header Content configured below will be displayed on the right hand side of the header area.', 'courage' ),
             'section' => 'courage_section_header',
             'settings' => 'courage_theme_options[header_content_description]',
-            'priority' => 2
+            'priority' => 3
             )
         )
     );
@@ -64,7 +64,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
         'section'  => 'courage_section_header',
         'settings' => 'courage_theme_options[header_search]',
         'type'     => 'checkbox',
-		'priority' => 3
+		'priority' => 4
 		)
 	);
 
@@ -80,7 +80,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
         'section'  => 'courage_section_header',
         'settings' => 'courage_theme_options[header_icons]',
         'type'     => 'checkbox',
-		'priority' => 4
+		'priority' => 5
 		)
 	);
 	
