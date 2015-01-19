@@ -1,11 +1,11 @@
 /*======================================
 Theme Name: Courage
 Theme URI: http://themezee.com/themes/courage/
-Description: A responsive, multipurpose blogging and magazine theme with bold colors and fonts. It comes with a featured content slider and a magazine page template. Courage is a trending theme on wordpress.com and we are sure you will like the WordPress.org version as well.
+Description: Courage is a great way to start your personal blog or magazine website today. The theme is very easy to use and looks awesome on every device. It includes a beautiful featured post slideshow and a clean and flexible Magazine Homepage template. Hope you enjoy it!
 Version: 1.0
 Author: ThemeZee
 Author URI: http://themezee.com
-Tags: two-columns, light, red, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, blue, silver, white, green, gray
+Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
 Text Domain: courage
 Domain Path: /languages/
 License: GNU General Public License v2.0
@@ -154,12 +154,6 @@ input, textarea, select {
 	float: left;
 	margin-top: 0.3em;
 }
-#logo .logo-image {
-	float: left;
-	border: 0;
-	max-width: 100%;
-	height: auto;
-}
 #logo .site-title {
 	float: left;
 	font-size: 2.7em;
@@ -186,7 +180,7 @@ input, textarea, select {
 	margin: 1px 0;
 }
 #custom-header img {
-	max-width: 1260px;
+	max-width: 1320px;
 	vertical-align: top;
 	width: 100%;
 	height: auto;
@@ -1088,20 +1082,19 @@ embed, iframe, object, video {
 	margin: 1em 0;
 }
 #comments .comments-title, #respond #reply-title {
-	font-size: 1.3em;
 	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
-	font-weight: bold;
+	font-size: 1.2em;
 	color: #252525;
-	-ms-word-wrap: break-word;
-	word-wrap: break-word;
 	background: #f5f5f5;
 	border: 1px solid #e2e2e2;
 	padding: 0.6em 1em;
-	margin-bottom: 1em;
+	margin-bottom: 0.8em;
+	line-height: 1.4em;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 	-webkit-border-radius: 0.4em;
 	-moz-border-radius: 0.4em;
 	border-radius: 0.4em;
-	margin-bottom: 0.8em;
 }
 .commentlist {
 	display: block;
@@ -1247,7 +1240,6 @@ embed, iframe, object, video {
 	text-decoration: none;
 }
 
-
 /* Page Templates
 -------------------------------------------------------------- */
 
@@ -1261,14 +1253,7 @@ embed, iframe, object, video {
 /* Magazine Homepage
 -------------------------------------------------------------- */
 
-/* Front Page Slideshow */
-#frontpage-slider-wrap {
-	padding: 0;
-	margin-bottom: 2.6em;
-	/* All other Slideshow Styles in flexslider.css */
-}
-
-.magazine-homepage-no-widgets, .frontpage-slider-empty-posts {
+.magazine-homepage-no-widgets, .post-slider-empty-posts {
 	line-height: 1.5em;
 	margin-bottom: 1.5em;
 }
@@ -1441,42 +1426,6 @@ embed, iframe, object, video {
 	margin-bottom: 1em;
 }
 
-/* Footer Widget Area
--------------------------------------------------------------- */
-#footer-widgets-wrap {
-	background: #252525;
-}
-#footer-widgets {
-	border-top: 0.8em solid rgba(255,255,255,0.08);
-	padding: 1.5em 0 0 1.5em;
-}
-.footer-widget-column {
-	float: left;
-	width: 25%;
-	padding-right: 1.5em;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#footer-widgets .widget {
-	border: 1px solid rgba(255,255,255,0.08);
-	color: #ccc;
-	margin-bottom: 1.5em;
-	background: none;
-}
-#footer-widgets .widgettitle {
-	background: rgba(255,255,255,0.04);
-	border: 1px solid rgba(255,255,255,0.08);
-	color: #fff;
-}
-#footer-widgets .widgettitle span {
-	font-size: 1.1em;
-}
-#footer-widgets .widget a:link, #footer-widgets .widget a:visited  {
-	color: #fff;
-}
-
-
 /* Footer
 -------------------------------------------------------------- */
 #footer-wrap {
@@ -1573,12 +1522,6 @@ embed, iframe, object, video {
 	.widget-category-posts .small-post .postmeta {
 		font-size: 0.8em;
 	}
-	.footer-widget-column {
-		width: 50%;
-	}
-	#footer-widget-three {
-		clear: left;
-	}
 }
 /* Tablets (landscape) | <960px */
 @media only screen and (max-width: 60em) {
@@ -1608,8 +1551,7 @@ embed, iframe, object, video {
 		text-align: center;
 		width: 100%;
 	}
-	#logo .site-title, 
-	#logo .logo-image {
+	#logo .site-title {
 		float: none;
 	}
 	#logo .site-description {
@@ -1908,10 +1850,6 @@ embed, iframe, object, video {
 	}
 	.post-title {
 		font-size: 1.3em;
-	}
-	.footer-widget-column {
-		float: none;
-		width: 100%;
 	}
 	
 	/* Magazine Homepage: Category Post Widgets */

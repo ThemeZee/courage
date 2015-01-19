@@ -46,7 +46,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
         public function render_content() {  ?>
 			
 			<p>
-				<a href="http://themezee.com/themes/courage/#CouragePro-1" target="_blank" class="button button-secondary">
+				<a href="http://themezee.com/themes/courage/#PROVersion-1" target="_blank" class="button button-secondary">
 					<?php echo esc_html( $this->label ); ?>
 				</a>
 			</p>

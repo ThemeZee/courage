@@ -56,4 +56,3 @@
 	
 	<?php // Display Custom Header Image
 		courage_display_custom_header(); ?>
-		

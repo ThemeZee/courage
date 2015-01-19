@@ -126,7 +126,7 @@ function courage_add_image_sizes() {
 	add_image_size( 'post-thumbnail', 840, 200, true);
 	
 	// Add Custom Header Image Size
-	add_image_size( 'custom-header-image', 1320, 200, true);
+	add_image_size( 'custom-header-image', 1320, 250, true);
 	
 	// Add Slider Image Size
 	add_image_size( 'slider-image', 1320, 380, true);
@@ -264,36 +264,27 @@ function courage_list_comments($comment, $args, $depth) {
 
 			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
 
-				<div class="comment-author vcard clearfix">
-					<span class="fn"><?php echo get_comment_author_link(); ?></span>
-					<div class="comment-meta commentmetadata">
-						<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
-							<?php echo get_comment_date(); ?>
-							<?php echo get_comment_time(); ?>
-						</a>
-						<?php edit_comment_link(__('(Edit)', 'courage'),'  ','') ?>
-					</div>
-
+				<div class="comment-author vcard">
+					<?php echo get_avatar( $comment, 56 ); ?>
+					<?php printf(__('<span class="fn">%s</span>', 'courage'), get_comment_author_link()) ?>
 				</div>
 
-				<div class="comment-content clearfix">
+		<?php if ($comment->comment_approved == '0') : ?>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'courage' ); ?></p>
+		<?php endif; ?>
 
-					<?php echo get_avatar( $comment, 72 ); ?>
-
-					<?php if ($comment->comment_approved == '0') : ?>
-						<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'courage' ); ?></p>
-					<?php endif; ?>
-
-					<?php comment_text(); ?>
-
+				<div class="comment-meta commentmetadata">
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'courage'), get_comment_date(),  get_comment_time()) ?></a>
+					<?php edit_comment_link(__('(Edit)', 'courage'),'  ','') ?>
 				</div>
+
+				<div class="comment-content"><?php comment_text(); ?></div>
 
 				<div class="reply">
 					<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 				</div>
 
 			</div>
-
 <?php
 	endif;
 

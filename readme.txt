@@ -71,7 +71,7 @@ I have included a few, nice page templates for advanced content presentation.
 	1. Fullwidth Template 
 	This template shows a static page without the blog sidebar
 	
-	2. Frontpage Template
+	2. Magazine Homepage Template
 	Displays a magazine-styled homepage with various posts.
 
 ===================================
@@ -86,10 +86,10 @@ G) Licenses of bundled resources
 ===================================
 
 	1. Images, Copyright 2013 ThemeZee.com
-	Images such as default slider image or background image included in this theme package are created by myself and licensed under GNU GPL.
-	License URL of Logo / Background images: http://www.gnu.org/licenses/gpl.html
+	Images such as default slider image included in this theme package are created by myself and licensed under GNU GPL.
+	License URL Default Slider Image: http://www.gnu.org/licenses/gpl.html
 	
-	2. Genericons, Copyright 2014 Automattic, Inc.
+	2. Genericons, Copyright 2015 Automattic, Inc.
 	The theme uses the Genericons icon font for Postmeta Icons and Social Icons, which is licensed under GNU GPL.
 	Source URL: http://genericons.com
 	License of Genericon Icon font: http://www.gnu.org/licenses/gpl.html
@@ -97,16 +97,17 @@ G) Licenses of bundled resources
 	2. Screenshot Photography (used on screenshot.png)
 	The demo photos used in screenshot.png are coming from Pixabay and are licensed under CC0 (GPL compatible).
 	Source URL: http://pixabay.com
-	Image 1: http://pixabay.com/en/papilio-rumanzovia-butterfly-animal-44882/
-	Image 2: http://pixabay.com/en/journal-green-leaf-veins-filigree-141494/
-	Image 3: http://pixabay.com/en/oak-sawfly-larva-larva-insect-252371/
-	Image 4: http://pixabay.com/en/butterfly-yellow-insect-nature-196745/
-	Image 5: http://pixabay.com/en/almond-blossom-cherry-blossom-5378/
-	Image 6: http://pixabay.com/en/insect-nature-tettigonia-viridissima-212943/
+	Image 1: http://pixabay.com/en/mountains-bank-mood-mountain-549099/
+	Image 2: http://pixabay.com/en/hawsers-ropes-cords-tightropes-241783/
+	Image 3: http://pixabay.com/en/mountains-alps-panorama-533494/
+	Image 4: http://pixabay.com/en/bike-dawn-195516/
+	Image 5: http://pixabay.com/en/river-kayak-water-kayaking-summer-565517/
+	Image 6: http://pixabay.com/en/hiking-boots-hike-legs-walk-travel-455754/
+	Image 6: http://pixabay.com/en/carbine-rope-hook-backup-climbing-7104/
 	License URL: http://creativecommons.org/publicdomain/zero/1.0/deed.de
 
 	3. Flexslider, Copyright 2012 WooThemes
-	The frontpage slideshow is powered by jQuery FlexSlider v2.0 by WooThemes
+	The frontpage slideshow is powered by jQuery FlexSlider v2.1 by WooThemes
 	Free to use under the GPLv2 license: http://www.woothemes.com/flexslider/
 	
 	4. Featured Content class, Copyright 2014 Twenty Fourteen theme

@@ -81,11 +81,11 @@ function courage_display_theme_info_page() {
 					</div>
 					
 					<div class="section">
-						<h4><?php _e( 'Courage Pro', 'courage' ); ?></h4>
+						<h4><?php _e( 'Pro Version', 'courage' ); ?></h4>
 						
-						<p class="about"><?php _e( 'Need more customization options and features? Check out the Courage Pro add-on plugin which adds custom colors, fonts and logo upload.', 'courage' ); ?></p>
+						<p class="about"><?php _e( 'Need more features? Check out the PRO version which comes with additional features and advanced customization options.', 'courage' ); ?></p>
 						<p>
-							<a href="http://themezee.com/themes/courage/#CouragePro-1" target="_blank" class="button button-secondary"><?php _e('Learn more about Courage Pro', 'courage'); ?></a>
+							<a href="http://themezee.com/themes/courage/#PROVersion-1" target="_blank" class="button button-secondary"><?php _e('Learn more about Courage Pro', 'courage'); ?></a>
 						</p>
 					</div>
 
@@ -107,7 +107,7 @@ function courage_display_theme_info_page() {
 			
 			<p><?php printf( __( 'Courage is proudly brought to you by %1s. If you like this theme, %2s :) ', 'courage' ), 
 				'<a target="_blank" href="http://themezee.com" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/dynamic-news-lite?filter=5" title="Courage Lite Review">' . __( 'rate it', 'courage' ) . '</a>'); ?>
+				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/courage?filter=5" title="Courage Review">' . __( 'rate it', 'courage' ) . '</a>'); ?>
 			</p>
 		
 		</div>
