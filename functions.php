@@ -62,7 +62,7 @@ function courage_google_fonts_url() {
 
 	$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 
-    return apply_filters( 'courage-fonts-url', $fonts_url );
+    return apply_filters( 'courage_google_fonts_url', $fonts_url );
 }
 
 
@@ -134,9 +134,6 @@ function courage_add_image_sizes() {
 	// Add Category Post Widget image sizes
 	add_image_size( 'category-posts-widget-small', 80, 80, true);
 	add_image_size( 'category-posts-widget-big', 540, 180, true);
-	
-	// Add Site Logo Size
-	add_image_size( 'site-logo', 1340, 250);
 
 }
 endif;

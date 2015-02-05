@@ -2,6 +2,11 @@
 Courage Changelog
 ===================================
 
+Version 1.0.1
+-----------------------------------
+[fixed] wrong filter name for implementing Google Fonts
+[fixed] ampersand escape bug in pagination links (https://core.trac.wordpress.org/ticket/30831)
+
 Version 1.0
 -----------------------------------
 Final Version
