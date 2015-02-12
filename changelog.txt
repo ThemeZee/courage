@@ -2,6 +2,11 @@
 Courage Changelog
 ===================================
 
+Version 1.0.2
+-----------------------------------
+[added] unminified version of html5shiv.min.js and jquery.flexslider-min.js
+[changed] namespacing of image size names: added theme slug as prefix
+
 Version 1.0.1
 -----------------------------------
 [fixed] wrong filter name for implementing Google Fonts
