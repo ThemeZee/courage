@@ -5,6 +5,7 @@ Courage Changelog
 Version 1.0.2
 -----------------------------------
 [added] unminified version of html5shiv.min.js and jquery.flexslider-min.js
+[added] check if current user can edit theme options before displaying admin notices on frontend
 [changed] namespacing of image size names: added theme slug as prefix
 
 Version 1.0.1
