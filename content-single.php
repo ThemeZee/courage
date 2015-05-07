@@ -3,7 +3,7 @@
 	
 		<?php courage_display_thumbnail_single(); ?>
 		
-		<h2 class="post-title"><?php the_title(); ?></h2>
+		<h2 class="post-title entry-title"><?php the_title(); ?></h2>
 		
 		<div class="postmeta"><?php courage_display_postmeta(); ?></div>
 
