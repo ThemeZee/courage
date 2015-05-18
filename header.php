@@ -46,11 +46,16 @@
 	</div>
 	
 	<nav id="mainnav" class="clearfix" role="navigation">
-		<div id="mainnav-mobile-menu"><h4 id="mainnav-icon"><?php _e('Menu', 'courage'); ?></h4></div>
 		<?php 
-			// Get Navigation out of Theme Options
-			wp_nav_menu(array('theme_location' => 'primary', 'container' => false, 'menu_id' => 'mainnav-menu', 'echo' => true, 'fallback_cb' => 'courage_default_menu', 'before' => '', 'after' => '', 'link_before' => '', 'link_after' => '', 'depth' => 0));
-		?>
+		// Display Main Navigation
+		wp_nav_menu( array(
+			'theme_location' => 'primary', 
+			'container' => false, 
+			'menu_id' => 'mainnav-menu', 
+			'echo' => true, 
+			'fallback_cb' => 'courage_default_menu')
+		);
+	?>
 	</nav>
 	
 	<?php // Display Custom Header Image

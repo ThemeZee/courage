@@ -2,7 +2,7 @@
 Theme Name: Courage
 Theme URI: http://themezee.com/themes/courage/
 Description: Courage is a great way to start your personal blog or magazine website today. The theme is very easy to use and looks awesome on every device. It includes a beautiful featured post slideshow and a clean and flexible Magazine Homepage template. Hope you enjoy it!
-Version: 1.0.5
+Version: 1.0.6
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
@@ -198,7 +198,7 @@ input, textarea, select {
 
 /* Navigation Menu
 -------------------------------------------------------------- */
-#mainnav-icon {
+#mainnav-icon, #mainnav-toggle {
 	display: none;
 }
 #mainnav {
@@ -1611,14 +1611,19 @@ embed, iframe, object, video {
 		border-top-left-radius: 0.4em;
 		border-top-right-radius: 0.4em;
 	}
-	#mainnav-icon {
+	#mainnav-toggle {
 		display: block;
-		padding: 1.2em 2em;
+		width: 100%;
+		margin: 0;
+		padding: 1em 1.5em 0.8em;
 		text-decoration: none;
 		color: #fff;
+		background: #252525;
+		border: none;
 		font-size: 1.05em;
 		font-weight: bold;
 		font-family: 'Lato', Tahoma, Verdana, Arial;
+		text-align: left;
 		-moz-border-radius-topleft: 0.4em;
 		-moz-border-radius-topright: 0.4em;
 		-webkit-border-top-left-radius: 0.4em;
@@ -1627,14 +1632,17 @@ embed, iframe, object, video {
 		-khtml-border-top-right-radius: 0.4em;
 		border-top-left-radius: 0.4em;
 		border-top-right-radius: 0.4em;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
-	#mainnav-icon:hover {
+	#mainnav-toggle:hover {
 		cursor: pointer;
 		background: rgba(0, 0, 0, 0.1);
 	}
-	#mainnav-icon:after {
+	#mainnav-toggle:after {
 		float: right;
-		margin: -0.1em 0 0;
+		margin: 0;
 		-webkit-font-smoothing: antialiased;
 		display: inline-block;
 		content: '\f419';
@@ -1644,8 +1652,8 @@ embed, iframe, object, video {
 	}
 	
 	#mainnav-menu {
-		width: 100%;
 		display: none;
+		width: 100%;
 		background: #252525;
 	}
 	#mainnav-menu a {
@@ -1703,6 +1711,37 @@ embed, iframe, object, video {
 	}
 	#mainnav-menu ul li.current_page_item a, #mainnav-menu ul li.current-menu-item a {
 		text-decoration: underline;
+	}
+	
+	#mainnav-menu .submenu-dropdown-toggle {
+		float: right;
+		display: block;
+		margin: 0;
+		padding: 0.75em 1em;
+	}
+	#mainnav-menu .submenu-dropdown-toggle:hover {
+		cursor: pointer;
+		background: rgba(0,0,0,0.15);
+	}
+	#mainnav-menu .submenu-dropdown-toggle:before {
+		font-size: 28px;
+		line-height: 1;
+		font-family: 'Genericons';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-decoration: inherit;
+		vertical-align: middle;
+		content: '\f431';
+		color: #fff;
+	}
+	#mainnav-menu .submenu-dropdown-toggle.active:before {
+		content: '\f432';
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle {
+		padding: 0.55em 0.8em;
+	}
+	#mainnav-menu ul .submenu-dropdown-toggle:before {
+		font-size: 24px;
 	}
 	
 	/* Magazine Homepage: Category Post Widgets */

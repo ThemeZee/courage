@@ -27,6 +27,14 @@ function courage_custom_slider_params() {
 	
 	// Passing Parameters to Javascript
 	wp_localize_script( 'courage-post-slider', 'courage_slider_params', $params );
+	
+	
+	// Set Navigation Menu Title
+	$nav_title = __('Menu', 'courage');
+	
+	// Passing Parameters to Javascript
+	wp_localize_script( 'courage-jquery-navigation', 'courage_mainnav_title', $nav_title );
+	
 }
 
 endif;

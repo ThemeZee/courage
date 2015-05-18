@@ -2,6 +2,12 @@
 Courage Changelog
 ===================================
 
+Version 1.0.6
+-----------------------------------
+[changed] navigation.js to use our new developed responsiveMenu function
+[improved] styling of navigation menu
+[added] dropdown icons and animations for nested submenus on mobile navigation
+
 Version 1.0.5
 -----------------------------------
 [added] new classes entry-title, updated and author for google microformats structure
