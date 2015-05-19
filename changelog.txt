@@ -5,8 +5,8 @@ Courage Changelog
 Version 1.0.6
 -----------------------------------
 [changed] navigation.js to use our new developed responsiveMenu function
-[improved] styling of navigation menu
 [added] dropdown icons and animations for nested submenus on mobile navigation
+[added] language files for German
 
 Version 1.0.5
 -----------------------------------
