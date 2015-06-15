@@ -2,6 +2,11 @@
 Courage Changelog
 ===================================
 
+Version 1.0.8
+-----------------------------------
+[fixed] spelling mistake in style.css
+[fixed] footer navigation menu toggle
+
 Version 1.0.7
 -----------------------------------
 [moved] featured content settings to post slider section in Customizer
