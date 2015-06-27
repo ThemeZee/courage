@@ -13,6 +13,6 @@
 			<div class="page-links"><?php wp_link_pages(); ?></div>			
 		</div>
 		
-		<div class="postinfo clearfix"><?php courage_display_postinfo(); ?></div>
+		<?php courage_display_postinfo(); ?>
 
 	</article>

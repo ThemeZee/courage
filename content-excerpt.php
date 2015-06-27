@@ -12,6 +12,6 @@
 			<a href="<?php esc_url(the_permalink()) ?>" class="more-link"><?php _e('Read more', 'courage'); ?></a>
 		</div>
 		
-		<div class="postinfo clearfix"><?php courage_display_postinfo(); ?></div>
+		<?php courage_display_postinfo(); ?>
 
 	</article>

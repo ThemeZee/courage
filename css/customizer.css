@@ -4,7 +4,8 @@
  */
 
 #customize-control-courage_control_slider_activated,
-#customize-control-courage_control_excerpt_text_headline   {
+#customize-control-courage_control_excerpt_text_headline,
+#customize-control-courage_control_postmeta_headline   {
 	margin-top: 12px;
 }
 #customize-control-courage_control_featured_posts_header,
@@ -17,6 +18,7 @@
 #customize-control-courage_control_header_content,
 #customize-control-courage_control_post_images,
 #customize-control-courage_control_excerpt_text_headline,
+#customize-control-courage_control_postmeta_headline,
 #customize-control-courage_control_slider_activated  {
 	margin-bottom: 0;
 }
