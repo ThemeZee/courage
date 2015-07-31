@@ -1,12 +1,12 @@
-# Translation of Courage in German
+# Translation of Courage in French (France)
 # This file is distributed under the same license as the Courage package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-07-31 11:53+0100\n"
+"PO-Revision-Date: 2015-07-31 11:54+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 1.5.7\n"
 "Project-Id-Version: Courage\n"
 "POT-Creation-Date: \n"
@@ -23,11 +23,12 @@ msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:51
 msgid "Default Fonts"
-msgstr ""
+msgstr "Polices par défaut"
 
 #: inc/customizer/sections/customizer-general.php:68
 msgid "Deactivate Google Fonts in case your language is not compatible."
 msgstr ""
+"Désactiver Google Fonts dans les cas où la langue n'est pas compatible."
 
 #: inc/customizer/sections/customizer-post.php:133
 msgid "Postmeta"
@@ -77,103 +78,100 @@ msgstr ""
 
 #: inc/featured-content.php:368
 msgid "Tag name"
-msgstr "Schlagwort-Name"
+msgstr "Nom du Tag"
 
 #: inc/featured-content.php:374
 msgid "Hide tag from displaying in post meta and tag clouds."
 msgstr ""
-"Verberge das Schlagwort bei der Anzeige der Beitrags-Metadaten und der "
-"Schlagwort-Wolke"
+"Ne pas afficher les tags suivant des metas des articles ou du nuage de tag."
 
 #: inc/featured-content.php:381
 msgid "Display featured posts in latest blog post listing."
-msgstr ""
+msgstr "Affiche les messages de la dernière liste d'article de blog"
 
 #: inc/widgets/widget-category-posts-boxed.php:219
 #: inc/widgets/widget-category-posts-columns.php:257
 #: inc/widgets/widget-category-posts-grid.php:242
 msgid "View all posts"
-msgstr "Zeige alle Beiträge"
+msgstr "Voir tous les articles"
 
 #: 404.php:9
 msgid "404 Error: Not found"
-msgstr "404 Fehler - Seite nicht gefunden"
+msgstr "Erreur 404: Introuvable"
 
 #: 404.php:12
 msgid ""
 "The page you trying to reach does not exist, or has been moved. Please use "
 "the menus or the search box to find what you are looking for"
 msgstr ""
-"Die gewünschte Seite existiert nicht oder wurde verschoben. Bitte verwenden "
-"Sie die Menüs oder das Suchfeld um zu finden, was Sie suchen."
+"La page que vous essayez d'atteindre n'existe pas ou a été déplacée. "
+"Utilisez les menus où la recherche pour trouver ce que vous cherchez"
 
 #: 404.php:14
 msgid "Search"
-msgstr "Suche"
+msgstr "Recherche"
 
 #: 404.php:17
 msgid "Recent Posts"
-msgstr "letzte Beiträge"
+msgstr "Articles récents"
 
 #: 404.php:27
 msgid "Pages"
-msgstr "Seiten"
+msgstr "Pages"
 
 #: comments.php:10
 msgid "Enter password to view comments."
-msgstr "Passwort eingeben, um Kommentare zu sehen."
+msgstr "Entrez le mot de passe pour voir les commentaires."
 
 #: comments.php:20 inc/template-tags.php:94
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:228
 #: inc/widgets/widget-category-posts-grid.php:213
 msgid "One comment"
-msgstr "1 Kommentar"
+msgstr "Un commentaire"
 
 #: comments.php:20 inc/template-tags.php:94
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:228
 #: inc/widgets/widget-category-posts-grid.php:213
 msgid "% comments"
-msgstr "% Kommentare"
+msgstr "% commentaires"
 
 #: content-excerpt.php:12 content.php:11
 msgid "Read more"
-msgstr "Weiterlesen"
+msgstr "Lire la suite..."
 
 #: functions.php:118
 msgid "Main Navigation"
-msgstr "Hauptnavigation"
+msgstr "Navigation principale"
 
 #: functions.php:119
 msgid "Footer Navigation"
-msgstr "Fußnavigation"
+msgstr "Navigation du bas de page"
 
 #: functions.php:122
 msgid "Social Icons"
-msgstr "Social-Media-Symbole"
+msgstr "Icones des réseaux sociaux"
 
 #: functions.php:156
 msgid "Sidebar"
-msgstr "Seitenleiste"
+msgstr "Sidebar"
 
 #: functions.php:158
 msgid "Appears on posts and pages except front page and fullwidth template."
 msgstr ""
-"Erscheint in Beiträgen und Seiten, außer bei der Startseite und der Vollbild-"
-"Vorlage"
+"Apparaît sur les articles et les pages exceptée la première page et le "
+"modèle pleine largeur."
 
 #: functions.php:165
 msgid "Magazine Homepage"
-msgstr "Magazin Startseite"
+msgstr ""
 
 #: functions.php:167
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
 msgstr ""
-"Erscheint nur auf der Magazin-Startseiten-Vorlage. Sie können das Kategorie-"
-"Beiträge-Widget hier verwenden."
 
 #: functions.php:247
 msgid "Pingback:"
@@ -181,7 +179,7 @@ msgstr "Pingback:"
 
 #: functions.php:248 functions.php:268
 msgid "(Edit)"
-msgstr "(Bearbeiten)"
+msgstr "Modification"
 
 #: functions.php:259
 msgid "<span class=\"fn\">%s</span>"
@@ -189,78 +187,78 @@ msgstr "<span class=\"fn\">%s</span>"
 
 #: functions.php:263
 msgid "Your comment is awaiting moderation."
-msgstr "Ihr  Kommentar wartet auf Bestätigung."
+msgstr "Votre commentaire est en attente de modération."
 
 #: functions.php:267
 msgid "%1$s at %2$s"
-msgstr "%1$s in %2$s"
+msgstr "%1$s à %2$s"
 
 #: inc/customizer/frontend/custom-slider.php:33
 msgid "Menu"
-msgstr "Menü"
+msgstr "Menu"
 
 #: image.php:19
 msgid "Previous"
-msgstr "Vorherige"
+msgstr "Précédent"
 
 #: image.php:20
 msgid "Next"
-msgstr "Nächste"
+msgstr "Prochain"
 
 #: image.php:26
 msgid "Return to Gallery"
-msgstr "Zurück zur Galerie"
+msgstr "Retournez à la galerie"
 
 #: image.php:27
 msgid "Return to"
-msgstr "Zurück zu"
+msgstr "Retourner à"
 
 #: search.php:13
 msgid "Search Results for: %s"
-msgstr "Suchergebnisse für %s"
+msgstr "Résultats de la recherche pour : %s"
 
 #: search.php:30
 msgid ""
 "No matches. Please try again, or use the navigation menus to find what you "
 "search for."
 msgstr ""
-"Keine Übereinstimmungen gefunden: Bitte versuchen Sie es erneut oder nutzen "
-"Sie die Navigation um zu finden, wonach Sie suchen."
+"Désolé, mais rien ne correspond à votre recherche. Veuillez essayer de "
+"nouveau, ou utilisez les menus de navigation pour trouver ce que vous "
+"recherchez."
 
 #: searchform.php:4
 msgid "Search for:"
-msgstr "Suche nach:"
+msgstr "Rechercher:"
 
 #: sidebar.php:14
 msgid "Widget Area"
-msgstr "Widget-Bereich"
+msgstr "Espace des widgets"
 
 #: sidebar.php:16
 msgid ""
 "There are no active widgets to be displayed. Please go to Appearance -> "
 "Widgets to setup your sidebar."
 msgstr ""
-"Es gibt keine aktiven Widgets die angzeigt werden können. Bitte Gehen zum "
-"Menüpunkt Design ->Widgets auf dem Dashboard, um die Seitenleiste "
-"einzurichten."
+"Il n'y a pas de widget actif à afficher. Allezdans le menu Apparence -> "
+"Widgets dans la barre de menu latéral."
 
 #: inc/template-tags.php:83
 msgid "View all posts by %s"
-msgstr "Zeige alle Beiträge von %s"
+msgstr "Voir tous les articles %s"
 
 #: inc/template-tags.php:94 inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:228
 #: inc/widgets/widget-category-posts-grid.php:213
 msgid "Leave a comment"
-msgstr "Hinterlasse einen Kommentar"
+msgstr "Laisser un  commentaire"
 
 #: inc/template-tags.php:99
 msgid "Edit Post"
-msgstr "Beitrag bearbeiten"
+msgstr "Modifier l'article"
 
 #: inc/template-tags.php:225
 msgid "Powered by %1$s and %2$s."
-msgstr "Präsentiert von %1$s und %2$s."
+msgstr "Crée par %1$s et %2$s."
 
 #: inc/template-tags.php:226
 msgid "WordPress"
@@ -268,7 +266,7 @@ msgstr "WordPress"
 
 #: inc/template-tags.php:227
 msgid "Courage"
-msgstr "Courage"
+msgstr ""
 
 #: inc/template-tags.php:259
 msgid ""
@@ -276,327 +274,325 @@ msgid ""
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" theme location."
 msgstr ""
-"Bitte gehen Sie im Dashboard auf Design-> Menüs und erstellen Sie ein "
-"benutzerdefiniertes Menü mit Links zu ihren Seiten in sozialen Netzwerken. "
-"Dann klicken Sie unter \"Position im Design\" auf \"Social Icons\" um ihr "
-"gerade erstelltes Menü diesem Bereich zuzuweisen."
+"Allez dans WP-Admin-> Appearance-> Menus et créez un nouveau menu "
+"personnalisé avec  les liens de vos reseaux sociaux. Puis cliquez sur  "
+"\"Manage Locations\" tab et assignez le menu creé dans  l'espace prévu dans "
+"le thème \"Social Icons\" ."
 
 #: inc/theme-info.php:15
 msgid "Welcome to Courage"
-msgstr "Willkommen bei Courage"
+msgstr ""
 
 #: inc/theme-info.php:16
 msgid "Theme Info"
-msgstr "Design-Info"
+msgstr "Informations sur le thème"
 
 #: inc/theme-info.php:35
 msgid "Welcome to %1s %2s"
-msgstr "Willkommen bei %1s %2s"
+msgstr "Bienvenue à %1s %2s"
 
 #: inc/theme-info.php:41
 msgid "Important Links:"
-msgstr "wichtige Links:"
+msgstr "Liens importants:"
 
 #: inc/theme-info.php:42
 msgid "Theme Info Page"
-msgstr "Design-Infoseite"
+msgstr "Page d'informations sur le thème"
 
 #: inc/theme-info.php:43
 msgid "Changelog"
-msgstr "Änderungsprotokoll"
+msgstr "Journal des modifications"
 
 #: inc/theme-info.php:44
 msgid "Theme Demo"
-msgstr "Design-Demo"
+msgstr "Démonstration"
 
 #: inc/theme-info.php:45 inc/theme-info.php:60
 msgid "Theme Documentation"
-msgstr "Design-Dokumentation"
+msgstr "Informations sur le thème"
 
 #: inc/theme-info.php:46
 msgid "Rate this theme"
-msgstr "Design bewerten"
+msgstr "Évaluer ce thème"
 
 #: inc/theme-info.php:57
 msgid "Getting Started with %s"
-msgstr "Erste Schritte mit %s"
+msgstr "Mise en route avec %s"
 
 #: inc/theme-info.php:62
 msgid ""
 "Need any help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
-"Benötigen Sie Hilfe zur Einrichtung und Konfiguration dieser Vorlage? Eine "
-"ausführliche Vorlagendokumentation finden Sie auf unserer Internetseite."
+"Besoin d'aide pour installer et configurer ce thème? Nous avons prévue pour "
+"vous une documentation complète sur le thème. Consultable sur notre site."
 
 #: inc/theme-info.php:64
 msgid "Visit Courage Documentation"
-msgstr "Courage Dokumentation ansehen"
+msgstr ""
 
 #: inc/theme-info.php:69 inc/customizer/customizer.php:28
 msgid "Theme Options"
-msgstr "Designoptionen"
+msgstr "Personnalisation du thème"
 
 #: inc/theme-info.php:71
 msgid ""
 "Courage supports the awesome Theme Customizer for all theme settings. Click "
 "\"Customize Theme\" to open the Customizer now."
 msgstr ""
-"Courage bietet umfangreiche Anpassungsmöglichkeiten. Klicken Sie auf "
-"\"Anpassen\" um die Vorlage einzurichten."
 
 #: inc/theme-info.php:73
 msgid "Customize Theme"
-msgstr "Design anpassen"
+msgstr "Personnalisez le thème"
 
 #: inc/theme-info.php:78
 msgid "Pro Version"
-msgstr "Pro Version"
+msgstr ""
 
 #: inc/theme-info.php:80
 msgid ""
 "Need more features? Check out the PRO version which comes with additional "
 "features and advanced customization options."
 msgstr ""
-"Sie brauchen mehr Funktionen? Sehen Sie sich die Pro Version an, welche "
-"zusätzliche Funktionen und erweiterte Anpassungsmöglichkeiten bietet."
+"Besoin de plus de fonctionnalités? Découvrez la version PRO qui apporte des "
+"fonctionnalités supplémentaires et des options de personnalisation avancées."
 
 #: inc/theme-info.php:82 inc/customizer/sections/customizer-upgrade.php:62
 msgid "Learn more about Courage Pro"
-msgstr "Erfahren Sie mehr über Courage Pro"
+msgstr ""
 
 #: inc/theme-info.php:102
 msgid ""
 "Courage is proudly brought to you by %1s. If you like this theme, %2s :) "
 msgstr ""
-"Das Design Courage wird ihnen präsentiert von %1s. Wenn Sie dieses Design "
-"mögen, %2s:)"
 
 #: inc/theme-info.php:104
 msgid "rate it"
-msgstr "bewerte es"
+msgstr "Noter"
 
 #: inc/customizer/customizer.php:49
 msgid "Display Tagline below site title."
-msgstr "Untertitel unterhalb Seitentitel anzeigen."
+msgstr "Affichage du slogan sous le titre du site."
 
 #: inc/customizer/sections/customizer-general.php:14
 msgid "General Settings"
-msgstr "Grundeinstellungen"
+msgstr "Réglages généraux"
 
 #: inc/customizer/sections/customizer-general.php:29
 msgid "Theme Layout"
-msgstr "Design Layout"
+msgstr "Disposition du thème"
 
 #: inc/customizer/sections/customizer-general.php:35
 msgid "Left Sidebar"
-msgstr "Seitenleiste links"
+msgstr "Barre latérale gauche"
 
 #: inc/customizer/sections/customizer-general.php:36
 msgid "Right Sidebar"
-msgstr "Seitenleiste rechts"
+msgstr "Barre latérale droite"
 
 #: inc/customizer/sections/customizer-header.php:14
 msgid "Header Settings"
-msgstr "Kopfzeileneinstellungen"
+msgstr ""
 
 #: inc/customizer/sections/customizer-header.php:30
 msgid "Header Content"
-msgstr "Kopfzeileninhalt"
+msgstr "Contenu du header"
 
 #: inc/customizer/sections/customizer-header.php:46
 msgid ""
 "The Header Content configured below will be displayed on the right hand side "
 "of the header area."
 msgstr ""
-"Der unten eingerichtete Kopfzeileninhalt wird auf der rechten Seite im "
-"Kopfzeilenbereich angezeigt."
+"Le contenu du header configuré ci-dessous s'affichera sur le côté droit de "
+"la zone du header."
 
 #: inc/customizer/sections/customizer-header.php:63
 msgid "Display search field on header area"
-msgstr "Suchfeld im Kopfzeilenbereich anzeigen"
+msgstr "Affichage champ de recherche sur la zone du header"
 
 #: inc/customizer/sections/customizer-header.php:79
 msgid "Display Social Icons on header area"
-msgstr "Social-Media-Symbole im Kopfzeilenbereich anzeigen"
+msgstr "Afficher les icones de réseaux sociaux sur la zone d'en-tête"
 
 #: inc/customizer/sections/customizer-post.php:14
 msgid "Post Settings"
-msgstr "Einstellungen für Beiträge"
+msgstr "Paramètre des articles"
 
 #: inc/customizer/sections/customizer-post.php:29
 msgid "Post Length on archives"
-msgstr "Beitragslänge in Archiven"
+msgstr "Longueur des articles sur les archives"
 
 #: inc/customizer/sections/customizer-post.php:35
 msgid "Show full posts"
-msgstr "Beiträge vollständig anzeigen"
+msgstr "Voir l'article en entier"
 
 #: inc/customizer/sections/customizer-post.php:36
 msgid "Show post summaries (excerpt)"
-msgstr "Beitragsauszug anzeigen"
+msgstr "Afficher les résumés des articles (extrait)"
 
 #: inc/customizer/sections/customizer-post.php:51
 msgid "Post Images"
-msgstr "Beitragsbilder"
+msgstr "Articles images"
 
 #: inc/customizer/sections/customizer-post.php:66
 msgid "Display featured images on archive pages"
-msgstr "Zeige empfohlene Bilder auf Archivseiten"
+msgstr "Affichage des images mises à la une sur les pages d'archives"
 
 #: inc/customizer/sections/customizer-post.php:82
 msgid "Display featured images on single posts"
-msgstr "Zeige empfohlene Bilder auf einzelnen Beiträgen"
+msgstr "Affichage des images mises à la une sur les articles"
 
 #: inc/customizer/sections/customizer-post.php:100
 msgid "Excerpt More Text"
-msgstr "Auszug mehr Text"
+msgstr "Extrait Plus texte"
 
 #: inc/customizer/sections/customizer-post.php:115
 msgid "Display [...] after text excerpts."
-msgstr "Zeige [...] nach Textauszug."
+msgstr "Affichage [...] après des extraits de texte."
 
 #: inc/customizer/sections/customizer-slider.php:14
 msgid "Post Slider"
-msgstr "Beitrags-Slider"
+msgstr "Diaporama des articles"
 
 #: inc/customizer/sections/customizer-slider.php:30
 msgid "Activate Featured Post Slider"
-msgstr "Slider für empfohlene Beiträge aktivieren"
+msgstr "Activez le diaporama des articles mis en avant"
 
 #: inc/customizer/sections/customizer-slider.php:45
 msgid "Display Slider on Magazine Front Page template."
-msgstr "Slider auf der Magazin-Startseiten-Vorlage anzeigen."
+msgstr "Affichage du slider sur le modèle Front Page Magazine."
 
 #: inc/customizer/sections/customizer-slider.php:60
 msgid "Display Slider on normal blog index."
-msgstr "Slider auf Blog-Übersicht anzeigen."
+msgstr "Afficher le diaporama sur la page d'accueil"
 
 #: inc/customizer/sections/customizer-slider.php:113
 msgid "Slider Animation"
-msgstr "Slider Animation"
+msgstr "Animation du diaporama"
 
 #: inc/customizer/sections/customizer-slider.php:120
 msgid "Horizontal Slider"
-msgstr "Slider horizontal"
+msgstr "Diaporama horizontal"
 
 #: inc/customizer/sections/customizer-slider.php:121
 msgid "Fade Slider"
-msgstr "Slider mit Einblendeffekt"
+msgstr "Diaporama en fondu"
 
 #: inc/customizer/sections/customizer-upgrade.php:14
 msgid "Courage Pro"
-msgstr "Courage Pro"
+msgstr ""
 
 #: inc/customizer/sections/customizer-upgrade.php:30
 msgid "Need more features?"
-msgstr "Mehr Funktionen benötigt?"
+msgstr "Besoin de plus de fonctionnalités?"
 
 #: inc/customizer/sections/customizer-upgrade.php:46
 msgid ""
 "Check out the PRO version which comes with additional features and advanced "
 "customization options."
 msgstr ""
-"Sehen Sie sich die Pro Version an, welche zusätzliche Funktionen und "
-"erweiterte Anpassungsmöglichkeiten bietet."
+"Besoin de plus de fonctionnalités? Découvrez la version PRO qui apporte des "
+"fonctionnalités supplémentaires et des options de personnalisation avancées."
 
 #: inc/widgets/widget-category-posts-boxed.php:11
 msgid ""
 "Display latest posts from category in boxed layout. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
-"Letzte Beiträge aus Kategorie in Box-Layout anzeigen. Bitte nur für den "
-"Magazin-Startseiten-Widget-Bereich nutzen."
+"Affichez les derniers articles d'une catégorie dans une disposition en "
+"grille. Utilisez ce widget SEULEMENT sur une zone de widget Frontpage "
+"Magazine ."
 
 #: inc/widgets/widget-category-posts-boxed.php:13
 msgid "Category Posts Boxed (Courage)"
-msgstr "Kategorie-Beiträge Box-Layout (Courage)"
+msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:231
 #: inc/widgets/widget-category-posts-columns.php:269
 #: inc/widgets/widget-category-posts-grid.php:254
 msgid "View all posts from category %s"
-msgstr "Zeige alle Beiträge aus Kategorie %s"
+msgstr "Voir les articles de la catégorie %s"
 
 #: inc/widgets/widget-category-posts-boxed.php:272
 #: inc/widgets/widget-category-posts-grid.php:297
 msgid "Title:"
-msgstr "Titel:"
+msgstr "Titre:"
 
 #: inc/widgets/widget-category-posts-boxed.php:278
 #: inc/widgets/widget-category-posts-grid.php:303
 msgid "Category:"
-msgstr "﻿Kategorie:"
+msgstr "Catégorie:"
 
 #: inc/widgets/widget-category-posts-boxed.php:281
 #: inc/widgets/widget-category-posts-columns.php:323
 #: inc/widgets/widget-category-posts-columns.php:344
 #: inc/widgets/widget-category-posts-grid.php:306
 msgid "All Categories"
-msgstr "Alle Kategorien"
+msgstr "Toutes les catégories"
 
 #: inc/widgets/widget-category-posts-boxed.php:295
 #: inc/widgets/widget-category-posts-grid.php:334
 msgid "Link Widget Title to Category Archive page"
-msgstr "Verlinke den Widget-Titel zur Kategorie Archivseite"
+msgstr "Liez le Widget Titre vers la page catégorie des archives"
 
 #: inc/widgets/widget-category-posts-columns.php:11
 msgid ""
 "Display latest posts from two specified categories. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
-"Letzte Beiträge aus 2 ausgewählten Kategorien anzeigen. Bitte nur für den "
-"Magazin-Startseiten-Widget-Bereich nutzen."
+"Affichez les derniers articles de deux catégories spécifiés. Utilisez ce "
+"widget SEULEMENT sur Frontpage Magazine zone de widget."
 
 #: inc/widgets/widget-category-posts-columns.php:13
 msgid "Category Posts Columns (Courage)"
-msgstr "Beiträge einer Kategorie in Spalten (Courage)"
+msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:314
 msgid "Left Category Title:"
-msgstr "linker Kategorietitel:"
+msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:320
 msgid "Left Category:"
-msgstr "linke Kategorie:"
+msgstr "Catégorie de gauche:"
 
 #: inc/widgets/widget-category-posts-columns.php:335
 msgid "Right Category Title:"
-msgstr "rechter Kategorietitel:"
+msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:341
 msgid "Right Category:"
-msgstr "rechte Kategorie:"
+msgstr "Catégorie de droite:"
 
 #: inc/widgets/widget-category-posts-columns.php:356
 #: inc/widgets/widget-category-posts-grid.php:318
 msgid "Number of posts:"
-msgstr "Anzahl Beiträge:"
+msgstr "Nombre d'articles:"
 
 #: inc/widgets/widget-category-posts-columns.php:364
 msgid "Highlight First Post (Big Image + Excerpt)"
-msgstr "ersten Beitrag hervorheben (größeres Bild + Textauszug)"
+msgstr "Surlignez le premier article (grande image + extrait)"
 
 #: inc/widgets/widget-category-posts-columns.php:371
 msgid "Link Category Titles to Category Archive pages"
-msgstr "Verlinke die Kategorietitel zu den Kategorie Archivseiten"
+msgstr ""
 
 #: inc/widgets/widget-category-posts-grid.php:11
 msgid ""
 "Display latest posts from category in a grid layout. Please use this widget "
 "ONLY on Frontpage Magazine widget area."
 msgstr ""
-"Letzte Beiträge aus der Kategorie im Tabellen-Layout anzeigen. Bitte nur für "
-"den Magazin-Startseiten-Widget-Bereich nutzen."
+"Affichez les derniers articles d'une catégorie dans une disposition en "
+"grille. Utilisez ce widget SEULEMENT sur une zone de widget Frontpage "
+"Magazine ."
 
 #: inc/widgets/widget-category-posts-grid.php:13
 msgid "Category Posts Grid (Courage)"
-msgstr "Kategoriebeiträge in Tabellenstil (Courage)"
+msgstr ""
 
 #: inc/widgets/widget-category-posts-grid.php:320
 msgid "Please chose an even number (2, 4, 6, 8)."
-msgstr "Bitte wählen Sie eine gerade Anzahl (2, 4, 6, 8)."
+msgstr "S'il vous plaît choisissez un nombre pair (2, 4, 6, 8)."
 
 #: inc/widgets/widget-category-posts-grid.php:327
 msgid "Display as small posts grid with thumbnails"
-msgstr "Beiträge mit Miniaturansichten im Tabellenstil anzeigen"
+msgstr "Afficher comme petite grille d'articles avec des vignettes"

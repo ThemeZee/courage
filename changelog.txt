@@ -2,6 +2,11 @@
 Courage Changelog
 ===================================
 
+Version 1.1.1
+-----------------------------------
+[added] setting for deactivating default google fonts in case they are not compatible with user language
+[added] translation files for Dutch, Italian, French, Polish and Greek
+
 Version 1.1
 -----------------------------------
 [changed] search title HTML markup in search.php

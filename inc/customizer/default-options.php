@@ -31,6 +31,7 @@ function courage_default_options() {
 
 	$default_options = array(
 		'layout' 							=> 'right-sidebar',
+		'deactivate_google_fonts'			=> false,
 		'header_tagline' 					=> false,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
