@@ -11,8 +11,11 @@
 add_action('admin_menu', 'courage_add_theme_info_page');
 function courage_add_theme_info_page() {
 	
+	// Get Theme Details from style.css
+	$theme = wp_get_theme(); 
+	
 	add_theme_page( 
-		__('Welcome to Courage', 'courage'), 
+		sprintf( __( 'Welcome to %1s %2s', 'courage' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ), 
 		__('Theme Info', 'courage'), 
 		'edit_theme_options', 
 		'courage', 
@@ -26,15 +29,15 @@ function courage_add_theme_info_page() {
 function courage_display_theme_info_page() { 
 	
 	// Get Theme Details from style.css
-	$theme_data = wp_get_theme(); 
+	$theme = wp_get_theme(); 
 	
 ?>
 			
 	<div class="wrap theme-info-wrap">
 
-		<h1><?php printf( __( 'Welcome to %1s %2s', 'courage' ), $theme_data->Name, $theme_data->Version ); ?></h1>
+		<h1><?php printf( __( 'Welcome to %1s %2s', 'courage' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ); ?></h1>
 
-		<div class="theme-description"><?php echo $theme_data->Description; ?></div>
+		<div class="theme-description"><?php echo $theme->get( 'Description' ); ?></div>
 		
 		<hr>
 		<div class="important-links clearfix">
@@ -54,21 +57,27 @@ function courage_display_theme_info_page() {
 
 				<div class="column column-half clearfix">
 				
-					<h3><?php printf( __( 'Getting Started with %s', 'courage' ), $theme_data->Name ); ?></h3>
+					<h3><?php printf( __( 'Getting Started with %s', 'courage' ), $theme->get( 'Name' ) ); ?></h3>
 						
 					<div class="section">
 						<h4><?php _e( 'Theme Documentation', 'courage' ); ?></h4>
 						
-						<p class="about"><?php _e( 'Need any help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'courage' ); ?></p>
+						<p class="about">
+							<?php _e( 'You need help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'courage' ); ?>
+						</p>
 						<p>
-							<a href="http://themezee.com/docs/courage-documentation/" target="_blank" class="button button-secondary"><?php _e('Visit Courage Documentation', 'courage'); ?></a>
+							<a href="http://themezee.com/docs/courage-documentation/" target="_blank" class="button button-secondary">
+								<?php printf( __( 'View %s Documentation', 'courage' ), $theme->get( 'Name' ) ); ?>
+							</a>
 						</p>
 					</div>
 					
 					<div class="section">
 						<h4><?php _e( 'Theme Options', 'courage' ); ?></h4>
 						
-						<p class="about"><?php _e( 'Courage supports the awesome Theme Customizer for all theme settings. Click "Customize Theme" to open the Customizer now.', 'courage' ); ?></p>
+						<p class="about">
+							<?php printf( __( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'courage' ), $theme->get( 'Name' ) ); ?>
+						</p>
 						<p>
 							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php _e('Customize Theme', 'courage'); ?></a>
 						</p>
@@ -77,9 +86,13 @@ function courage_display_theme_info_page() {
 					<div class="section">
 						<h4><?php _e( 'Pro Version', 'courage' ); ?></h4>
 						
-						<p class="about"><?php _e( 'Need more features? Check out the PRO version which comes with additional features and advanced customization options.', 'courage' ); ?></p>
+						<p class="about">
+							<?php _e( 'You need more features? Purchase the Pro Version to get additional features and advanced customization options.', 'courage' ); ?>
+						</p>
 						<p>
-							<a href="http://themezee.com/themes/courage/#PROVersion-1" target="_blank" class="button button-secondary"><?php _e('Learn more about Courage Pro', 'courage'); ?></a>
+							<a href="http://themezee.com/themes/courage/#PROVersion-1" target="_blank" class="button button-secondary">
+								<?php printf( __( 'Learn more about %s Pro', 'courage' ), $theme->get( 'Name' ) ); ?>
+							</a>
 						</p>
 					</div>
 
@@ -99,7 +112,8 @@ function courage_display_theme_info_page() {
 		
 		<div id="theme-author">
 			
-			<p><?php printf( __( 'Courage is proudly brought to you by %1s. If you like this theme, %2s :) ', 'courage' ), 
+			<p><?php printf( __( '%1s is proudly brought to you by %2s. If you like this theme, %3s :) ', 'courage' ), 
+				$theme->get( 'Name' ),
 				'<a target="_blank" href="http://themezee.com" title="ThemeZee">ThemeZee</a>',
 				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/courage?filter=5" title="Courage Review">' . __( 'rate it', 'courage' ) . '</a>'); ?>
 			</p>

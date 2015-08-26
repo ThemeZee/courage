@@ -8,9 +8,9 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'courage_category_posts_grid', 
-			'description' => __('Display latest posts from category in a grid layout. Please use this widget ONLY on Frontpage Magazine widget area.', 'courage')
+			'description' => __('Displays your posts from a selected category in a grid layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'courage')
 		);
-		parent::__construct('courage_category_posts_grid', __('Category Posts Grid (Courage)', 'courage'), $widget_ops);
+		parent::__construct('courage_category_posts_grid', sprintf( __('Category Posts: Grid (%s)', 'courage'), wp_get_theme()->Name ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );

@@ -8,9 +8,9 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'courage_category_posts_columns', 
-			'description' => __('Display latest posts from two specified categories. Please use this widget ONLY on Frontpage Magazine widget area.', 'courage')
+			'description' => __('Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'courage')
 		);
-		parent::__construct('courage_category_posts_columns', __('Category Posts Columns (Courage)', 'courage'), $widget_ops);
+		parent::__construct('courage_category_posts_columns', sprintf( __('Category Posts: 2 Columns (%s)', 'courage'), wp_get_theme()->Name ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -361,7 +361,7 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('highlight_post'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $highlight_post ) ; ?> id="<?php echo $this->get_field_id('highlight_post'); ?>" name="<?php echo $this->get_field_name('highlight_post'); ?>" />
-				<?php _e('Highlight First Post (Big Image + Excerpt)', 'courage'); ?>
+				<?php _e('Highlight first post (big image + excerpt)', 'courage'); ?>
 			</label>
 		</p>
 		
