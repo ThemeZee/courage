@@ -27,7 +27,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Header_Control(
         $wp_customize, 'courage_control_slider_activated', array(
-            'label' => __( 'Activate Featured Post Slider', 'courage' ),
+            'label' => __( 'Activate Post Slider', 'courage' ),
             'section' => 'courage_section_slider',
             'settings' => 'courage_theme_options[slider_active_header]',
             'priority' => 1
@@ -42,7 +42,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_slider_active_magazine', array(
-        'label'    => __( 'Display Slider on Magazine Front Page template.', 'courage' ),
+        'label'    => __( 'Show Slider on Magazine Homepage', 'courage' ),
         'section'  => 'courage_section_slider',
         'settings' => 'courage_theme_options[slider_active_magazine]',
         'type'     => 'checkbox',
@@ -57,7 +57,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_slider_active_blog', array(
-        'label'    => __( 'Display Slider on normal blog index.', 'courage' ),
+        'label'    => __( 'Show Slider on posts page', 'courage' ),
         'section'  => 'courage_section_slider',
         'settings' => 'courage_theme_options[slider_active_blog]',
         'type'     => 'checkbox',
@@ -117,8 +117,8 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 		'priority' => 9,
 		'active_callback' => 'courage_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => __( 'Horizontal Slider', 'courage' ),
-            'fade' => __( 'Fade Slider', 'courage' )
+            'horizontal' => __( 'Slide Effect', 'courage' ),
+            'fade' => __( 'Fade Effect', 'courage' )
 			)
 		)
 	);

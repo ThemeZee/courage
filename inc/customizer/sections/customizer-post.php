@@ -26,14 +26,14 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_posts_length', array(
-        'label'    => __( 'Post Length on archives', 'courage' ),
+        'label'    => __( 'Post length on archives', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[posts_length]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
             'index' => __( 'Show full posts', 'courage' ),
-            'excerpt' => __( 'Show post summaries (excerpt)', 'courage' )
+            'excerpt' => __( 'Show post excerpts', 'courage' )
 			)
 		)
 	);

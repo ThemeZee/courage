@@ -222,9 +222,9 @@ add_action( 'courage_footer_text', 'courage_display_footer_text' );
 function courage_display_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf(__( 'Powered by %1$s and %2$s.', 'courage' ), 
-			sprintf( '<a href="http://wordpress.org" title="WordPress">%s</a>', __( 'WordPress', 'courage' ) ),
-			sprintf( '<a href="http://themezee.com/themes/courage/" title="Courage WordPress Theme">%s</a>', __( 'Courage', 'courage' ) )
+		<?php printf( __( 'Powered by %1$s and %2$s.', 'courage' ),  
+			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
+			'<a href="http://themezee.com/themes/courage/" title="Courage WordPress Theme">Courage</a>'
 		); ?>
 	</span>
 
