@@ -2,6 +2,12 @@
 Courage Changelog
 ===================================
 
+Version 1.1.3
+-----------------------------------
+[improved] phrasing of all translatable text strings
+[improved] code of 404.php and search.php templates
+[updated] language files
+
 Version 1.1.2
 -----------------------------------
 [fixed] deprecating PHP4 style constructors notices in WordPress 4.3

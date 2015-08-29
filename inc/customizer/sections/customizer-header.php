@@ -43,7 +43,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Description_Control(
         $wp_customize, 'courage_control_header_content_description', array(
-            'label' =>  __( 'The Header Content configured below will be displayed on the right hand side of the header area.', 'courage' ),
+            'label' =>  __( 'The Header Content will be displayed on the right hand side of the header area.', 'courage' ),
             'section' => 'courage_section_header',
             'settings' => 'courage_theme_options[header_content_description]',
             'priority' => 3

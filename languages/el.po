@@ -2,121 +2,28 @@
 # This file is distributed under the same license as the Courage package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-07-31 11:53+0100\n"
+"Project-Id-Version: Courage\n"
+"Report-Msgid-Bugs-To: http://themezee.com/\n"
+"POT-Creation-Date: 2015-08-29 14:24+0100\n"
+"PO-Revision-Date: 2015-08-29 14:33+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Poedit 1.5.7\n"
-"Project-Id-Version: Courage\n"
-"POT-Creation-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-
-#: searchform.php:5
-msgid "Search &hellip;"
-msgstr ""
-
-#: inc/featured-content.php:388
-msgid "Number of Posts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:51
-msgid "Default Fonts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-general.php:68
-msgid "Deactivate Google Fonts in case your language is not compatible."
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:133
-msgid "Postmeta"
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:148
-msgid "Display date on posts."
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:163
-msgid "Display author on posts."
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:178
-msgid "Display categories on posts."
-msgstr ""
-
-#: inc/customizer/sections/customizer-post.php:193
-msgid "Display tags on posts."
-msgstr ""
-
-#: inc/customizer/sections/customizer-slider.php:78
-msgid "Select Featured Posts"
-msgstr ""
-
-#: inc/customizer/sections/customizer-slider.php:95
-msgid ""
-"The slideshow displays all your featured posts. You can easily feature posts "
-"by a tag of your choice."
-msgstr ""
-
-#: featured-content-slider.php:14
-msgid ""
-"There is no featured content to be displayed in the slider. To set up the "
-"slider, go to Appearance -> Customize -> Theme Options, and add a tag under "
-"Tag Name in the Featured Content section. The slideshow will then display "
-"all posts which are tagged with that keyword."
-msgstr ""
-
-#: template-magazine.php:39
-msgid ""
-"There are no widgets to be displayed. Please go to Appearance -> Widgets and "
-"add at least one widget to the \"Magazine Homepage\" widget area. You can "
-"use the three Category Posts widgets to set up the theme like the demo "
-"website."
-msgstr ""
-
-#: inc/featured-content.php:368
-msgid "Tag name"
-msgstr ""
-
-#: inc/featured-content.php:374
-msgid "Hide tag from displaying in post meta and tag clouds."
-msgstr ""
-
-#: inc/featured-content.php:381
-msgid "Display featured posts in latest blog post listing."
-msgstr ""
-
-#: inc/widgets/widget-category-posts-boxed.php:219
-#: inc/widgets/widget-category-posts-columns.php:257
-#: inc/widgets/widget-category-posts-grid.php:242
-msgid "View all posts"
-msgstr ""
 
 #: 404.php:9
-msgid "404 Error: Not found"
+#, fuzzy
+msgid "404: Page not found"
 msgstr "Σφάλμα 404: Η Σελίδα Δεν Βρέθηκε"
 
 #: 404.php:12
 msgid ""
-"The page you trying to reach does not exist, or has been moved. Please use "
-"the menus or the search box to find what you are looking for"
+"It looks like nothing was found at this location. Maybe try a search or one "
+"of the links below?"
 msgstr ""
-"Η σελίδα που προσπαθείτε να φτάσετε δεν υπάρχει ή έχει μετακινηθεί. Παρακαλώ "
-"χρησιμοποιήστε το μενού ή το πλαίσιο αναζήτησης για να βρείτε αυτό που "
-"ψάχνετε."
-
-#: 404.php:14
-msgid "Search"
-msgstr "Αναζήτηση"
-
-#: 404.php:17
-msgid "Recent Posts"
-msgstr "Πρόσφατες δημοσιεύσεις"
-
-#: 404.php:27
-msgid "Pages"
-msgstr "Σελίδες"
 
 #: comments.php:10
 msgid "Enter password to view comments."
@@ -133,12 +40,21 @@ msgstr "Ένα σχόλιο"
 #: inc/widgets/widget-category-posts-boxed.php:190
 #: inc/widgets/widget-category-posts-columns.php:228
 #: inc/widgets/widget-category-posts-grid.php:213
+#, fuzzy, php-format
 msgid "% comments"
 msgstr "% σχόλια"
 
-#: content-excerpt.php:12 content.php:11
+#: content-excerpt.php:12 content-search.php:8 content.php:11
 msgid "Read more"
 msgstr "Διαβάστε περισσότερα"
+
+#: featured-content-slider.php:14
+msgid ""
+"There is no featured content to be displayed in the slider. To set up the "
+"slider, go to Appearance &#8594; Customize &#8594; Theme Options, and add a "
+"featured tag in the Post Slider section. The slideshow displays all your "
+"posts which are tagged with that keyword."
+msgstr ""
 
 #: functions.php:118
 msgid "Main Navigation"
@@ -152,12 +68,14 @@ msgstr "Πλοήγηση στο υποσέλιδο"
 msgid "Social Icons"
 msgstr "Εικόνες κοινωνικών δικτύων"
 
-#: functions.php:156
+#: functions.php:156 sidebar.php:14
 msgid "Sidebar"
 msgstr "Πλαϊνή μπάρα"
 
 #: functions.php:158
-msgid "Appears on posts and pages except front page and fullwidth template."
+#, fuzzy
+msgid ""
+"Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 "Εμφανίζεται σε δημοσιεύσεις και σελίδες εκτός από την πρώτη σελίδα και τη "
 "σελίδα πλήρους πλάτους."
@@ -180,67 +98,73 @@ msgstr "Pingback:"
 msgid "(Edit)"
 msgstr "(Επεξεργασία)"
 
-#: functions.php:259
-msgid "<span class=\"fn\">%s</span>"
-msgstr ""
-
 #: functions.php:263
 msgid "Your comment is awaiting moderation."
 msgstr "Το σχόλιό σας αναμένει την έγκριση του συντονιστή."
 
 #: functions.php:267
+#, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: inc/customizer/frontend/custom-slider.php:33
-msgid "Menu"
-msgstr "Μενού"
-
-#: image.php:19
-msgid "Previous"
-msgstr "Προηγούμενη"
-
-#: image.php:20
-msgid "Next"
-msgstr "Επόμενη"
-
-#: image.php:26
-msgid "Return to Gallery"
-msgstr "Επιστροφή στην γκαλερί"
-
-#: image.php:27
-msgid "Return to"
-msgstr "Επιστροφή στην"
-
 #: search.php:13
+#, php-format
 msgid "Search Results for: %s"
 msgstr "Αποτελέσματα αναζήτησης για: %s"
 
-#: search.php:30
+#: search.php:37
+msgid "No matches"
+msgstr ""
+
+#: search.php:41
+#, fuzzy
 msgid ""
-"No matches. Please try again, or use the navigation menus to find what you "
-"search for."
+"Please try again, or use the navigation menus to find what you search for."
 msgstr ""
 "Δεν βρέθηκαν αποτελέσματα. Παρακαλώ δοκιμάστε ξανά ή χρησιμοποιήστε το μενού "
 "πλοήγησης για να βρείτε αυτό που ψάχνετε."
 
 #: searchform.php:4
+#, fuzzy
+msgctxt "label"
 msgid "Search for:"
 msgstr "Αναζήτηση για:"
 
-#: sidebar.php:14
-msgid "Widget Area"
-msgstr "Περιοχή γραφικών στοιχείων"
+#: searchform.php:5
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
 
 #: sidebar.php:16
 msgid ""
-"There are no active widgets to be displayed. Please go to Appearance -> "
-"Widgets to setup your sidebar."
+"Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
 msgstr ""
-"Δεν υπάρχουν σε λειτουργία widgets που θα εμφανίζονται. Παρακαλούμε "
-"πηγαίνετε στο Εμφάνιση-> Widgets για να στήσετε την πλαϊνή μπάρα σας."
+
+#: template-magazine.php:39
+msgid ""
+"Please go to Appearance &#8594; Widgets and add at least one widget to the "
+"\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
+"set up the theme like the demo website."
+msgstr ""
+
+#: inc/featured-content.php:368
+msgid "Tag name"
+msgstr ""
+
+#: inc/featured-content.php:374
+msgid "Hide tag from displaying in post meta and tag clouds."
+msgstr ""
+
+#: inc/featured-content.php:381
+msgid "Display featured posts in latest blog post listing."
+msgstr ""
+
+#: inc/featured-content.php:388
+msgid "Number of Posts"
+msgstr ""
 
 #: inc/template-tags.php:83
+#, php-format
 msgid "View all posts by %s"
 msgstr "Προβολή όλων των δημοσιεύσεων από %s"
 
@@ -255,22 +179,16 @@ msgid "Edit Post"
 msgstr "Επεξεργασίας δημοσίευσης"
 
 #: inc/template-tags.php:225
+#, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr "Υποστηρίζεται από %1$s και %2$s."
 
-#: inc/template-tags.php:226
-msgid "WordPress"
-msgstr "WordPress"
-
-#: inc/template-tags.php:227
-msgid "Courage"
-msgstr ""
-
 #: inc/template-tags.php:259
+#, fuzzy
 msgid ""
-"Please go to WP-Admin-> Appearance-> Menus and create a new custom menu with "
+"Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
-"tab and assign your created menu to the \"Social Icons\" theme location."
+"tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 "Παρακαλώ πηγαίνετε στο WP-Admin-> Εμφάνιση-> Μενού και δημιουργήστε ένα νέο "
 "προσαρμοσμένο μενού με προσαρμοσμένες συνδέσεις στα κοινωνικά σας δίκτυα. "
@@ -278,102 +196,110 @@ msgstr ""
 "εκχωρήσετε το μενού που δημιουργήθηκε στη θέση \"Εικόνες κοινωνικών δικτύων"
 "\"."
 
-#: inc/theme-info.php:15
-msgid "Welcome to Courage"
-msgstr ""
+#: inc/theme-info.php:18 inc/theme-info.php:38
+#, fuzzy, php-format
+msgid "Welcome to %1$s %2$s"
+msgstr "Καλώς ήλθατε %1s %2s"
 
-#: inc/theme-info.php:16
+#: inc/theme-info.php:19
 msgid "Theme Info"
 msgstr "Πληροφορίες θέματος"
 
-#: inc/theme-info.php:35
-msgid "Welcome to %1s %2s"
-msgstr "Καλώς ήλθατε %1s %2s"
-
-#: inc/theme-info.php:41
+#: inc/theme-info.php:44
 msgid "Important Links:"
 msgstr "Σημαντικοί σύνδεσμοι:"
 
-#: inc/theme-info.php:42
-msgid "Theme Info Page"
+#: inc/theme-info.php:45
+#, fuzzy
+msgid "Theme Page"
 msgstr "Σελίδα πληροφοριών για το θέμα"
 
-#: inc/theme-info.php:43
+#: inc/theme-info.php:46
 msgid "Changelog"
 msgstr "Αρχείο καταγραφής αλλαγών"
 
-#: inc/theme-info.php:44
+#: inc/theme-info.php:47
 msgid "Theme Demo"
 msgstr "Θέμα Demo"
 
-#: inc/theme-info.php:45 inc/theme-info.php:60
+#: inc/theme-info.php:48 inc/theme-info.php:63
 msgid "Theme Documentation"
 msgstr "Τεκμηρίωση θέματος"
 
-#: inc/theme-info.php:46
+#: inc/theme-info.php:49
 msgid "Rate this theme"
 msgstr "Βαθμολογήστε αυτό το θέμα"
 
-#: inc/theme-info.php:57
+#: inc/theme-info.php:60
+#, php-format
 msgid "Getting Started with %s"
 msgstr "Ξεκινώντας με %s"
 
-#: inc/theme-info.php:62
+#: inc/theme-info.php:66
+#, fuzzy
 msgid ""
-"Need any help to setup and configure this theme? We got you covered with an "
+"You need help to setup and configure this theme? We got you covered with an "
 "extensive theme documentation on our website."
 msgstr ""
 "Χρειάζεστε οποιαδήποτε βοήθεια για να εγκαταστήσετε και να ρυθμίσετε το θέμα "
 "αυτό; Μπορούμε να σας βοηθήσουμε εμείς με εκτεταμένη τεκμηρίωση του θέματος "
 "στην ιστοσελίδα μας."
 
-#: inc/theme-info.php:64
-msgid "Visit Courage Documentation"
-msgstr ""
+#: inc/theme-info.php:70
+#, fuzzy, php-format
+msgid "View %s Documentation"
+msgstr "Τεκμηρίωση θέματος"
 
-#: inc/theme-info.php:69 inc/customizer/customizer.php:28
+#: inc/theme-info.php:76 inc/customizer/customizer.php:28
 msgid "Theme Options"
 msgstr "Ρυθμίσεις θέματος"
 
-#: inc/theme-info.php:71
+#: inc/theme-info.php:79
+#, php-format
 msgid ""
-"Courage supports the awesome Theme Customizer for all theme settings. Click "
-"\"Customize Theme\" to open the Customizer now."
+"%s makes use of the Customizer for all theme settings. Click on \"Customize "
+"Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:73
+#: inc/theme-info.php:82
 msgid "Customize Theme"
 msgstr "Προσαρμογή θέματος"
 
-#: inc/theme-info.php:78
+#: inc/theme-info.php:87 inc/customizer/sections/customizer-upgrade.php:17
 msgid "Pro Version"
 msgstr ""
 
-#: inc/theme-info.php:80
+#: inc/theme-info.php:90
+#, fuzzy
 msgid ""
-"Need more features? Check out the PRO version which comes with additional "
-"features and advanced customization options."
+"You need more features? Purchase the Pro Version to get additional features "
+"and advanced customization options."
 msgstr ""
 "Χρειάζεστε περισσότερα χαρακτηριστικά; Ελέγξτε την PRO εκδοχή η οποία "
 "έρχεται με επιπλέον χαρακτηριστικά και επιλογές προηγμένης "
 "προσαρμοστικότητας."
 
-#: inc/theme-info.php:82 inc/customizer/sections/customizer-upgrade.php:62
-msgid "Learn more about Courage Pro"
+#: inc/theme-info.php:94 inc/customizer/sections/customizer-upgrade.php:65
+#, php-format
+msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/theme-info.php:102
-msgid ""
-"Courage is proudly brought to you by %1s. If you like this theme, %2s :) "
+#: inc/theme-info.php:115
+#, php-format
+msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
 
-#: inc/theme-info.php:104
+#: inc/theme-info.php:118
 msgid "rate it"
 msgstr "Αξιολογήστε το"
 
 #: inc/customizer/customizer.php:49
 msgid "Display Tagline below site title."
 msgstr "Εμφάνιση της γραμμής ετικέτας κάτω από τον τίτλο του site."
+
+#: inc/customizer/frontend/custom-slider.php:33
+msgid "Menu"
+msgstr "Μενού"
 
 #: inc/customizer/sections/customizer-general.php:14
 msgid "General Settings"
@@ -391,6 +317,14 @@ msgstr "Αριστερή πλευρική στήλη"
 msgid "Right Sidebar"
 msgstr "Δεξιά πλευρική στήλη"
 
+#: inc/customizer/sections/customizer-general.php:51
+msgid "Default Fonts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:68
+msgid "Deactivate Google Fonts in case your language is not compatible."
+msgstr ""
+
 #: inc/customizer/sections/customizer-header.php:14
 msgid "Header Settings"
 msgstr ""
@@ -400,9 +334,10 @@ msgid "Header Content"
 msgstr "Περιεχόμενο Κεφαλίδας"
 
 #: inc/customizer/sections/customizer-header.php:46
+#, fuzzy
 msgid ""
-"The Header Content configured below will be displayed on the right hand side "
-"of the header area."
+"The Header Content will be displayed on the right hand side of the header "
+"area."
 msgstr ""
 "Η κεφαλίδα περιεχομένου έχει ρυθμιστεί να εμφανίζετε στη δεξιά πλευρά της "
 "περιοχής κεφαλίδας."
@@ -420,7 +355,8 @@ msgid "Post Settings"
 msgstr "Ρυθμίσεις Δημοσιεύσεων"
 
 #: inc/customizer/sections/customizer-post.php:29
-msgid "Post Length on archives"
+#, fuzzy
+msgid "Post length on archives"
 msgstr "Μήκος θέσης για τα αρχεία"
 
 #: inc/customizer/sections/customizer-post.php:35
@@ -428,7 +364,8 @@ msgid "Show full posts"
 msgstr "Εμφάνιση πλήρους δημοσίευσης"
 
 #: inc/customizer/sections/customizer-post.php:36
-msgid "Show post summaries (excerpt)"
+#, fuzzy
+msgid "Show post excerpts"
 msgstr "Εμφάνιση περίληψη δημοσίευσης (απόσπασμα)"
 
 #: inc/customizer/sections/customizer-post.php:51
@@ -444,73 +381,115 @@ msgid "Display featured images on single posts"
 msgstr "Εμφάνιση προτεινόμενων εικόνων σε μονές δημοσιεύσεις"
 
 #: inc/customizer/sections/customizer-post.php:100
-msgid "Excerpt More Text"
-msgstr "Απόσπασμα περισσότερο κείμενο"
+msgid "Text after Excerpts"
+msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:115
-msgid "Display [...] after text excerpts."
+#, fuzzy
+msgid "Display [...] after excerpts"
 msgstr "Εμφάνισε [...] μετά το αποσπάσματα κειμένου."
+
+#: inc/customizer/sections/customizer-post.php:133
+#, fuzzy
+msgid "Post Meta"
+msgstr "Ρυθμίσεις Δημοσιεύσεων"
+
+#: inc/customizer/sections/customizer-post.php:148
+msgid "Display post date"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:163
+msgid "Display post author"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:178
+msgid "Display post categories"
+msgstr ""
+
+#: inc/customizer/sections/customizer-post.php:193
+msgid "Display post tags"
+msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:14
 msgid "Post Slider"
 msgstr "Δημοσίευση Slider"
 
 #: inc/customizer/sections/customizer-slider.php:30
-msgid "Activate Featured Post Slider"
+#, fuzzy
+msgid "Activate Post Slider"
 msgstr "Ενεργοποιήστε το προτεινόμενο Slider δημοσιεύσεων"
 
 #: inc/customizer/sections/customizer-slider.php:45
-msgid "Display Slider on Magazine Front Page template."
+#, fuzzy
+msgid "Show Slider on Magazine Homepage"
 msgstr "Εμφάνιση του Slider στο πρότυπο περιοδικού. "
 
 #: inc/customizer/sections/customizer-slider.php:60
-msgid "Display Slider on normal blog index."
-msgstr "Εμφάνιση του Slider σε κανονικό blog."
+#, fuzzy
+msgid "Show Slider on posts page"
+msgstr "Εμφάνιση πλήρους δημοσίευσης"
+
+#: inc/customizer/sections/customizer-slider.php:78
+msgid "Select Featured Posts"
+msgstr ""
+
+#: inc/customizer/sections/customizer-slider.php:95
+msgid ""
+"The slideshow displays all your featured posts. You can easily feature posts "
+"by a tag of your choice."
+msgstr ""
 
 #: inc/customizer/sections/customizer-slider.php:113
 msgid "Slider Animation"
 msgstr "Κίνηση του Slider"
 
 #: inc/customizer/sections/customizer-slider.php:120
-msgid "Horizontal Slider"
-msgstr "Οριζόντιο Slider"
-
-#: inc/customizer/sections/customizer-slider.php:121
-msgid "Fade Slider"
-msgstr "Εφέ(fade) Slider"
-
-#: inc/customizer/sections/customizer-upgrade.php:14
-msgid "Courage Pro"
+msgid "Slide Effect"
 msgstr ""
 
-#: inc/customizer/sections/customizer-upgrade.php:30
-msgid "Need more features?"
+#: inc/customizer/sections/customizer-slider.php:121
+msgid "Fade Effect"
+msgstr ""
+
+#: inc/customizer/sections/customizer-upgrade.php:33
+#, fuzzy
+msgid "You need more features?"
 msgstr "Χρειάζεστε περισσότερα χαρακτηριστικά;"
 
-#: inc/customizer/sections/customizer-upgrade.php:46
+#: inc/customizer/sections/customizer-upgrade.php:49
+#, fuzzy
 msgid ""
-"Check out the PRO version which comes with additional features and advanced "
+"Purchase the Pro Version to get additional features and advanced "
 "customization options."
 msgstr ""
 "Ελέγξτε την PRO εκδοχή η οποία έρχεται με επιπλέον χαρακτηριστικά και "
 "επιλογές προηγμένης προσαρμοστικότητας."
 
 #: inc/widgets/widget-category-posts-boxed.php:11
+#, fuzzy
 msgid ""
-"Display latest posts from category in boxed layout. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
+"Displays your posts from a selected category in a boxed layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 "Εμφάνιση των τελευταίων δημοσιεύσεων από κατηγορία σε διάταξη κουτί. "
 "Παρακαλώ χρησιμοποιήστε αυτό το widget μόνο για τον τομέα widget μόνο στο "
 "πρότυπο περιοδικό."
 
 #: inc/widgets/widget-category-posts-boxed.php:13
-msgid "Category Posts Boxed (Courage)"
+#, php-format
+msgid "Category Posts: Boxed (%s)"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:219
+#: inc/widgets/widget-category-posts-columns.php:257
+#: inc/widgets/widget-category-posts-grid.php:242
+msgid "View all posts"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:231
 #: inc/widgets/widget-category-posts-columns.php:269
 #: inc/widgets/widget-category-posts-grid.php:254
+#, php-format
 msgid "View all posts from category %s"
 msgstr "Δείτε όλες τις δημοσιεύσεις από την κατηγορία %s"
 
@@ -537,16 +516,18 @@ msgid "Link Widget Title to Category Archive page"
 msgstr "Σύνδεση τίτλου widget στη σελίδα αρχείου κατηγορίας"
 
 #: inc/widgets/widget-category-posts-columns.php:11
+#, fuzzy
 msgid ""
-"Display latest posts from two specified categories. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
+"Displays your posts from two selected categories. Please use this widget "
+"ONLY in the Magazine Homepage widget area."
 msgstr ""
 "Εμφάνιση των τελευταίων δημοσιεύσεων από τις δύο συγκεκριμένες κατηγορίες. "
 "Παρακαλώ χρησιμοποιήστε αυτό το widget μόνο για τον τομέα widget μόνο στο "
 "πρότυπο περιοδικό."
 
 #: inc/widgets/widget-category-posts-columns.php:13
-msgid "Category Posts Columns (Courage)"
+#, php-format
+msgid "Category Posts: 2 Columns (%s)"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:314
@@ -571,7 +552,8 @@ msgid "Number of posts:"
 msgstr "Αριθμός δημοσιεύσεων:"
 
 #: inc/widgets/widget-category-posts-columns.php:364
-msgid "Highlight First Post (Big Image + Excerpt)"
+#, fuzzy
+msgid "Highlight first post (big image + excerpt)"
 msgstr "Επισημάνετε την πρώτη δημοσίευση (Μεγάλη εικόνα + Απόσπασμα)"
 
 #: inc/widgets/widget-category-posts-columns.php:371
@@ -579,16 +561,18 @@ msgid "Link Category Titles to Category Archive pages"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-grid.php:11
+#, fuzzy
 msgid ""
-"Display latest posts from category in a grid layout. Please use this widget "
-"ONLY on Frontpage Magazine widget area."
+"Displays your posts from a selected category in a grid layout. Please use "
+"this widget ONLY in the Magazine Homepage widget area."
 msgstr ""
 "Εμφάνιση των τελευταίων δημοσιεύσεων από την κατηγορία σε διάταξη πλέγματος. "
 "Παρακαλώ χρησιμοποιήστε αυτό το widget μόνο για τον τομέα widget μόνο στο "
 "πρότυπο περιοδικό."
 
 #: inc/widgets/widget-category-posts-grid.php:13
-msgid "Category Posts Grid (Courage)"
+#, php-format
+msgid "Category Posts: Grid (%s)"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-grid.php:320
@@ -598,3 +582,57 @@ msgstr "Διάλεξε έναν ζυγό αριθμό (2, 4, 6, 8)."
 #: inc/widgets/widget-category-posts-grid.php:327
 msgid "Display as small posts grid with thumbnails"
 msgstr "Προβολή ως μικρές δημοσιεύσεις σε πλέγμα με μικρογραφίες"
+
+#~ msgid ""
+#~ "The page you trying to reach does not exist, or has been moved. Please "
+#~ "use the menus or the search box to find what you are looking for"
+#~ msgstr ""
+#~ "Η σελίδα που προσπαθείτε να φτάσετε δεν υπάρχει ή έχει μετακινηθεί. "
+#~ "Παρακαλώ χρησιμοποιήστε το μενού ή το πλαίσιο αναζήτησης για να βρείτε "
+#~ "αυτό που ψάχνετε."
+
+#~ msgid "Search"
+#~ msgstr "Αναζήτηση"
+
+#~ msgid "Recent Posts"
+#~ msgstr "Πρόσφατες δημοσιεύσεις"
+
+#~ msgid "Pages"
+#~ msgstr "Σελίδες"
+
+#~ msgid "Previous"
+#~ msgstr "Προηγούμενη"
+
+#~ msgid "Next"
+#~ msgstr "Επόμενη"
+
+#~ msgid "Return to Gallery"
+#~ msgstr "Επιστροφή στην γκαλερί"
+
+#~ msgid "Return to"
+#~ msgstr "Επιστροφή στην"
+
+#~ msgid "Widget Area"
+#~ msgstr "Περιοχή γραφικών στοιχείων"
+
+#~ msgid ""
+#~ "There are no active widgets to be displayed. Please go to Appearance -> "
+#~ "Widgets to setup your sidebar."
+#~ msgstr ""
+#~ "Δεν υπάρχουν σε λειτουργία widgets που θα εμφανίζονται. Παρακαλούμε "
+#~ "πηγαίνετε στο Εμφάνιση-> Widgets για να στήσετε την πλαϊνή μπάρα σας."
+
+#~ msgid "WordPress"
+#~ msgstr "WordPress"
+
+#~ msgid "Excerpt More Text"
+#~ msgstr "Απόσπασμα περισσότερο κείμενο"
+
+#~ msgid "Display Slider on normal blog index."
+#~ msgstr "Εμφάνιση του Slider σε κανονικό blog."
+
+#~ msgid "Horizontal Slider"
+#~ msgstr "Οριζόντιο Slider"
+
+#~ msgid "Fade Slider"
+#~ msgstr "Εφέ(fade) Slider"
