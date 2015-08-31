@@ -375,5 +375,3 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 <?php
 	}
 }
-register_widget('Courage_Category_Posts_Columns_Widget');
-?>

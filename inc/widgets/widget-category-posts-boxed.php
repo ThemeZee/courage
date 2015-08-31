@@ -299,5 +299,3 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 <?php
 	}
 }
-register_widget('Courage_Category_Posts_Boxed_Widget');
-?>
