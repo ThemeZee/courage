@@ -337,3 +337,12 @@ class Courage_Category_Posts_Grid_Widget extends WP_Widget {
 <?php
 	}
 }
+
+// Register Widget
+add_action( 'widgets_init', 'courage_register_category_posts_grid_widget' );
+
+function courage_register_category_posts_grid_widget() {
+
+	register_widget('Courage_Category_Posts_Grid_Widget');
+	
+}

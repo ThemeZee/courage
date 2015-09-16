@@ -172,11 +172,6 @@ function courage_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle">',
 		'after_title' => '</h3>',
 	));
-	
-	// Register Category Posts Widgets
-	register_widget('Courage_Category_Posts_Boxed_Widget');
-	register_widget('Courage_Category_Posts_Columns_Widget');
-	register_widget('Courage_Category_Posts_Grid_Widget');
 
 }
 endif;
