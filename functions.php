@@ -5,7 +5,6 @@
 // Load default style.css and Javascripts
 add_action('wp_enqueue_scripts', 'courage_enqueue_scripts');
 
-if ( ! function_exists( 'courage_enqueue_scripts' ) ):
 function courage_enqueue_scripts() {
 
 	// Get Theme Options from Database
@@ -35,20 +34,16 @@ function courage_enqueue_scripts() {
 
 	endif;
 
+	// Register Comment Reply Script for Threaded Comments
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
+
 	// Register and Enqueue Fonts
 	wp_enqueue_style('courage-default-fonts', courage_google_fonts_url(), array(), null );
 
 }
-endif;
 
-// Load comment-reply.js if comment form is loaded and threaded comments activated
-add_action( 'comment_form_before', 'courage_enqueue_comment_reply' );
-
-function courage_enqueue_comment_reply() {
-	if( get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
 
 // Retrieve Font URL to register default Google Fonts
 function courage_google_fonts_url() {
@@ -81,7 +76,6 @@ function courage_google_fonts_url() {
 // Setup Function: Registers support for various WordPress features
 add_action( 'after_setup_theme', 'courage_setup' );
 
-if ( ! function_exists( 'courage_setup' ) ):
 function courage_setup() {
 
 	// Set Content Width
@@ -122,13 +116,11 @@ function courage_setup() {
 	register_nav_menu( 'social', __('Social Icons', 'courage') );
 
 }
-endif;
 
 
 // Add custom Image Sizes
 add_action( 'after_setup_theme', 'courage_add_image_sizes' );
 
-if ( ! function_exists( 'courage_add_image_sizes' ) ):
 function courage_add_image_sizes() {
 	
 	// Add Custom Header Image Size
@@ -142,13 +134,11 @@ function courage_add_image_sizes() {
 	add_image_size('courage-category-posts-widget-big', 540, 180, true);
 
 }
-endif;
 
 
 // Register Sidebars
 add_action( 'widgets_init', 'courage_register_sidebars' );
 
-if ( ! function_exists( 'courage_register_sidebars' ) ):
 function courage_register_sidebars() {
 
 	// Register Sidebar
@@ -174,7 +164,6 @@ function courage_register_sidebars() {
 	));
 
 }
-endif;
 
 
 /*==================================== INCLUDE FILES ====================================*/
