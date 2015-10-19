@@ -69,14 +69,47 @@
 }
 
 .tzwb-posts-list .tzwb-postmeta {
-	margin: 0.3em 0 0;
+	margin: 0.1em 0 0;
 	padding: 0;
 	font-size: 0.85em;
-	color: #777;
+	color: #222;
+}
+
+.tzwb-posts-list .tzwb-postmeta a:link, 
+.tzwb-posts-list .tzwb-postmeta a:visited {
+	color: #444;
+	text-decoration: underline;
+}
+
+.tzwb-posts-list .tzwb-postmeta a:hover, 
+.tzwb-posts-list .tzwb-postmeta a:active{
+	text-decoration: none;
 }
 
 .tzwb-posts-list  .tzwb-postmeta span {
 	margin-right: 0.4em;
+}
+
+.tzwb-posts-list .tzwb-postmeta span:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px 'Genericons';
+	vertical-align: top;
+	color: #252525;
+	margin: 0.15em 0 0 0;
+}
+
+.tzwb-posts-list .tzwb-postmeta .tzwb-meta-date:before{
+	content: '\f307';
+	margin-right: 0.2em;
+}
+
+.tzwb-posts-list .tzwb-postmeta .tzwb-meta-author:before{
+	content: '\f304';
+}
+
+.tzwb-posts-list .tzwb-postmeta .tzwb-meta-comments:before{
+	content: '\f300';
 }
 
 
@@ -107,10 +140,19 @@
 }
 
 .tzwb-comments-list .tzwb-comment-date {
-	margin: 0.3em 0 0;
-	padding: 0;
+	margin: 0.1em 0 0;
 	font-size: 0.85em;
-	color: #777;
+	color: #444;
+}
+
+.tzwb-comments-list .tzwb-comment-date:before {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px 'Genericons';
+	vertical-align: top;
+	color: #252525;
+	margin: 0.15em 0.2em 0 0;
+	content: '\f307';
 }
 
 
@@ -144,7 +186,8 @@
 	display: block;
 	margin: 0 0.15em 0.15em;
 	padding: 0.4em 0.8em;
-	font-size: 0.9em;
+	font-size: 0.95em;
+	font-weight: bold;
 	text-decoration: none;
 	color: #252525;
 	border: 1px solid #e2e2e2;
@@ -176,35 +219,38 @@
 	margin: 1em 0 0 0;
 }
 
-.tzwb-tabbed-content .tzwb-tabcontent li.widget-thumb {
+.tzwb-tabbed-content .tzwb-tabcontent li.tzwb-has-thumbnail {
 	list-style: none;
 	margin: 0 0 0.5em 0;
 	overflow: auto;
 }
 
-.tzwb-tabbed-content .tzwb-tabcontent  li.widget-thumb .wp-post-image {
+.tzwb-tabbed-content .tzwb-tabcontent  li.tzwb-has-thumbnail .wp-post-image {
 	float: left;
 	margin: 0.3em 0.8em 0.5em 0;
-	max-width: 80px;
+	max-width: 85px;
 	height: auto;
+	-webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	border-radius: 0.3em;
 }
 
-.tzwb-tabbed-content .tzwb-tabcontent li.widget-avatar {
+.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar {
 	list-style: none;
 	margin: 0 0 0.3em 0;
 	overflow: auto;
 }
 
-.tzwb-tabbed-content .tzwb-tabcontent li.widget-avatar img {
+.tzwb-tabbed-content .tzwb-tabcontent .tzwb-comments-list li.tzwb-has-avatar .avatar {
 	float: left;
 	margin: 0.3em 0.8em 0.3em 0;
 }
 
-.tzwb-tabbed-content .tzwb-tabcontent ul li .widget-postmeta {
-	margin: 0.1em 0;
+.tzwb-tabbed-content .tzwb-tabcontent ul li .tzwb-postmeta {
+	margin: 0.1em 0 0;
 	padding: 0;
-	font-size: 0.8em;
-	color: #777;
+	font-size: 0.85em;
+	color: #444;
 }
 
 
@@ -323,4 +369,41 @@
 
 .tzwb-social-icons-menu li a .screen-reader-text {
 	display: none;
+}
+
+
+/*--------------------------------------------------------------
+# Widget Styling in Footer area
+---------------------------------------------------------------- */
+#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta,
+#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta a:link, 
+#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta a:visited,
+#footer-widgets .widget .tzwb-comments-list .tzwb-comment-date {
+	color: #eee;
+}
+
+#footer-widgets .widget .tzwb-comments-list .tzwb-comment-date:before,
+#footer-widgets .widget .tzwb-posts-list .tzwb-postmeta span:before {
+	color: #fff;
+}
+
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi-wrap {
+	background: none;
+}
+
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a {
+	border: 1px solid rgba(255,255,255,0.08);
+}
+
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:link, 
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:visited  {
+	background: rgba(255,255,255,0.04);
+	color: #ccc;
+}
+
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:hover, 
+#footer-widgets .tzwb-tabbed-content .tzwb-tabnavi li a:active  {
+	background: rgba(255,255,255,0.08);
+	text-decoration: none;
+	color: #eee;
 }
