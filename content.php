@@ -8,7 +8,7 @@
 		<div class="postmeta"><?php courage_display_postmeta(); ?></div>
 
 		<div class="entry clearfix">
-			<?php the_content(__('Read more', 'courage')); ?>
+			<?php the_content( esc_html__( 'Read more', 'courage' ) ); ?>
 			<div class="page-links"><?php wp_link_pages(); ?></div>
 		</div>
 		

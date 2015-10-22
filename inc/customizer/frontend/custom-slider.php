@@ -30,7 +30,7 @@ function courage_custom_slider_params() {
 	
 	
 	// Set Navigation Menu Title
-	$nav_title = __('Menu', 'courage');
+	$nav_title = esc_html__( 'Menu', 'courage' );
 	
 	// Passing Parameters to Javascript
 	wp_localize_script( 'courage-jquery-navigation', 'courage_mainnav_title', $nav_title );

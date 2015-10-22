@@ -15,8 +15,8 @@ function courage_add_theme_info_page() {
 	$theme = wp_get_theme(); 
 	
 	add_theme_page( 
-		sprintf( __( 'Welcome to %1$s %2$s', 'courage' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ), 
-		__('Theme Info', 'courage'), 
+		sprintf( esc_html__( 'Welcome to %1$s %2$s', 'courage' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ), 
+		esc_html__( 'Theme Info', 'courage' ), 
 		'edit_theme_options', 
 		'courage', 
 		'courage_display_theme_info_page'
@@ -35,18 +35,18 @@ function courage_display_theme_info_page() {
 			
 	<div class="wrap theme-info-wrap">
 
-		<h1><?php printf( __( 'Welcome to %1$s %2$s', 'courage' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ); ?></h1>
+		<h1><?php printf( esc_html__( 'Welcome to %1$s %2$s', 'courage' ), $theme->get( 'Name' ), $theme->get( 'Version' ) ); ?></h1>
 
 		<div class="theme-description"><?php echo $theme->get( 'Description' ); ?></div>
 		
 		<hr>
 		<div class="important-links clearfix">
-			<p><strong><?php _e('Important Links:', 'courage'); ?></strong>
-				<a href="http://themezee.com/themes/courage/" target="_blank"><?php _e('Theme Page', 'courage'); ?></a>
-				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php _e('Changelog', 'courage'); ?></a>
-				<a href="http://preview.themezee.com/courage/" target="_blank"><?php _e('Theme Demo', 'courage'); ?></a>
-				<a href="http://themezee.com/docs/courage-documentation/" target="_blank"><?php _e('Theme Documentation', 'courage'); ?></a>
-				<a href="http://wordpress.org/support/view/theme-reviews/courage?filter=5" target="_blank"><?php _e('Rate this theme', 'courage'); ?></a>
+			<p><strong><?php esc_html_e( 'Important Links:', 'courage' ); ?></strong>
+				<a href="http://themezee.com/themes/courage/" target="_blank"><?php esc_html_e( 'Theme Page', 'courage' ); ?></a>
+				<a href="<?php echo get_template_directory_uri(); ?>/changelog.txt" target="_blank"><?php esc_html_e( 'Changelog', 'courage' ); ?></a>
+				<a href="http://preview.themezee.com/courage/" target="_blank"><?php esc_html_e( 'Theme Demo', 'courage' ); ?></a>
+				<a href="http://themezee.com/docs/courage-documentation/" target="_blank"><?php esc_html_e( 'Theme Documentation', 'courage' ); ?></a>
+				<a href="http://wordpress.org/support/view/theme-reviews/courage?filter=5" target="_blank"><?php esc_html_e( 'Rate this theme', 'courage' ); ?></a>
 			</p>
 		</div>
 		<hr>
@@ -57,41 +57,41 @@ function courage_display_theme_info_page() {
 
 				<div class="column column-half clearfix">
 				
-					<h3><?php printf( __( 'Getting Started with %s', 'courage' ), $theme->get( 'Name' ) ); ?></h3>
+					<h3><?php printf( esc_html__( 'Getting Started with %s', 'courage' ), $theme->get( 'Name' ) ); ?></h3>
 						
 					<div class="section">
-						<h4><?php _e( 'Theme Documentation', 'courage' ); ?></h4>
+						<h4><?php esc_html_e( 'Theme Documentation', 'courage' ); ?></h4>
 						
 						<p class="about">
-							<?php _e( 'You need help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'courage' ); ?>
+							<?php esc_html_e( 'You need help to setup and configure this theme? We got you covered with an extensive theme documentation on our website.', 'courage' ); ?>
 						</p>
 						<p>
 							<a href="http://themezee.com/docs/courage-documentation/" target="_blank" class="button button-secondary">
-								<?php printf( __( 'View %s Documentation', 'courage' ), $theme->get( 'Name' ) ); ?>
+								<?php printf( esc_html__( 'View %s Documentation', 'courage' ), $theme->get( 'Name' ) ); ?>
 							</a>
 						</p>
 					</div>
 					
 					<div class="section">
-						<h4><?php _e( 'Theme Options', 'courage' ); ?></h4>
+						<h4><?php esc_html_e( 'Theme Options', 'courage' ); ?></h4>
 						
 						<p class="about">
-							<?php printf( __( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'courage' ), $theme->get( 'Name' ) ); ?>
+							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'courage' ), $theme->get( 'Name' ) ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php _e('Customize Theme', 'courage'); ?></a>
+							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'courage' ); ?></a>
 						</p>
 					</div>
 					
 					<div class="section">
-						<h4><?php _e( 'Pro Version', 'courage' ); ?></h4>
+						<h4><?php esc_html_e( 'Pro Version', 'courage' ); ?></h4>
 						
 						<p class="about">
-							<?php _e( 'You need more features? Purchase the Pro Version to get additional features and advanced customization options.', 'courage' ); ?>
+							<?php esc_html_e( 'You need more features? Purchase the Pro Version to get additional features and advanced customization options.', 'courage' ); ?>
 						</p>
 						<p>
 							<a href="http://themezee.com/themes/courage/#PROVersion-1" target="_blank" class="button button-secondary">
-								<?php printf( __( 'Learn more about %s Pro', 'courage' ), $theme->get( 'Name' ) ); ?>
+								<?php printf( esc_html__( 'Learn more about %s Pro', 'courage' ), $theme->get( 'Name' ) ); ?>
 							</a>
 						</p>
 					</div>
@@ -112,10 +112,10 @@ function courage_display_theme_info_page() {
 		
 		<div id="theme-author">
 			
-			<p><?php printf( __( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'courage' ), 
+			<p><?php printf( esc_html__( '%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)', 'courage' ), 
 				$theme->get( 'Name' ),
 				'<a target="_blank" href="http://themezee.com" title="ThemeZee">ThemeZee</a>',
-				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/courage?filter=5" title="Courage Review">' . __( 'rate it', 'courage' ) . '</a>'); ?>
+				'<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/courage?filter=5" title="Courage Review">' . esc_html__( 'rate it', 'courage' ) . '</a>'); ?>
 			</p>
 		
 		</div>

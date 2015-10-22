@@ -11,7 +11,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
 
 	// Add Sections for Post Settings
 	$wp_customize->add_section( 'courage_section_post', array(
-        'title'    => __( 'Post Settings', 'courage' ),
+        'title'    => esc_html__( 'Post Settings', 'courage' ),
         'priority' => 30,
 		'panel' => 'courage_options_panel' 
 		)
@@ -26,14 +26,14 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_posts_length', array(
-        'label'    => __( 'Post length on archives', 'courage' ),
+        'label'    => esc_html__( 'Post length on archives', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[posts_length]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'index' => __( 'Show full posts', 'courage' ),
-            'excerpt' => __( 'Show post excerpts', 'courage' )
+            'index' => esc_html__( 'Show full posts', 'courage' ),
+            'excerpt' => esc_html__( 'Show post excerpts', 'courage' )
 			)
 		)
 	);
@@ -48,7 +48,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Header_Control(
         $wp_customize, 'courage_control_post_images', array(
-            'label' => __( 'Post Images', 'courage' ),
+            'label' => esc_html__( 'Post Images', 'courage' ),
             'section' => 'courage_section_post',
             'settings' => 'courage_theme_options[post_images]',
             'priority' => 	2
@@ -63,7 +63,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_posts_thumbnails_index', array(
-        'label'    => __( 'Display featured images on archive pages', 'courage' ),
+        'label'    => esc_html__( 'Display featured images on archive pages', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[post_thumbnails_index]',
         'type'     => 'checkbox',
@@ -79,7 +79,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_posts_thumbnails_single', array(
-        'label'    => __( 'Display featured images on single posts', 'courage' ),
+        'label'    => esc_html__( 'Display featured images on single posts', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[post_thumbnails_single]',
         'type'     => 'checkbox',
@@ -97,7 +97,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Header_Control(
         $wp_customize, 'courage_control_excerpt_text_headline', array(
-            'label' => __( 'Text after Excerpts', 'courage' ),
+            'label' => esc_html__( 'Text after Excerpts', 'courage' ),
             'section' => 'courage_section_post',
             'settings' => 'courage_theme_options[excerpt_text_headline]',
             'priority' => 5
@@ -112,7 +112,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_excerpt_text', array(
-        'label'    => __( 'Display [...] after excerpts', 'courage' ),
+        'label'    => esc_html__( 'Display [...] after excerpts', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[excerpt_text]',
         'type'     => 'checkbox',
@@ -130,7 +130,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Header_Control(
         $wp_customize, 'courage_control_postmeta_headline', array(
-            'label' => __( 'Post Meta', 'courage' ),
+            'label' => esc_html__( 'Post Meta', 'courage' ),
             'section' => 'courage_section_post',
             'settings' => 'courage_theme_options[postmeta_headline]',
             'priority' => 7
@@ -145,7 +145,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_meta_date', array(
-        'label'    => __( 'Display post date', 'courage' ),
+        'label'    => esc_html__( 'Display post date', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[meta_date]',
         'type'     => 'checkbox',
@@ -160,7 +160,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_meta_author', array(
-        'label'    => __( 'Display post author', 'courage' ),
+        'label'    => esc_html__( 'Display post author', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[meta_author]',
         'type'     => 'checkbox',
@@ -175,7 +175,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_meta_category', array(
-        'label'    => __( 'Display post categories', 'courage' ),
+        'label'    => esc_html__( 'Display post categories', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[meta_category]',
         'type'     => 'checkbox',
@@ -190,7 +190,7 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_meta_tags', array(
-        'label'    => __( 'Display post tags', 'courage' ),
+        'label'    => esc_html__( 'Display post tags', 'courage' ),
         'section'  => 'courage_section_post',
         'settings' => 'courage_theme_options[meta_tags]',
         'type'     => 'checkbox',

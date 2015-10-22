@@ -8,9 +8,9 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'courage_category_posts_columns', 
-			'description' => __('Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'courage')
+			'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'courage' )
 		);
-		parent::__construct('courage_category_posts_columns', sprintf( __('Category Posts: 2 Columns (%s)', 'courage'), wp_get_theme()->Name ), $widget_ops);
+		parent::__construct('courage_category_posts_columns', sprintf( esc_html__( 'Category Posts: 2 Columns (%s)', 'courage' ), wp_get_theme()->Name ), $widget_ops);
 		
 		// Delete Widget Cache on certain actions
 		add_action( 'save_post', array( $this, 'delete_widget_cache' ) );
@@ -264,7 +264,7 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 				// Check if "All Categories" is selected
 				if( $category_id == 0 ) :
 				
-					$link_title = __('View all posts', 'courage');
+					$link_title = esc_html__( 'View all posts', 'courage' );
 					
 					// Set Link URL to always point to latest posts page
 					if ( get_option( 'show_on_front' ) == 'page' ) :
@@ -276,7 +276,7 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 				else :
 					
 					// Set Link URL and Title for Category
-					$link_title = sprintf( __('View all posts from category %s', 'courage'), get_cat_name( $category_id ) );
+					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'courage' ), get_cat_name( $category_id ) );
 					$link_url = esc_url( get_category_link( $category_id ) );
 					
 				endif;
@@ -322,16 +322,16 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 
 ?>
 		<p>
-			<label for="<?php echo $this->get_field_id('category_one_title'); ?>"><?php _e('Left Category Title:', 'courage'); ?>
+			<label for="<?php echo $this->get_field_id('category_one_title'); ?>"><?php esc_html_e( 'Left Category Title:', 'courage' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('category_one_title'); ?>" name="<?php echo $this->get_field_name('category_one_title'); ?>" type="text" value="<?php echo $category_one_title; ?>" />
 			</label>
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id('category_one'); ?>"><?php _e('Left Category:', 'courage'); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category_one'); ?>"><?php esc_html_e( 'Left Category:', 'courage' ); ?></label><br/>
 			<?php // Display Category One Select
 				$args = array(
-					'show_option_all'    => __('All Categories', 'courage'),
+					'show_option_all'    => esc_html__( 'All Categories', 'courage' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $category_one,
@@ -343,16 +343,16 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 		</p>
 		
 				<p>
-			<label for="<?php echo $this->get_field_id('category_two_title'); ?>"><?php _e('Right Category Title:', 'courage'); ?>
+			<label for="<?php echo $this->get_field_id('category_two_title'); ?>"><?php esc_html_e( 'Right Category Title:', 'courage' ); ?>
 				<input class="widefat" id="<?php echo $this->get_field_id('category_two_title'); ?>" name="<?php echo $this->get_field_name('category_two_title'); ?>" type="text" value="<?php echo $category_two_title; ?>" />
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('category_two'); ?>"><?php _e('Right Category:', 'courage'); ?></label><br/>
+			<label for="<?php echo $this->get_field_id('category_two'); ?>"><?php esc_html_e( 'Right Category:', 'courage' ); ?></label><br/>
 			<?php // Display Category One Select
 				$args = array(
-					'show_option_all'    => __('All Categories', 'courage'),
+					'show_option_all'    => esc_html__( 'All Categories', 'courage' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
 					'selected'           => $category_two,
@@ -364,7 +364,7 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts:', 'courage'); ?>
+			<label for="<?php echo $this->get_field_id('number'); ?>"><?php esc_html_e( 'Number of posts:', 'courage' ); ?>
 				<input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo (int)$number; ?>" size="3" />
 			</label>
 		</p>
@@ -372,24 +372,24 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id('highlight_post'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $highlight_post ) ; ?> id="<?php echo $this->get_field_id('highlight_post'); ?>" name="<?php echo $this->get_field_name('highlight_post'); ?>" />
-				<?php _e('Highlight first post (big image + excerpt)', 'courage'); ?>
+				<?php esc_html_e( 'Highlight first post (big image + excerpt)', 'courage' ); ?>
 			</label>
 		</p>
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
 				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
-				<?php _e('Link Category Titles to Category Archive pages', 'courage'); ?>
+				<?php esc_html_e( 'Link Category Titles to Category Archive pages', 'courage' ); ?>
 			</label>
 		</p>
 		
 		<p>
-			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php _e( 'Post Meta:', 'courage' ); ?></label><br/>
+			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php esc_html_e( 'Post Meta:', 'courage' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'postmeta' ); ?>" name="<?php echo $this->get_field_name( 'postmeta' ); ?>">
-				<option value="0" <?php selected($postmeta, 0); ?>><?php _e( 'Hide post meta', 'courage' ); ?></option>
-				<option value="1" <?php selected($postmeta, 1); ?>><?php _e( 'Display post date', 'courage' ); ?></option>
-				<option value="2" <?php selected($postmeta, 2); ?>><?php _e( 'Display date and author', 'courage' ); ?></option>
-				<option value="3" <?php selected($postmeta, 3); ?>><?php _e( 'Display date and comments', 'courage' ); ?></option>
+				<option value="0" <?php selected($postmeta, 0); ?>><?php esc_html_e( 'Hide post meta', 'courage' ); ?></option>
+				<option value="1" <?php selected($postmeta, 1); ?>><?php esc_html_e( 'Display post date', 'courage' ); ?></option>
+				<option value="2" <?php selected($postmeta, 2); ?>><?php esc_html_e( 'Display date and author', 'courage' ); ?></option>
+				<option value="3" <?php selected($postmeta, 3); ?>><?php esc_html_e( 'Display date and comments', 'courage' ); ?></option>
 			</select>
 		</p>
 		

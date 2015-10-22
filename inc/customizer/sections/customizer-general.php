@@ -11,7 +11,7 @@ function courage_customize_register_general_settings( $wp_customize ) {
 
 	// Add Section for Theme Options
 	$wp_customize->add_section( 'courage_section_general', array(
-        'title'    => __( 'General Settings', 'courage' ),
+        'title'    => esc_html__( 'General Settings', 'courage' ),
         'priority' => 10,
 		'panel' => 'courage_options_panel' 
 		)
@@ -26,14 +26,14 @@ function courage_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_layout', array(
-        'label'    => __( 'Theme Layout', 'courage' ),
+        'label'    => esc_html__( 'Theme Layout', 'courage' ),
         'section'  => 'courage_section_general',
         'settings' => 'courage_theme_options[layout]',
         'type'     => 'radio',
 		'priority' => 1,
         'choices'  => array(
-            'left-sidebar' => __( 'Left Sidebar', 'courage' ),
-            'right-sidebar' => __( 'Right Sidebar', 'courage')
+            'left-sidebar' => esc_html__( 'Left Sidebar', 'courage' ),
+            'right-sidebar' => esc_html__( 'Right Sidebar', 'courage' )
 			)
 		)
 	);
@@ -48,7 +48,7 @@ function courage_customize_register_general_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Header_Control(
         $wp_customize, 'courage_control_default_fonts', array(
-            'label' => __( 'Default Fonts', 'courage' ),
+            'label' => esc_html__( 'Default Fonts', 'courage' ),
             'section' => 'courage_section_general',
             'settings' => 'courage_theme_options[default_fonts]',
             'priority' => 2
@@ -65,7 +65,7 @@ function courage_customize_register_general_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_deactivate_google_fonts', array(
-        'label'    => __( 'Deactivate Google Fonts in case your language is not compatible.', 'courage' ),
+        'label'    => esc_html__( 'Deactivate Google Fonts in case your language is not compatible.', 'courage' ),
         'section'  => 'courage_section_general',
         'settings' => 'courage_theme_options[deactivate_google_fonts]',
         'type'     => 'checkbox',

@@ -80,42 +80,38 @@ if ( ! function_exists( 'courage_display_postmeta' ) ):
 			
 		endif;
 
-		edit_post_link(__( 'Edit Post', 'courage' ));
+		edit_post_link( esc_html__( 'Edit Post', 'courage' ) );
 	}
 	
 endif;
 
 
 // Display Post Date
-function courage_meta_date() { ?>		
+function courage_meta_date() {		
 		
-	<span class="meta-date">
-	<?php printf('<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>', 
-			esc_url( get_permalink() ),
-			esc_attr( get_the_time() ),
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() )
-		);
-	?>
-	</span>
+	$time_string = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date published updated" datetime="%3$s">%4$s</time></a>',
+		esc_url( get_permalink() ),
+		esc_attr( get_the_time() ),
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() )
+	);
+
+	echo '<span class="meta-date">' . $time_string . '</span>';
 	
-<?php
 }
 
 
 // Display Post Author
-function courage_meta_author() { ?>		
-		
-	<span class="meta-author author vcard">
-	<?php printf('<a class="fn" href="%1$s" title="%2$s" rel="author">%3$s</a>', 
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'courage' ), get_the_author() ) ),
-			get_the_author()
-		);
-	?>
-	</span>
-			
-<?php
+function courage_meta_author() {  
+	
+	$author_string = sprintf( '<a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a>', 
+		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+		esc_attr( sprintf( esc_html__( 'View all posts by %s', 'courage' ), get_the_author() ) ),
+		esc_html( get_the_author() )
+	);
+	
+	echo '<span class="meta-author author vcard"> ' . $author_string . '</span>';
+
 }
 
 
@@ -123,7 +119,7 @@ function courage_meta_author() { ?>
 function courage_meta_comments() { ?>		
 		
 	<span class="meta-comments">
-		<?php comments_popup_link( __('Leave a comment', 'courage'),__('One comment','courage'),__('% comments','courage') ); ?>
+		<?php comments_popup_link( esc_html__( 'Leave a comment', 'courage' ), esc_html__( 'One comment', 'courage' ), esc_html__( '% comments', 'courage' ) ); ?>
 	</span>
 			
 <?php
@@ -250,7 +246,7 @@ add_action( 'courage_footer_text', 'courage_display_footer_text' );
 function courage_display_footer_text() { ?>
 
 	<span class="credit-link">
-		<?php printf( __( 'Powered by %1$s and %2$s.', 'courage' ),  
+		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'courage' ),  
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
 			'<a href="http://themezee.com/themes/courage/" title="Courage WordPress Theme">Courage</a>'
 		); ?>
@@ -284,7 +280,7 @@ function courage_display_social_icons() {
 	else: // Display Hint how to configure Social Icons ?>
 
 		<p class="social-icons-hint">
-			<?php _e('Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'courage'); ?>
+			<?php esc_html_e( 'Please go to Appearance &#8594; Menus and create a new custom menu with custom links to all your social networks. Then click on "Manage Locations" tab and assign your created menu to the "Social Icons" location.', 'courage' ); ?>
 		</p>
 <?php
 	endif;
@@ -301,8 +297,8 @@ function courage_list_comments($comment, $args, $depth) {
 	if( $comment->comment_type == 'pingback' or $comment->comment_type == 'trackback' ) : ?>
 
 		<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-			<p><?php _e( 'Pingback:', 'courage' ); ?> <?php comment_author_link(); ?>
-			<?php edit_comment_link( __( '(Edit)', 'courage' ), '<span class="edit-link">', '</span>' ); ?>
+			<p><?php esc_html_e( 'Pingback:', 'courage' ); ?> <?php comment_author_link(); ?>
+			<?php edit_comment_link( esc_html__( '(Edit)', 'courage' ), '<span class="edit-link">', '</span>' ); ?>
 			</p>
 
 	<?php else : ?>
@@ -317,12 +313,12 @@ function courage_list_comments($comment, $args, $depth) {
 				</div>
 
 		<?php if ($comment->comment_approved == '0') : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'courage' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'courage' ); ?></p>
 		<?php endif; ?>
 
 				<div class="comment-meta commentmetadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf(__('%1$s at %2$s', 'courage'), get_comment_date(),  get_comment_time()) ?></a>
-					<?php edit_comment_link(__('(Edit)', 'courage'),'  ','') ?>
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php printf( esc_html__( '%1$s at %2$s', 'courage' ), get_comment_date(),  get_comment_time() ) ?></a>
+					<?php edit_comment_link( esc_html__( '(Edit)', 'courage' ),'  ','' ) ?>
 				</div>
 
 				<div class="comment-content"><?php comment_text(); ?></div>

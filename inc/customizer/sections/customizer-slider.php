@@ -11,7 +11,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 
 	// Add Sections for Slider Settings
 	$wp_customize->add_section( 'courage_section_slider', array(
-        'title'    => __( 'Post Slider', 'courage' ),
+        'title'    => esc_html__( 'Post Slider', 'courage' ),
         'priority' => 50,
 		'panel' => 'courage_options_panel' 
 		)
@@ -27,7 +27,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Header_Control(
         $wp_customize, 'courage_control_slider_activated', array(
-            'label' => __( 'Activate Post Slider', 'courage' ),
+            'label' => esc_html__( 'Activate Post Slider', 'courage' ),
             'section' => 'courage_section_slider',
             'settings' => 'courage_theme_options[slider_active_header]',
             'priority' => 1
@@ -42,7 +42,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_slider_active_magazine', array(
-        'label'    => __( 'Show Slider on Magazine Homepage', 'courage' ),
+        'label'    => esc_html__( 'Show Slider on Magazine Homepage', 'courage' ),
         'section'  => 'courage_section_slider',
         'settings' => 'courage_theme_options[slider_active_magazine]',
         'type'     => 'checkbox',
@@ -57,7 +57,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_slider_active_blog', array(
-        'label'    => __( 'Show Slider on posts page', 'courage' ),
+        'label'    => esc_html__( 'Show Slider on posts page', 'courage' ),
         'section'  => 'courage_section_slider',
         'settings' => 'courage_theme_options[slider_active_blog]',
         'type'     => 'checkbox',
@@ -75,7 +75,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Header_Control(
         $wp_customize, 'courage_control_featured_posts_header', array(
-            'label' => __( 'Select Featured Posts', 'courage' ),
+            'label' => esc_html__( 'Select Featured Posts', 'courage' ),
             'section' => 'courage_section_slider',
             'settings' => 'courage_theme_options[featured_posts_header]',
             'priority' => 4,
@@ -92,7 +92,7 @@ function courage_customize_register_slider_settings( $wp_customize ) {
     );
     $wp_customize->add_control( new Courage_Customize_Description_Control(
         $wp_customize, 'courage_control_featured_posts_description', array(
-			'label'    => __( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'courage' ),
+			'label'    => esc_html__( 'The slideshow displays all your featured posts. You can easily feature posts by a tag of your choice.', 'courage' ),
             'section' => 'courage_section_slider',
             'settings' => 'courage_theme_options[featured_posts_description]',
             'priority' => 5,
@@ -110,15 +110,15 @@ function courage_customize_register_slider_settings( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_slider_animation', array(
-        'label'    => __( 'Slider Animation', 'courage' ),
+        'label'    => esc_html__( 'Slider Animation', 'courage' ),
         'section'  => 'courage_section_slider',
         'settings' => 'courage_theme_options[slider_animation]',
         'type'     => 'radio',
 		'priority' => 9,
 		'active_callback' => 'courage_slider_activated_callback',
         'choices'  => array(
-            'horizontal' => __( 'Slide Effect', 'courage' ),
-            'fade' => __( 'Fade Effect', 'courage' )
+            'horizontal' => esc_html__( 'Slide Effect', 'courage' ),
+            'fade' => esc_html__( 'Fade Effect', 'courage' )
 			)
 		)
 	);

@@ -106,11 +106,11 @@ function courage_setup() {
 		'flex-height' => true));
 
 	// Register Navigation Menus
-	register_nav_menu( 'primary', __('Main Navigation', 'courage') );
-	register_nav_menu( 'footer', __('Footer Navigation', 'courage') );
+	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'courage' ) );
+	register_nav_menu( 'footer', esc_html__( 'Footer Navigation', 'courage' ) );
 	
 	// Register Social Icons Menu
-	register_nav_menu( 'social', __('Social Icons', 'courage') );
+	register_nav_menu( 'social', esc_html__( 'Social Icons', 'courage' ) );
 
 }
 
@@ -140,9 +140,9 @@ function courage_register_sidebars() {
 
 	// Register Sidebar
 	register_sidebar( array(
-		'name' => __( 'Sidebar', 'courage' ),
+		'name' => esc_html__( 'Sidebar', 'courage' ),
 		'id' => 'sidebar',
-		'description' => __( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'courage' ),
+		'description' => esc_html__( 'Appears on posts and pages except Magazine Homepage and Fullwidth template.', 'courage' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s clearfix">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widgettitle"><span>',
@@ -151,9 +151,9 @@ function courage_register_sidebars() {
 	
 	// Register Magazine Homepage
 	register_sidebar( array(
-		'name' => __( 'Magazine Homepage', 'courage' ),
+		'name' => esc_html__( 'Magazine Homepage', 'courage' ),
 		'id' => 'magazine-homepage',
-		'description' => __( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'courage' ),
+		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'courage' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widgettitle">',
