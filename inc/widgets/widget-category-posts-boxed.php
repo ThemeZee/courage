@@ -128,7 +128,7 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 
 						<a href="<?php the_permalink() ?>" rel="bookmark"><?php the_post_thumbnail('courage-category-posts-widget-big'); ?></a>
 
-						<h3 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h3>
+						<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 						<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
 
@@ -149,8 +149,11 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 					<?php endif; ?>
 
 						<div class="small-post-content">
-							<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+							
+							<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+							
 							<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+						
 						</div>
 
 					</article>

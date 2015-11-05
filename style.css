@@ -2,7 +2,7 @@
 Theme Name: Courage
 Theme URI: http://themezee.com/themes/courage/
 Description: Courage is a great way to start your personal blog or magazine website today. The theme is very easy to use and looks awesome on every device. It includes a beautiful featured post slideshow and a clean and flexible Magazine Homepage template. Hope you enjoy it!
-Version: 1.1.7
+Version: 1.1.8
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
@@ -470,7 +470,7 @@ input, textarea, select {
 	-moz-border-radius: 0.4em;
 	border-radius: 0.4em;
 }
-.page-title, .post-title {
+.page-title, .entry-title {
 	background: #f5f5f5;
 	border: 1px solid #e2e2e2;
 	padding: 0.5em 0.6em;
@@ -488,14 +488,14 @@ input, textarea, select {
     font-size: 1.8em;
 	color: #252525;
 }
-.post-title {
+.entry-title {
     font-size: 1.4em;
 }
-.post-title a:link, .post-title a:visited {
+.entry-title a:link, .entry-title a:visited {
 	color: #2277bb;
 	text-decoration: none;
 }
-.post-title a:hover, .post-title a:active{
+.entry-title a:hover, .entry-title a:active{
 	color: #252525;
 }
 .sticky {}
@@ -1305,7 +1305,7 @@ embed, iframe, object, video {
 .widget-category-posts .type-post .postmeta a:link, .widget-category-posts .type-post .postmeta a:visited {
 	color: #444;
 }
-.widget-category-posts .big-post .post-title {
+.widget-category-posts .big-post .entry-title {
 	font-size: 1.2em;
 }
 .widget-category-posts .big-post .wp-post-image {
@@ -1330,7 +1330,7 @@ embed, iframe, object, video {
 .widget-category-posts .small-post .small-post-content {
 	padding: 0.8em 0.4em;
 }
-.widget-category-posts .small-post .post-title {
+.widget-category-posts .small-post .entry-title {
 	border: none;
 	margin: 0 0 0.4em 0;
 	padding: 0;
@@ -1509,10 +1509,10 @@ embed, iframe, object, video {
 		width: 96%;
 		margin: 0 auto 1.5em;
 	}
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.1em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 1.0em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
@@ -1753,10 +1753,10 @@ embed, iframe, object, video {
 	#widget-category-posts-columns .category-posts-columns .category-posts-columns-content {
 		margin-bottom: 1em;
 	}
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.2em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 1.05em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
@@ -1864,10 +1864,10 @@ embed, iframe, object, video {
 		padding: 0.2em 0.4em;
 	}
 	
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.1em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 1.0em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
@@ -1889,7 +1889,7 @@ embed, iframe, object, video {
 	.page-title {
 		font-size: 1.6em;
 	}
-	.post-title {
+	.entry-title {
 		font-size: 1.3em;
 	}
 	
@@ -1914,10 +1914,10 @@ embed, iframe, object, video {
 		margin-left: 0;
 		padding-left: 0;
 	}
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.2em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 1.05em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
@@ -1961,7 +1961,7 @@ embed, iframe, object, video {
 	.page-title {
 		font-size: 1.4em;
 	}
-	.post-title {
+	.entry-title {
 		font-size: 1.2em;
 	}
 	.alignright, .alignleft {
@@ -1981,10 +1981,10 @@ embed, iframe, object, video {
 	#widget-category-posts-columns .category-posts-columns .category-posts-columns-content {
 		margin-bottom: 0.9em;
 	}
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.1em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 1.0em;
 	}
 	.widget-category-posts .small-post .wp-post-image {
@@ -2000,10 +2000,10 @@ embed, iframe, object, video {
 	
 }
 @media only screen and (max-width: 20em) {
-	.widget-category-posts .big-post .post-title {
+	.widget-category-posts .big-post .entry-title {
 		font-size: 1.0em;
 	}
-	.widget-category-posts .small-post .post-title {
+	.widget-category-posts .small-post .entry-title {
 		font-size: 0.9em;
 	}
 	.widget-category-posts .small-post .postmeta {
@@ -2021,7 +2021,7 @@ embed, iframe, object, video {
 	.page-title {
 		font-size: 1.2em;
 	}
-	.post-title {
+	.entry-title {
 		font-size: 1.1em;
 	}
 	.postmeta span, .postinfo span {
