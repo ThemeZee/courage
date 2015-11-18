@@ -2,6 +2,11 @@
 Courage Changelog
 ===================================
 
+Version 1.1.9
+-----------------------------------
+[removed] empty spaces at the end of template files
+[fixed] styling of 404 template
+
 Version 1.1.8
 -----------------------------------
 [added] Post Slider page template

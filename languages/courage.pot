@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Courage\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-08-31 19:58+0100\n"
-"PO-Revision-Date: 2015-08-31 19:58+0100\n"
+"POT-Creation-Date: 2015-11-12 10:00+0100\n"
+"PO-Revision-Date: 2015-11-12 10:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -34,17 +34,11 @@ msgstr ""
 msgid "Enter password to view comments."
 msgstr ""
 
-#: comments.php:20 inc/template-tags.php:94
-#: inc/widgets/widget-category-posts-boxed.php:190
-#: inc/widgets/widget-category-posts-columns.php:228
-#: inc/widgets/widget-category-posts-grid.php:213
+#: comments.php:20 inc/template-tags.php:122
 msgid "One comment"
 msgstr ""
 
-#: comments.php:20 inc/template-tags.php:94
-#: inc/widgets/widget-category-posts-boxed.php:190
-#: inc/widgets/widget-category-posts-columns.php:228
-#: inc/widgets/widget-category-posts-grid.php:213
+#: comments.php:20 inc/template-tags.php:122
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -61,52 +55,35 @@ msgid ""
 "posts which are tagged with that keyword."
 msgstr ""
 
-#: functions.php:118
+#: functions.php:108
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:109
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:122
+#: functions.php:112
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:156 sidebar.php:14
+#: functions.php:142 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:158
+#: functions.php:144
 msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: functions.php:167
+#: functions.php:153
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:169
+#: functions.php:155
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
-msgstr ""
-
-#: functions.php:254
-msgid "Pingback:"
-msgstr ""
-
-#: functions.php:255 functions.php:275
-msgid "(Edit)"
-msgstr ""
-
-#: functions.php:270
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: functions.php:274
-#, php-format
-msgid "%1$s at %2$s"
 msgstr ""
 
 #: search.php:13
@@ -162,30 +139,45 @@ msgid "Number of Posts"
 msgstr ""
 
 #: inc/template-tags.php:83
+msgid "Edit Post"
+msgstr ""
+
+#: inc/template-tags.php:109
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:94 inc/widgets/widget-category-posts-boxed.php:190
-#: inc/widgets/widget-category-posts-columns.php:228
-#: inc/widgets/widget-category-posts-grid.php:213
+#: inc/template-tags.php:122
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:99
-msgid "Edit Post"
-msgstr ""
-
-#: inc/template-tags.php:225
+#: inc/template-tags.php:249
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:259
+#: inc/template-tags.php:283
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
+msgstr ""
+
+#: inc/template-tags.php:300
+msgid "Pingback:"
+msgstr ""
+
+#: inc/template-tags.php:301 inc/template-tags.php:321
+msgid "(Edit)"
+msgstr ""
+
+#: inc/template-tags.php:316
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: inc/template-tags.php:320
+#, php-format
+msgid "%1$s at %2$s"
 msgstr ""
 
 #: inc/theme-info.php:18 inc/theme-info.php:38
@@ -375,6 +367,9 @@ msgid "Post Meta"
 msgstr ""
 
 #: inc/customizer/sections/customizer-post.php:148
+#: inc/widgets/widget-category-posts-boxed.php:317
+#: inc/widgets/widget-category-posts-columns.php:393
+#: inc/widgets/widget-category-posts-grid.php:356
 msgid "Display post date"
 msgstr ""
 
@@ -449,39 +444,63 @@ msgstr ""
 msgid "Category Posts: Boxed (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:219
-#: inc/widgets/widget-category-posts-columns.php:257
-#: inc/widgets/widget-category-posts-grid.php:242
+#: inc/widgets/widget-category-posts-boxed.php:232
+#: inc/widgets/widget-category-posts-columns.php:270
+#: inc/widgets/widget-category-posts-grid.php:255
 msgid "View all posts"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:231
-#: inc/widgets/widget-category-posts-columns.php:269
-#: inc/widgets/widget-category-posts-grid.php:254
+#: inc/widgets/widget-category-posts-boxed.php:244
+#: inc/widgets/widget-category-posts-columns.php:282
+#: inc/widgets/widget-category-posts-grid.php:267
 #, php-format
 msgid "View all posts from category %s"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:272
-#: inc/widgets/widget-category-posts-grid.php:297
+#: inc/widgets/widget-category-posts-boxed.php:286
+#: inc/widgets/widget-category-posts-grid.php:311
 msgid "Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:278
-#: inc/widgets/widget-category-posts-grid.php:303
+#: inc/widgets/widget-category-posts-boxed.php:292
+#: inc/widgets/widget-category-posts-grid.php:317
 msgid "Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:281
-#: inc/widgets/widget-category-posts-columns.php:323
-#: inc/widgets/widget-category-posts-columns.php:344
-#: inc/widgets/widget-category-posts-grid.php:306
+#: inc/widgets/widget-category-posts-boxed.php:295
+#: inc/widgets/widget-category-posts-columns.php:337
+#: inc/widgets/widget-category-posts-columns.php:358
+#: inc/widgets/widget-category-posts-grid.php:320
 msgid "All Categories"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-boxed.php:295
-#: inc/widgets/widget-category-posts-grid.php:334
+#: inc/widgets/widget-category-posts-boxed.php:309
+#: inc/widgets/widget-category-posts-grid.php:348
 msgid "Link Widget Title to Category Archive page"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:314
+#: inc/widgets/widget-category-posts-columns.php:390
+#: inc/widgets/widget-category-posts-grid.php:353
+msgid "Post Meta:"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:316
+#: inc/widgets/widget-category-posts-columns.php:392
+#: inc/widgets/widget-category-posts-grid.php:355
+msgid "Hide post meta"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:318
+#: inc/widgets/widget-category-posts-columns.php:394
+#: inc/widgets/widget-category-posts-grid.php:357
+msgid "Display date and author"
+msgstr ""
+
+#: inc/widgets/widget-category-posts-boxed.php:319
+#: inc/widgets/widget-category-posts-columns.php:395
+#: inc/widgets/widget-category-posts-grid.php:358
+msgid "Display date and comments"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-columns.php:11
@@ -495,32 +514,32 @@ msgstr ""
 msgid "Category Posts: 2 Columns (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:314
+#: inc/widgets/widget-category-posts-columns.php:328
 msgid "Left Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:320
+#: inc/widgets/widget-category-posts-columns.php:334
 msgid "Left Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:335
+#: inc/widgets/widget-category-posts-columns.php:349
 msgid "Right Category Title:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:341
+#: inc/widgets/widget-category-posts-columns.php:355
 msgid "Right Category:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:356
-#: inc/widgets/widget-category-posts-grid.php:318
+#: inc/widgets/widget-category-posts-columns.php:370
+#: inc/widgets/widget-category-posts-grid.php:332
 msgid "Number of posts:"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:364
+#: inc/widgets/widget-category-posts-columns.php:378
 msgid "Highlight first post (big image + excerpt)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-columns.php:371
+#: inc/widgets/widget-category-posts-columns.php:385
 msgid "Link Category Titles to Category Archive pages"
 msgstr ""
 
@@ -535,10 +554,10 @@ msgstr ""
 msgid "Category Posts: Grid (%s)"
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:320
+#: inc/widgets/widget-category-posts-grid.php:334
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr ""
 
-#: inc/widgets/widget-category-posts-grid.php:327
+#: inc/widgets/widget-category-posts-grid.php:341
 msgid "Display as small posts grid with thumbnails"
 msgstr ""
