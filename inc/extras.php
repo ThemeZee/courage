@@ -18,6 +18,32 @@ function courage_get_featured_content() {
 }
 
 
+/**
+ * Adds custom theme design and sidebar layout classes to the array of body classes.
+ *
+ * @param array $classes Classes for the body element.
+ * @return array
+ */
+function courage_body_classes( $classes ) {
+	
+	// Get Theme Options from Database
+	$theme_options = courage_theme_options();
+		
+	// Switch Sidebar Layout to left
+	if ( isset($theme_options['layout']) and $theme_options['layout'] == 'left-sidebar' ) :
+		$classes[] = 'sidebar-left';
+	endif;
+	
+	// Add Theme Design class
+	if ( isset($theme_options['design']) and $theme_options['design'] == 'boxed' ) :
+		$classes[] = 'boxed-design';
+	endif;
+
+	return $classes;
+}
+add_filter( 'body_class', 'courage_body_classes' );
+
+
 // Change Excerpt Length
 add_filter('excerpt_length', 'courage_excerpt_length');
 function courage_excerpt_length($length) {
