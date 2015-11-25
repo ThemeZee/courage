@@ -2,7 +2,7 @@
 Theme Name: Courage
 Theme URI: http://themezee.com/themes/courage/
 Description: Courage is a great way to start your personal blog or magazine website today. The theme is very easy to use and looks awesome on every device. It includes a beautiful featured post slideshow and a clean and flexible Magazine Homepage template. Hope you enjoy it!
-Version: 1.1.8
+Version: 1.1.9
 Author: ThemeZee
 Author URI: http://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
@@ -2056,6 +2056,35 @@ embed, iframe, object, video {
 }
 
 /* Boxed Design */
+.boxed-design #wrapper {
+	margin: 0 auto;
+}
+.boxed-design #header {
+	background: #fff;
+}
+.boxed-design input, .boxed-design textarea, .boxed-design input[type="submit"],
+.boxed-design #mainnav, .boxed-design #mainnav-mobile-menu, .boxed-design #mainnav-toggle, 
+.boxed-design .type-post, .boxed-design .type-page, .boxed-design .type-attachment, .boxed-design .page-title, .boxed-design .entry-title,
+.boxed-design .postinfo, .boxed-design .more-link, .boxed-design .archive-title, .boxed-design .post-pagination a , .boxed-design .post-pagination .current,
+.boxed-design article .wp-post-image, .boxed-design #social-icons-menu li a, .boxed-design #footer-wrap, .boxed-design .widget, .boxed-design .widgettitle ,
+.boxed-design #comments .comments-title, .boxed-design #respond #reply-title, .boxed-design .commentlist .comment, .boxed-design .comment-pagination a, 
+.boxed-design #commentform input[type="text"], .boxed-design #commentform textarea, .boxed-design #commentform #submit,
+.boxed-design #widget-category-posts-columns .category-posts-columns .category-posts-columns-content{
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.boxed-design #social-icons-menu li a:hover {
+	-webkit-border-radius: 1.5em;
+	-moz-border-radius: 1.5em;
+	border-radius: 1.5em;
+}
+@media only screen and (max-width: 60em) {
+	.boxed-design #wrapper {
+		width: 100%;
+		padding: 0;
+	}
+}
 
 /*--------------------------------------------------------------
 # Media Query Fixes

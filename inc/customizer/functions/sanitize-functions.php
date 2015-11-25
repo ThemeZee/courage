@@ -16,6 +16,15 @@ function courage_sanitize_checkbox( $value ) {
 	endif;
 }
 
+// Sanitize the layout sidebar value.
+function courage_sanitize_design( $value ) {
+
+	if ( ! in_array( $value, array( 'rounded', 'boxed' ), true ) ) :
+        $value = 'rounded';
+	endif;
+
+    return $value;
+}
 
 // Sanitize the layout sidebar value.
 function courage_sanitize_layout( $value ) {

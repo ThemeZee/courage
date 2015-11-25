@@ -18,6 +18,27 @@ function courage_customize_register_general_settings( $wp_customize ) {
 	);
 	
 	// Add Settings and Controls for Layout
+	$wp_customize->add_setting( 'courage_theme_options[design]', array(
+        'default'           => 'rounded',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'courage_sanitize_design'
+		)
+	);
+    $wp_customize->add_control( 'courage_control_design', array(
+        'label'    => esc_html__( 'Theme Design', 'courage' ),
+        'section'  => 'courage_section_general',
+        'settings' => 'courage_theme_options[design]',
+        'type'     => 'radio',
+		'priority' => 1,
+        'choices'  => array(
+            'rounded' => esc_html__( 'Rounded (Default)', 'courage' ),
+            'boxed' => esc_html__( 'Boxed Layout', 'courage' )
+			)
+		)
+	);
+	
+	// Add Settings and Controls for Layout
 	$wp_customize->add_setting( 'courage_theme_options[layout]', array(
         'default'           => 'right-sidebar',
 		'type'           	=> 'option',
@@ -30,7 +51,7 @@ function courage_customize_register_general_settings( $wp_customize ) {
         'section'  => 'courage_section_general',
         'settings' => 'courage_theme_options[layout]',
         'type'     => 'radio',
-		'priority' => 1,
+		'priority' => 2,
         'choices'  => array(
             'left-sidebar' => esc_html__( 'Left Sidebar', 'courage' ),
             'right-sidebar' => esc_html__( 'Right Sidebar', 'courage' )
@@ -51,7 +72,7 @@ function courage_customize_register_general_settings( $wp_customize ) {
             'label' => esc_html__( 'Default Fonts', 'courage' ),
             'section' => 'courage_section_general',
             'settings' => 'courage_theme_options[default_fonts]',
-            'priority' => 2
+            'priority' => 3
             )
         )
     );
@@ -69,7 +90,7 @@ function courage_customize_register_general_settings( $wp_customize ) {
         'section'  => 'courage_section_general',
         'settings' => 'courage_theme_options[deactivate_google_fonts]',
         'type'     => 'checkbox',
-		'priority' => 3
+		'priority' => 4
 		)
 	);
 	

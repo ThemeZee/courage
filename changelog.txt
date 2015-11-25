@@ -4,6 +4,7 @@ Courage Changelog
 
 Version 1.1.9
 -----------------------------------
+[added] boxed design theme setting
 [removed] empty spaces at the end of template files
 [fixed] styling of 404 template
 

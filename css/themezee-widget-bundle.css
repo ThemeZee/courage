@@ -371,6 +371,25 @@
 	display: none;
 }
 
+/*--------------------------------------------------------------
+# Theme Options based stylings
+---------------------------------------------------------------- */
+
+/* Boxed Design */
+.boxed-design .tzwb-posts-list .wp-post-image,
+.boxed-design .tzwb-comments-list .avatar,
+.boxed-design .tzwb-tabbed-content .tzwb-tabnavi li a,
+.boxed-design .tzwb-tabbed-content .tzwb-tabcontent  li.tzwb-has-thumbnail .wp-post-image,
+.boxed-design .tzwb-social-icons .tzwb-social-icons-menu li a {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.boxed-design .tzwb-social-icons .tzwb-social-icons-menu li a:hover {
+	-webkit-border-radius: 1.5em;
+	-moz-border-radius: 1.5em;
+	border-radius: 1.5em;
+}
 
 /*--------------------------------------------------------------
 # Widget Styling in Footer area

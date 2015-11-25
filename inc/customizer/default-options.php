@@ -30,6 +30,7 @@ function courage_theme_options() {
 function courage_default_options() {
 
 	$default_options = array(
+		'design' 							=> 'rounded',
 		'layout' 							=> 'right-sidebar',
 		'deactivate_google_fonts'			=> false,
 		'header_tagline' 					=> false,

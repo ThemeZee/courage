@@ -307,3 +307,11 @@ html[xmlns] .zeeslides {display: block;}
 		font-size: 0.95em;
 	}
 }
+
+/* Boxed Design */
+.boxed-design #post-slider .zeeslide .slide-content .slide-title,
+.boxed-design #post-slider .zeeslide .slide-content .slide-entry span{
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
