@@ -5,6 +5,7 @@ Courage Changelog
 Version 1.2
 -----------------------------------
 [added] basic support for wooCommerce
+[added] support for ThemeZee Breadcrumbs plugin
 
 Version 1.1.9
 -----------------------------------

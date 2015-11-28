@@ -20,6 +20,8 @@ Template Name: Magazine Homepage
 	
 		<section id="content" class="primary" role="main">
 		
+		<?php if ( function_exists( 'themezee_breadcrumbs' ) ) themezee_breadcrumbs(); ?>
+			
 		<?php // Display Magazine Homepage Widgets
 		if( is_active_sidebar('magazine-homepage') ) : ?>
 
