@@ -2,6 +2,10 @@
 Courage Changelog
 ===================================
 
+Version 1.2
+-----------------------------------
+[added] basic support for wooCommerce
+
 Version 1.1.9
 -----------------------------------
 [added] boxed design theme setting
