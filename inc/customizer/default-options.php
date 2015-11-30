@@ -30,10 +30,12 @@ function courage_theme_options() {
 function courage_default_options() {
 
 	$default_options = array(
+		'header_tagline'					=> false,
+		'custom_header_link'				=> '',
+		'custom_header_hide'				=> true,
 		'design' 							=> 'rounded',
 		'layout' 							=> 'right-sidebar',
 		'deactivate_google_fonts'			=> false,
-		'header_tagline' 					=> false,
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
 		'posts_length' 						=> 'index',

@@ -2106,7 +2106,7 @@ embed, iframe, object, video {
 .boxed-design article .wp-post-image, .boxed-design #social-icons-menu li a, .boxed-design #footer-wrap, .boxed-design .widget, .boxed-design .widgettitle ,
 .boxed-design #comments .comments-title, .boxed-design #respond #reply-title, .boxed-design .commentlist .comment, .boxed-design .comment-pagination a, 
 .boxed-design #commentform input[type="text"], .boxed-design #commentform textarea, .boxed-design #commentform #submit,
-.boxed-design #widget-category-posts-columns .category-posts-columns .category-posts-columns-content{
+.boxed-design #widget-category-posts-columns .category-posts-columns .category-posts-columns-content, .boxed-design .breadcrumbs {
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
 	border-radius: 0;
