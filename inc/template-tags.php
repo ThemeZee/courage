@@ -26,11 +26,11 @@ if ( ! function_exists( 'courage_display_custom_header' ) ):
 	
 	function courage_display_custom_header() {
 		
-		// Get Theme Options from Database
+		// Get theme options from database
 		$theme_options = courage_theme_options();
 		
-		// Hide Header image on Magazine Homepage
-		if ( true == $theme_options['custom_header_hide'] and is_page_template('template-magazine.php') ) {
+		// Hide header image on front page
+		if ( true == $theme_options['custom_header_hide'] and is_front_page() ) {
 			return;
 		}
 			

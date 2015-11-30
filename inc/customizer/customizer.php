@@ -54,7 +54,7 @@ function courage_customize_register_options( $wp_customize ) {
 		)
 	);
 	
-	// Add Custom Header Link
+	// Add Header Image Link
 	$wp_customize->add_setting( 'courage_theme_options[custom_header_link]', array(
         'default'           => '',
 		'type'           	=> 'option',
@@ -63,30 +63,28 @@ function courage_customize_register_options( $wp_customize ) {
 		)
 	);
     $wp_customize->add_control( 'courage_control_custom_header_link', array(
-        'label'    => esc_html__( 'Custom Header Link', 'courage' ),
+        'label'    => esc_html__( 'Header Image Link', 'courage' ),
         'section'  => 'header_image',
         'settings' => 'courage_theme_options[custom_header_link]',
         'type'     => 'url',
-		'priority' => 10,
-		'active_callback' => 'get_header_image'
+		'priority' => 10
 		)
 	);
 	
 	// Add Custom Header Hide Checkbox
 	$wp_customize->add_setting( 'courage_theme_options[custom_header_hide]', array(
-        'default'           => true,
+        'default'           => false,
 		'type'           	=> 'option',
         'transport'         => 'refresh',
         'sanitize_callback' => 'courage_sanitize_checkbox'
 		)
 	);
     $wp_customize->add_control( 'courage_control_custom_header_hide', array(
-        'label'    => esc_html__( 'Hide custom header image on Magazine Homepage template', 'courage' ),
+        'label'    => esc_html__( 'Hide header image on front page', 'courage' ),
         'section'  => 'header_image',
         'settings' => 'courage_theme_options[custom_header_hide]',
         'type'     => 'checkbox',
-		'priority' => 15,
-		'active_callback' => 'get_header_image'
+		'priority' => 15
 		)
 	);
 	

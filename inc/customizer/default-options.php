@@ -32,7 +32,7 @@ function courage_default_options() {
 	$default_options = array(
 		'header_tagline'					=> false,
 		'custom_header_link'				=> '',
-		'custom_header_hide'				=> true,
+		'custom_header_hide'				=> false,
 		'design' 							=> 'rounded',
 		'layout' 							=> 'right-sidebar',
 		'deactivate_google_fonts'			=> false,
