@@ -23,3 +23,10 @@
 #customize-control-courage_control_slider_activated  {
 	margin-bottom: 0;
 }
+
+#customize-control-courage_control_upgrade div {
+	margin: 4px 0 32px;
+}
+#customize-control-courage_control_upgrade div .customize-control-title {
+	margin-bottom: 4px;
+}

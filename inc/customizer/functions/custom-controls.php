@@ -6,10 +6,9 @@
 
 /*========================== CUSTOMIZER CONTROLS FUNCTIONS ==========================*/
 
-
 if ( class_exists( 'WP_Customize_Control' ) ) :
 
-	// Add simple heading option to the theme customizer
+	// Title Control
     class Courage_Customize_Header_Control extends WP_Customize_Control {
 
         public function render_content() {  ?>
@@ -18,48 +17,81 @@ if ( class_exists( 'WP_Customize_Control' ) ) :
 				<span class="customize-control-title"><?php echo wp_kses_post( $this->label ); ?></span>
 			</label>
 			
-<?php
+			<?php
         }
     }
 	
-	// Add simple description control to the theme customizer	
+	// Description Control
 	class Courage_Customize_Description_Control extends WP_Customize_Control {
 
         public function render_content() {  ?>
 			
 			<span class="description"><?php echo wp_kses_post( $this->label ); ?></span>
 			
-<?php
+			<?php
         }
     }
 	
-	// Add simple textfield control to the theme customizer
-	class Courage_Customize_Text_Control extends WP_Customize_Control {
+	// Upgrade Control
+	class Courage_Customize_Upgrade_Control extends WP_Customize_Control {
 
         public function render_content() {  ?>
 			
-			<span class="textfield"><?php echo esc_html( $this->label ); ?></span>
+			<div class="upgrade-pro-version">
 			
-<?php
-        }
-    }
-	
-	// Add simple upgrade button control to the theme customizer
-	class Courage_Customize_Button_Control extends WP_Customize_Control {
+				<span class="customize-control-title"><?php esc_html_e( 'Pro Version', 'courage' ); ?></span>
+				
+				<span class="textfield">
+					<?php printf( esc_html__( 'Purchase the Pro Version of %s to get additional features and advanced customization options.', 'courage' ), 'Courage'); ?>
+				</span>
+				
+				<p>
+					<a href="http://themezee.com/themes/courage/?utm_source=customizer&utm_medium=button&utm_campaign=courage&utm_content=pro-version" target="_blank" class="button button-secondary">
+						<?php printf( esc_html__( 'Learn more about %s Pro', 'courage' ), 'Courage'); ?>
+					</a>
+				</p>
+				
+			</div>
+			
+			<div class="upgrade-toolkit">
+			
+				<span class="customize-control-title"><?php esc_html_e( 'ThemeZee Toolkit', 'courage' ); ?></span>
+				
+				<span class="textfield">
+					<?php esc_html_e( 'The ThemeZee Toolkit add-on is a collection of useful small modules and features, neatly bundled into a single plugin.', 'courage' ); ?>
+				</span>
+				
+				<p>
+					<a href="http://themezee.com/addons/toolkit/?utm_source=customizer&utm_medium=button&utm_campaign=courage&utm_content=toolkit" target="_blank" class="button button-secondary">
+						<?php printf( esc_html__( 'View Details', 'courage' ), 'Courage'); ?>
+					</a>
+					<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-primary">
+						<?php esc_html_e( 'Install now', 'courage' ); ?>
+					</a>
+				</p>
+			
+			</div>
+			
+			<div class="upgrade-addons">
+			
+				<span class="customize-control-title"><?php esc_html_e( 'Add-on plugins', 'courage' ); ?></span>
+				
+				<span class="textfield">
+					<?php esc_html_e( 'Extend the functionality of your WordPress website with our customized add-ons.', 'courage' ); ?>
+				</span>
 
-        public function render_content() {  ?>
+				<p>
+					<a href="http://themezee.com/addons/?utm_source=customizer&utm_medium=button&utm_campaign=courage&utm_content=addons" target="_blank" class="button button-secondary">
+						<?php esc_html_e( 'Browse our add-ons', 'courage' ); ?>
+					</a>
+				</p>
+				
+			</div>
 			
-			<p>
-				<a href="http://themezee.com/themes/courage/#PROVersion-1" target="_blank" class="button button-secondary">
-					<?php echo esc_html( $this->label ); ?>
-				</a>
-			</p>
-			
-<?php
+			<?php
         }
     }
-	
-	
+
 endif;
 
 
@@ -76,6 +108,3 @@ function courage_slider_activated_callback( $control ) {
 	endif;
 	
 }
-
-
-?>
