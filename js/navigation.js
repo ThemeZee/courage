@@ -75,7 +75,7 @@
 		*********************/	
 		
 		/* Add Menu Toggle Button for mobile navigation */
-		$this.before('<div id=\"mainnav-mobile-menu\"><button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button></div>');
+		$this.before('<button id=\"' + toggleID + '\" class=\"' + toggleClass + '\">' + toggleText + '</button>');
 
 		/* Add dropdown toggle for submenus on mobile navigation */
 		$menu.find('li.menu-item-has-children').prepend('<span class=\"submenu-dropdown-toggle\"></span>');
@@ -102,6 +102,14 @@
 	# Setup Navigation Menus
 	--------------------------------------------------------------*/
 	$( document ).ready( function() {
+		
+		/* Setup Top Navigation */
+		$("#topnav").responsiveMenu({
+			menuID: "topnav-menu",
+			toggleID: "topnav-toggle",
+			toggleClass: "nav-toggle",
+			maxWidth: "60em"
+		});
 		
 		/* Setup Main Navigation */
 		$("#mainnav").responsiveMenu({

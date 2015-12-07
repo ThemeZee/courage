@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Courage\n"
 "Report-Msgid-Bugs-To: http://themezee.com/\n"
-"POT-Creation-Date: 2015-11-12 10:00+0100\n"
-"PO-Revision-Date: 2015-11-12 10:00+0100\n"
+"POT-Creation-Date: 2015-12-07 17:48+0100\n"
+"PO-Revision-Date: 2015-12-07 17:48+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: en_US\n"
@@ -20,11 +20,11 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:9
+#: 404.php:11
 msgid "404: Page not found"
 msgstr ""
 
-#: 404.php:12
+#: 404.php:14
 msgid ""
 "It looks like nothing was found at this location. Maybe try a search or one "
 "of the links below?"
@@ -34,11 +34,11 @@ msgstr ""
 msgid "Enter password to view comments."
 msgstr ""
 
-#: comments.php:20 inc/template-tags.php:122
+#: comments.php:20 inc/template-tags.php:140
 msgid "One comment"
 msgstr ""
 
-#: comments.php:20 inc/template-tags.php:122
+#: comments.php:20 inc/template-tags.php:140
 #, php-format
 msgid "% comments"
 msgstr ""
@@ -55,47 +55,51 @@ msgid ""
 "posts which are tagged with that keyword."
 msgstr ""
 
-#: functions.php:108
+#: functions.php:111
 msgid "Main Navigation"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:112
+msgid "Top Navigation"
+msgstr ""
+
+#: functions.php:113
 msgid "Footer Navigation"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:116
 msgid "Social Icons"
 msgstr ""
 
-#: functions.php:142 sidebar.php:14
+#: functions.php:146 sidebar.php:14
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:144
+#: functions.php:148
 msgid ""
 "Appears on posts and pages except Magazine Homepage and Fullwidth template."
 msgstr ""
 
-#: functions.php:153
+#: functions.php:157
 msgid "Magazine Homepage"
 msgstr ""
 
-#: functions.php:155
+#: functions.php:159
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
 msgstr ""
 
-#: search.php:13
+#: search.php:15
 #, php-format
 msgid "Search Results for: %s"
 msgstr ""
 
-#: search.php:37
+#: search.php:39
 msgid "No matches"
 msgstr ""
 
-#: search.php:41
+#: search.php:43
 msgid ""
 "Please try again, or use the navigation menus to find what you search for."
 msgstr ""
@@ -115,7 +119,7 @@ msgid ""
 "Please go to Appearance &#8594; Widgets and add some widgets to your sidebar."
 msgstr ""
 
-#: template-magazine.php:39
+#: template-magazine.php:41
 msgid ""
 "Please go to Appearance &#8594; Widgets and add at least one widget to the "
 "\"Magazine Homepage\" widget area. You can use the Category Posts widgets to "
@@ -138,44 +142,44 @@ msgstr ""
 msgid "Number of Posts"
 msgstr ""
 
-#: inc/template-tags.php:83
+#: inc/template-tags.php:101
 msgid "Edit Post"
 msgstr ""
 
-#: inc/template-tags.php:109
+#: inc/template-tags.php:127
 #, php-format
 msgid "View all posts by %s"
 msgstr ""
 
-#: inc/template-tags.php:122
+#: inc/template-tags.php:140
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/template-tags.php:249
+#: inc/template-tags.php:267
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr ""
 
-#: inc/template-tags.php:283
+#: inc/template-tags.php:301
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
 "tab and assign your created menu to the \"Social Icons\" location."
 msgstr ""
 
-#: inc/template-tags.php:300
+#: inc/template-tags.php:318
 msgid "Pingback:"
 msgstr ""
 
-#: inc/template-tags.php:301 inc/template-tags.php:321
+#: inc/template-tags.php:319 inc/template-tags.php:339
 msgid "(Edit)"
 msgstr ""
 
-#: inc/template-tags.php:316
+#: inc/template-tags.php:334
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/template-tags.php:320
+#: inc/template-tags.php:338
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -189,11 +193,11 @@ msgstr ""
 msgid "Theme Info"
 msgstr ""
 
-#: inc/theme-info.php:44
-msgid "Important Links:"
+#: inc/theme-info.php:44 inc/customizer/customizer.php:111
+msgid "Theme Links"
 msgstr ""
 
-#: inc/theme-info.php:45
+#: inc/theme-info.php:45 inc/customizer/customizer.php:113
 msgid "Theme Page"
 msgstr ""
 
@@ -206,14 +210,15 @@ msgid "Theme Demo"
 msgstr ""
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
+#: inc/customizer/customizer.php:115
 msgid "Theme Documentation"
 msgstr ""
 
-#: inc/theme-info.php:49
+#: inc/theme-info.php:49 inc/customizer/customizer.php:117
 msgid "Rate this theme"
 msgstr ""
 
-#: inc/theme-info.php:60
+#: inc/theme-info.php:56
 #, php-format
 msgid "Getting Started with %s"
 msgstr ""
@@ -240,31 +245,32 @@ msgid ""
 "Theme\" to open the Customizer now."
 msgstr ""
 
-#: inc/theme-info.php:82
+#: inc/theme-info.php:83
 msgid "Customize Theme"
 msgstr ""
 
-#: inc/theme-info.php:87 inc/customizer/sections/customizer-upgrade.php:17
+#: inc/theme-info.php:89 inc/customizer/functions/custom-controls.php:42
 msgid "Pro Version"
 msgstr ""
 
-#: inc/theme-info.php:90
+#: inc/theme-info.php:92 inc/customizer/functions/custom-controls.php:45
+#, php-format
 msgid ""
-"You need more features? Purchase the Pro Version to get additional features "
-"and advanced customization options."
+"Purchase the Pro Version of %s to get additional features and advanced "
+"customization options."
 msgstr ""
 
-#: inc/theme-info.php:94 inc/customizer/sections/customizer-upgrade.php:65
+#: inc/theme-info.php:96 inc/customizer/functions/custom-controls.php:50
 #, php-format
 msgid "Learn more about %s Pro"
 msgstr ""
 
-#: inc/theme-info.php:115
+#: inc/theme-info.php:117
 #, php-format
 msgid "%1$s is proudly brought to you by %2$s. If you like this theme, %3$s :)"
 msgstr ""
 
-#: inc/theme-info.php:118
+#: inc/theme-info.php:120
 msgid "rate it"
 msgstr ""
 
@@ -276,8 +282,48 @@ msgstr ""
 msgid "Display Tagline below site title."
 msgstr ""
 
+#: inc/customizer/customizer.php:66
+msgid "Header Image Link"
+msgstr ""
+
+#: inc/customizer/customizer.php:83
+msgid "Hide header image on front page"
+msgstr ""
+
 #: inc/customizer/frontend/custom-slider.php:33
 msgid "Menu"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:58
+msgid "ThemeZee Toolkit"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:61
+msgid ""
+"The ThemeZee Toolkit add-on is a collection of useful small modules and "
+"features, neatly bundled into a single plugin."
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:66
+msgid "View Details"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:69
+msgid "Install now"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:77
+msgid "Add-on plugins"
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:80
+msgid ""
+"Extend the functionality of your WordPress website with our customized add-"
+"ons."
+msgstr ""
+
+#: inc/customizer/functions/custom-controls.php:85
+msgid "Browse our add-ons"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:14
@@ -285,22 +331,34 @@ msgid "General Settings"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:29
-msgid "Theme Layout"
+msgid "Theme Design"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:35
-msgid "Left Sidebar"
+msgid "Rounded (Default)"
 msgstr ""
 
 #: inc/customizer/sections/customizer-general.php:36
+msgid "Boxed Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:50
+msgid "Theme Layout"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:56
+msgid "Left Sidebar"
+msgstr ""
+
+#: inc/customizer/sections/customizer-general.php:57
 msgid "Right Sidebar"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:51
+#: inc/customizer/sections/customizer-general.php:72
 msgid "Default Fonts"
 msgstr ""
 
-#: inc/customizer/sections/customizer-general.php:68
+#: inc/customizer/sections/customizer-general.php:89
 msgid "Deactivate Google Fonts in case your language is not compatible."
 msgstr ""
 
@@ -308,21 +366,25 @@ msgstr ""
 msgid "Header Settings"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:30
+#: inc/customizer/sections/customizer-header.php:29
+msgid "Top Header Text Line"
+msgstr ""
+
+#: inc/customizer/sections/customizer-header.php:47
 msgid "Header Content"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:46
+#: inc/customizer/sections/customizer-header.php:63
 msgid ""
 "The Header Content will be displayed on the right hand side of the header "
 "area."
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:63
+#: inc/customizer/sections/customizer-header.php:80
 msgid "Display search field on header area"
 msgstr ""
 
-#: inc/customizer/sections/customizer-header.php:79
+#: inc/customizer/sections/customizer-header.php:96
 msgid "Display Social Icons on header area"
 msgstr ""
 
@@ -423,14 +485,8 @@ msgstr ""
 msgid "Fade Effect"
 msgstr ""
 
-#: inc/customizer/sections/customizer-upgrade.php:33
-msgid "You need more features?"
-msgstr ""
-
-#: inc/customizer/sections/customizer-upgrade.php:49
-msgid ""
-"Purchase the Pro Version to get additional features and advanced "
-"customization options."
+#: inc/customizer/sections/customizer-upgrade.php:14
+msgid "More Features"
 msgstr ""
 
 #: inc/widgets/widget-category-posts-boxed.php:11

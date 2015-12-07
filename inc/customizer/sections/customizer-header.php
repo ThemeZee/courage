@@ -16,7 +16,24 @@ function courage_customize_register_header_settings( $wp_customize ) {
 		'panel' => 'courage_options_panel' 
 		)
 	);
-
+	
+	// Add Header Text
+	$wp_customize->add_setting( 'courage_theme_options[header_text]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+		)
+	);
+    $wp_customize->add_control( 'courage_control_header_text', array(
+        'label'    => esc_html__( 'Top Header Text Line', 'courage' ),
+        'section'  => 'courage_section_header',
+        'settings' => 'courage_theme_options[header_text]',
+        'type'     => 'text',
+		'priority' => 2
+		)
+	);
+	
 	// Add Header Content Header
 	$wp_customize->add_setting( 'courage_theme_options[header_content]', array(
         'default'           => '',
@@ -30,7 +47,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
             'label' => esc_html__( 'Header Content', 'courage' ),
             'section' => 'courage_section_header',
             'settings' => 'courage_theme_options[header_content]',
-            'priority' => 2
+            'priority' => 3
             )
         )
     );
@@ -46,7 +63,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
             'label' =>  esc_html__( 'The Header Content will be displayed on the right hand side of the header area.', 'courage' ),
             'section' => 'courage_section_header',
             'settings' => 'courage_theme_options[header_content_description]',
-            'priority' => 3
+            'priority' => 4
             )
         )
     );
@@ -64,7 +81,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
         'section'  => 'courage_section_header',
         'settings' => 'courage_theme_options[header_search]',
         'type'     => 'checkbox',
-		'priority' => 4
+		'priority' => 5
 		)
 	);
 
@@ -80,7 +97,7 @@ function courage_customize_register_header_settings( $wp_customize ) {
         'section'  => 'courage_section_header',
         'settings' => 'courage_theme_options[header_icons]',
         'type'     => 'checkbox',
-		'priority' => 5
+		'priority' => 6
 		)
 	);
 	

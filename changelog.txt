@@ -8,6 +8,7 @@ Version 1.2
 [added] support for ThemeZee Breadcrumbs plugin
 [added] custom header image settings
 [added] theme links in theme options panel
+[added] top navigation menu and header text setting
 
 Version 1.1.9
 -----------------------------------

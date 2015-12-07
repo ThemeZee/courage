@@ -109,6 +109,7 @@ function courage_setup() {
 
 	// Register Navigation Menus
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'courage' ) );
+	register_nav_menu( 'secondary', esc_html__( 'Top Navigation', 'courage' ) );
 	register_nav_menu( 'footer', esc_html__( 'Footer Navigation', 'courage' ) );
 	
 	// Register Social Icons Menu

@@ -36,6 +36,7 @@ function courage_default_options() {
 		'design' 							=> 'rounded',
 		'layout' 							=> 'right-sidebar',
 		'deactivate_google_fonts'			=> false,
+		'header_text' 						=> '',
 		'header_search' 					=> false,
 		'header_icons' 						=> false,
 		'posts_length' 						=> 'index',
