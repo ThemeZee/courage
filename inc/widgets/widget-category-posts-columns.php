@@ -174,7 +174,7 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 
 						<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-						<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+						<div class="entry-meta postmeta"><?php $this->display_postmeta($instance); ?></div>
 
 						<div class="entry">
 							<?php the_excerpt(); ?>
@@ -194,7 +194,7 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 							
 							<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							
-							<div class="postmeta"><?php $this->display_postmeta($instance); ?></div>
+							<div class="entry-meta postmeta"><?php $this->display_postmeta($instance); ?></div>
 						
 						</div>
 
