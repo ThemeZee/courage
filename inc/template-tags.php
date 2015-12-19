@@ -223,6 +223,24 @@ if ( ! function_exists( 'courage_display_postinfo' ) ):
 endif;
 
 
+// Display Courage plugin
+if ( ! function_exists( 'courage_display_related_posts' ) ):
+	
+	function courage_display_related_posts() { 
+		
+		if ( function_exists( 'themezee_related_posts' ) ) {
+
+			themezee_related_posts( array( 
+				'class' => 'related-posts widget clearfix',
+				'before_title' => '<h2 class="related-posts-title">',
+				'after_title' => '</h2>'
+			) );
+			
+		}
+	}
+	
+endif;
+
 	
 // Display Content Pagination
 if ( ! function_exists( 'courage_display_pagination' ) ):

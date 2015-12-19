@@ -949,7 +949,7 @@ blockquote cite {
 
 /* Images | Gallery | Videos
 -------------------------------------------------------------- */
-article .wp-post-image {
+.wp-post-image {
 	max-width: 100%;
 	margin: 0 0 1em 0;
 	height: auto;
@@ -1444,9 +1444,6 @@ embed, iframe, object, video {
 	padding: 0;
 	border: none;
 	background: none;
-}
-.widget-category-posts .type-post .entry-meta a:link, .widget-category-posts .type-post .entry-meta a:visited {
-	color: #444;
 }
 .widget-category-posts .big-post .entry-title {
 	font-size: 1.2em;
@@ -2349,7 +2346,7 @@ embed, iframe, object, video {
 .boxed-design #mainnav, .boxed-design #navi-wrap, .boxed-design #mainnav-toggle, 
 .boxed-design .type-post, .boxed-design .type-page, .boxed-design .type-attachment, .boxed-design .page-title, .boxed-design .entry-title,
 .boxed-design .postinfo, .boxed-design .more-link, .boxed-design .archive-title, .boxed-design .post-pagination a , .boxed-design .post-pagination .current,
-.boxed-design article .wp-post-image, .boxed-design #social-icons-menu li a, .boxed-design #footer-wrap, .boxed-design .widget, .boxed-design .widgettitle ,
+.boxed-design .wp-post-image, .boxed-design #social-icons-menu li a, .boxed-design #footer-wrap, .boxed-design .widget, .boxed-design .widgettitle ,
 .boxed-design #comments .comments-title, .boxed-design #respond #reply-title, .boxed-design .commentlist .comment, .boxed-design .comment-pagination a, 
 .boxed-design #commentform input[type="text"], .boxed-design #commentform textarea, .boxed-design #commentform #submit,
 .boxed-design #widget-category-posts-columns .category-posts-columns .category-posts-columns-content, .boxed-design .breadcrumbs {
