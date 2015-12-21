@@ -2,6 +2,11 @@
 Courage Changelog
 ===================================
 
+Version 1.2.1
+-----------------------------------
+[added] support for ThemeZee Related Posts plugin
+[added] category and tag descriptions on archive template
+
 Version 1.2
 -----------------------------------
 [added] basic support for wooCommerce
