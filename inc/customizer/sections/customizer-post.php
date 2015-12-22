@@ -197,7 +197,38 @@ function courage_customize_register_post_settings( $wp_customize ) {
 		'priority' => 11
 		)
 	);
+	
+	// Add Post Footer Settings
+	$wp_customize->add_setting( 'courage_theme_options[post_footer_headline]', array(
+        'default'           => '',
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'esc_attr'
+        )
+    );
+    $wp_customize->add_control( new Courage_Customize_Header_Control(
+        $wp_customize, 'courage_control_post_footer_headline', array(
+            'label' => esc_html__( 'Post Footer', 'courage' ),
+            'section' => 'courage_section_post',
+            'settings' => 'courage_theme_options[post_footer_headline]',
+            'priority' => 12
+            )
+        )
+    );
+	$wp_customize->add_setting( 'courage_theme_options[post_navigation]', array(
+        'default'           => false,
+		'type'           	=> 'option',
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'courage_sanitize_checkbox'
+		)
+	);
+    $wp_customize->add_control( 'courage_control_post_navigation', array(
+        'label'    => esc_html__( 'Display post navigation on single posts', 'courage' ),
+        'section'  => 'courage_section_post',
+        'settings' => 'courage_theme_options[post_navigation]',
+        'type'     => 'checkbox',
+		'priority' => 13
+		)
+	);
 
 }
-
-?>

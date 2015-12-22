@@ -6,6 +6,8 @@ Version 1.2.1
 -----------------------------------
 [added] support for ThemeZee Related Posts plugin
 [added] category and tag descriptions on archive template
+[added] previous/next post navigation on single post view
+[fixed] post title styling of Category Posts Grid widget
 
 Version 1.2
 -----------------------------------

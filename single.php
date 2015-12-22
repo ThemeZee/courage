@@ -13,6 +13,8 @@
 			endwhile;
 		
 		endif; ?>
+		
+		<?php courage_display_post_navigation(); ?>
 			
 		<?php courage_display_related_posts(); ?>
 		
