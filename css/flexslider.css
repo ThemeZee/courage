@@ -53,11 +53,15 @@ html[xmlns] .zeeslides {display: block;}
 }
 
 #post-slider .zeeslide .slide-image .wp-post-image {
+	margin: 0;
 	max-width: 1320px;
 	width: 100%;
 	max-height: 380px;
 	height: auto;
 	vertical-align: top;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
 }
 #post-slider .zeeslide .slide-content {
 	position: absolute;
