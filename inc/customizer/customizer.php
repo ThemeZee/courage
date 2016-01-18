@@ -109,9 +109,9 @@ function courage_customize_controls_js() {
 	// Localize the script
 	wp_localize_script( 'courage-customizer-controls', 'courage_theme_links', array(
 		'title'	=> esc_html__( 'Theme Links', 'courage' ),
-		'themeURL'	=> esc_url( 'http://themezee.com/themes/courage/?utm_source=customizer&utm_medium=textlink&utm_campaign=courage&utm_content=theme-page' ),
+		'themeURL'	=> esc_url( 'https://themezee.com/themes/courage/?utm_source=customizer&utm_medium=textlink&utm_campaign=courage&utm_content=theme-page' ),
 		'themeLabel'	=> esc_html__( 'Theme Page', 'courage' ),
-		'docuURL'	=> esc_url( 'http://themezee.com/docs/courage-documentation/?utm_source=customizer&utm_medium=textlink&utm_campaign=courage&utm_content=documentation' ),
+		'docuURL'	=> esc_url( 'https://themezee.com/docs/courage-documentation/?utm_source=customizer&utm_medium=textlink&utm_campaign=courage&utm_content=documentation' ),
 		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'courage' ),
 		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/courage?filter=5' ),
 		'rateLabel'	=> esc_html__( 'Rate this theme', 'courage' ),

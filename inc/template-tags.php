@@ -302,7 +302,7 @@ function courage_display_footer_text() { ?>
 	<span class="credit-link">
 		<?php printf( esc_html__( 'Powered by %1$s and %2$s.', 'courage' ),  
 			'<a href="http://wordpress.org" title="WordPress">WordPress</a>',
-			'<a href="http://themezee.com/themes/courage/" title="Courage WordPress Theme">Courage</a>'
+			'<a href="https://themezee.com/themes/courage/" title="Courage WordPress Theme">Courage</a>'
 		); ?>
 	</span>
 
