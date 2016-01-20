@@ -39,7 +39,7 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 	}
 	
 	// Display Widget
-	function widget($args, $instance) {
+	function widget( $args, $instance ) {
 
 		$cache = array();
 				
@@ -60,30 +60,26 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Start Output Buffering
 		ob_start();
 			
-		// Extract Sidebar Arguments
-		extract($args);
-		
 		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
+		$settings = wp_parse_args( $instance, $this->default_settings() );
 		
 		// Output
-		echo $before_widget;
+		echo $args['before_widget'];
 	?>
 		<div id="widget-category-posts-boxed" class="widget-category-posts clearfix">
 
 			<?php // Display Title
-			$this->display_widget_title($args, $instance); ?>
+			$this->display_widget_title( $args, $settings ); ?>
 			
 			<div class="widget-category-posts-content">
 			
-				<?php $this->render($instance); ?>
+				<?php $this->render( $settings ); ?>
 				
 			</div>
 			
 		</div>
 	<?php
-		echo $after_widget;
+		echo $args['after_widget'];
 		
 		// Set Cache
 		if ( ! $this->is_preview() ) {
@@ -96,19 +92,15 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 	}
 	
 	// Render Widget Content
-	function render($instance) {
-		
-		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
+	function render( $settings ) {
 		
 		// Get latest posts from database
 		$query_arguments = array(
 			'posts_per_page' => 4,
 			'ignore_sticky_posts' => true,
-			'cat' => (int)$category
+			'cat' => (int)$settings['category']
 		);
-		$posts_query = new WP_Query($query_arguments);
+		$posts_query = new WP_Query( $query_arguments );
 		$i = 0;
 
 		// Check if there are posts
@@ -130,7 +122,7 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 
 						<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
-						<div class="entry-meta postmeta"><?php $this->display_postmeta($instance); ?></div>
+						<div class="entry-meta postmeta"><?php $this->display_postmeta( $settings ); ?></div>
 
 						<div class="entry">
 							<?php the_excerpt(); ?>
@@ -152,7 +144,7 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 							
 							<?php the_title( sprintf( '<h1 class="entry-title post-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 							
-							<div class="entry-meta postmeta"><?php $this->display_postmeta($instance); ?></div>
+							<div class="entry-meta postmeta"><?php $this->display_postmeta( $settings ); ?></div>
 						
 						</div>
 
@@ -177,28 +169,24 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 	}
 	
 	// Display Postmeta
-	function display_postmeta( $instance ) {
+	function display_postmeta( $settings ) {
 	
-		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
-		
 		// Display Date unless deactivated
-		if ( $postmeta > 0 ) :
+		if ( $settings['postmeta'] > 0 ) :
 		
 			courage_meta_date();
 					
 		endif; 
 		
 		// Display Author unless deactivated
-		if ( $postmeta == 2 ) :	
+		if ( $settings['postmeta'] == 2 ) :	
 		
 			courage_meta_author();
 		
 		endif; 
 		
 		// Display Comments
-		if ( $postmeta == 3 and comments_open() ) :
+		if ( $settings['postmeta'] == 3 and comments_open() ) :
 			
 			courage_meta_comments();
 			
@@ -207,33 +195,26 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 	}
 	
 	// Display Widget Title
-	function display_widget_title($args, $instance) {
-		
-		// Get Sidebar Arguments
-		extract($args);
-		
-		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
+	function display_widget_title( $args, $settings ) {
 		
 		// Add Widget Title Filter
-		$widget_title = apply_filters('widget_title', $title, $instance, $this->id_base);
+		$widget_title = apply_filters('widget_title', $settings['title'], $settings, $this->id_base);
 		
 		if( !empty( $widget_title ) ) :
 		
-			echo $before_title;
+			echo $args['before_title'];
 			
 			// Link Category Title
-			if( $category_link == true ) : 
+			if( $settings['category_link'] == true ) : 
 				
 				// Check if "All Categories" is selected
-				if( $category == 0 ) :
+				if( $settings['category'] == 0 ) :
 				
 					$link_title = esc_html__( 'View all posts', 'courage' );
 					
 					// Set Link URL to always point to latest posts page
 					if ( get_option( 'show_on_front' ) == 'page' ) :
-						$link_url = esc_url( get_permalink( get_option('page_for_posts' ) ) );
+						$link_url = esc_url( get_permalink( get_option( 'page_for_posts' ) ) );
 					else : 
 						$link_url =	esc_url( home_url('/') );
 					endif;
@@ -241,8 +222,8 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 				else :
 					
 					// Set Link URL and Title for Category
-					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'courage' ), get_cat_name( $category ) );
-					$link_url = esc_url( get_category_link( $category ) );
+					$link_title = sprintf( esc_html__( 'View all posts from category %s', 'courage' ), get_cat_name( $settings['category'] ) );
+					$link_url = esc_url( get_category_link( $settings['category'] ) );
 					
 				endif;
 				
@@ -256,18 +237,18 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 			
 			endif;
 			
-			echo $after_title; 
+			echo $args['after_title']; 
 			
 		endif;
 
 	}
 
-	function update($new_instance, $old_instance) {
+	function update( $new_instance, $old_instance ) {
 
 		$instance = $old_instance;
-		$instance['title'] = sanitize_text_field($new_instance['title']);
+		$instance['title'] = sanitize_text_field($new_instance['title'] );
 		$instance['category'] = (int)$new_instance['category'];
-		$instance['category_link'] = !empty($new_instance['category_link']);
+		$instance['category_link'] = !empty($new_instance['category_link'] );
 		$instance['postmeta'] = (int)$new_instance['postmeta'];
 		
 		$this->delete_widget_cache();
@@ -278,13 +259,12 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 	function form( $instance ) {
 		
 		// Get Widget Settings
-		$defaults = $this->default_settings();
-		extract( wp_parse_args( $instance, $defaults ) );
-
-?>
+		$settings = wp_parse_args( $instance, $this->default_settings() ); 
+		?>
+		
 		<p>
 			<label for="<?php echo $this->get_field_id('title'); ?>"><?php esc_html_e( 'Title:', 'courage' ); ?>
-				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" />
+				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $settings['title']; ?>" />
 			</label>
 		</p>
 
@@ -295,7 +275,7 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 					'show_option_all'    => esc_html__( 'All Categories', 'courage' ),
 					'show_count' 		 => true,
 					'hide_empty'		 => false,
-					'selected'           => $category,
+					'selected'           => $settings['category'],
 					'name'               => $this->get_field_name('category'),
 					'id'                 => $this->get_field_id('category')
 				);
@@ -305,7 +285,7 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 		
 		<p>
 			<label for="<?php echo $this->get_field_id('category_link'); ?>">
-				<input class="checkbox" type="checkbox" <?php checked( $category_link ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
+				<input class="checkbox" type="checkbox" <?php checked( $settings['category_link'] ) ; ?> id="<?php echo $this->get_field_id('category_link'); ?>" name="<?php echo $this->get_field_name('category_link'); ?>" />
 				<?php esc_html_e( 'Link Widget Title to Category Archive page', 'courage' ); ?>
 			</label>
 		</p>
@@ -313,10 +293,10 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 		<p>
 			<label for="<?php echo $this->get_field_id( 'postmeta' ); ?>"><?php esc_html_e( 'Post Meta:', 'courage' ); ?></label><br/>
 			<select id="<?php echo $this->get_field_id( 'postmeta' ); ?>" name="<?php echo $this->get_field_name( 'postmeta' ); ?>">
-				<option value="0" <?php selected($postmeta, 0); ?>><?php esc_html_e( 'Hide post meta', 'courage' ); ?></option>
-				<option value="1" <?php selected($postmeta, 1); ?>><?php esc_html_e( 'Display post date', 'courage' ); ?></option>
-				<option value="2" <?php selected($postmeta, 2); ?>><?php esc_html_e( 'Display date and author', 'courage' ); ?></option>
-				<option value="3" <?php selected($postmeta, 3); ?>><?php esc_html_e( 'Display date and comments', 'courage' ); ?></option>
+				<option value="0" <?php selected( $settings['postmeta'], 0); ?>><?php esc_html_e( 'Hide post meta', 'courage' ); ?></option>
+				<option value="1" <?php selected( $settings['postmeta'], 1); ?>><?php esc_html_e( 'Display post date', 'courage' ); ?></option>
+				<option value="2" <?php selected( $settings['postmeta'], 2); ?>><?php esc_html_e( 'Display date and author', 'courage' ); ?></option>
+				<option value="3" <?php selected( $settings['postmeta'], 3); ?>><?php esc_html_e( 'Display date and comments', 'courage' ); ?></option>
 			</select>
 		</p>
 		
