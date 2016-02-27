@@ -2,7 +2,7 @@
 Theme Name: Courage
 Theme URI: https://themezee.com/themes/courage/
 Description: Courage is a great way to start your personal blog or magazine website today. The theme is very easy to use and looks awesome on every device. It includes a beautiful featured post slideshow and a clean and flexible Magazine Homepage template. Hope you enjoy it!
-Version: 1.2.2
+Version: 1.2.3
 Author: ThemeZee
 Author URI: https://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
@@ -717,6 +717,31 @@ input, textarea, select {
 	margin: 1em 0 0.5em;
 }
 
+/* Post Navigation */
+.post-navigation {
+	margin: 0 0 1.5em 0;
+	color: #252525;
+	background: #fff;
+	border: 1px solid #e2e2e2;
+	padding: 0.8em 1em;
+	-webkit-border-radius: 0.4em;
+	-moz-border-radius: 0.4em;
+	border-radius: 0.4em;
+}
+.post-navigation .nav-links:before,
+.post-navigation .nav-links:after {
+	content: "";
+	display: table;
+}
+.post-navigation .nav-links:after {
+	clear: both;
+}
+.post-navigation .nav-links .nav-previous {
+	float: left;
+}
+.post-navigation .nav-links .nav-next {
+	float: right;
+}
 
 /* Archives and Search Heading */
 .archive-title {
@@ -788,30 +813,29 @@ input, textarea, select {
 	border-radius: 0.4em;
 }
 
-/* Post Navigation */
-.post-navigation {
-	margin: 0 0 1.5em 0;
+/* Infinite Scroll Pagination */
+.infinite-scroll .post-pagination {
+	display: none;
+}
+.infinite-scroll #infinite-handle span {
+	display: inline-block;
+	margin-bottom: 1.5em;
+	padding: 0.6em 1em;
+	line-height: 1.5;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
 	color: #252525;
-	background: #fff;
 	border: 1px solid #e2e2e2;
-	padding: 0.8em 1em;
+	background: #f5f5f5;
 	-webkit-border-radius: 0.4em;
 	-moz-border-radius: 0.4em;
 	border-radius: 0.4em;
 }
-.post-navigation .nav-links:before,
-.post-navigation .nav-links:after {
-	content: "";
-	display: table;
-}
-.post-navigation .nav-links:after {
-	clear: both;
-}
-.post-navigation .nav-links .nav-previous {
-	float: left;
-}
-.post-navigation .nav-links .nav-next {
-	float: right;
+.infinite-scroll #infinite-handle span:hover {
+	background: #fdfdfd;
+	border: 1px solid #ccc;
 }
 
 /* Breadcrumbs */
@@ -938,8 +962,6 @@ big, .big_tag {
 	font-size: 1.3em;
 }
 ins {
-	padding: 1px 2px;
-	background: #ffa;
 	text-decoration: none;
 }
 code, pre {

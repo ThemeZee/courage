@@ -2,6 +2,10 @@
 Courage Changelog
 ===================================
 
+Version 1.2.3
+-----------------------------------
+[added] support for Jetpack Infinite Scroll feature
+
 Version 1.2.2
 -----------------------------------
 [removed] extract() function from widget files for better readable code
