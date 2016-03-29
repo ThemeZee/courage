@@ -2,6 +2,11 @@
 Courage Changelog
 ===================================
 
+Version 1.2.4
+-----------------------------------
+[fixed] spacing of featured header image on static pages
+[fixed] size of custom header image (please regenerate your thumbnails if necessary)
+
 Version 1.2.3
 -----------------------------------
 [added] support for Jetpack Infinite Scroll feature

@@ -100,7 +100,7 @@ function courage_setup() {
 	// Add Custom Header
 	add_theme_support('custom-header', array(
 		'header-text' => false,
-		'width'	=> 1340,
+		'width'	=> 1320,
 		'height' => 200,
 		'flex-height' => true));
 		
