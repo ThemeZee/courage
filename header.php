@@ -32,7 +32,8 @@
 
 				<div id="logo" class="clearfix">
 				
-				<?php do_action('courage_site_title'); ?>
+				<?php courage_site_logo(); ?>
+				<?php courage_site_title(); ?>
 
 				<?php // Display Tagline on header if activated
 				if ( isset($theme_options['header_tagline']) and $theme_options['header_tagline'] == true ) : ?>			
