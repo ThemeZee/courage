@@ -167,8 +167,8 @@ function courage_register_sidebars() {
 		'description' => esc_html__( 'Appears on Magazine Homepage template only. You can use the Category Posts widgets here.', 'courage' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2 class="widgettitle">',
-		'after_title' => '</h2>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));
 
 }
