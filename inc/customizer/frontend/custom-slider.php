@@ -8,9 +8,9 @@
  */
 
 // Passing Variables to Featured Post Slider Slider ( js/slider.js)
-add_action('wp_enqueue_scripts', 'courage_custom_slider_params');
+add_action( 'wp_enqueue_scripts', 'courage_custom_slider_params' );
 
-if ( ! function_exists( 'courage_custom_slider_params' ) ):
+if ( ! function_exists( 'courage_custom_slider_params' ) ) :
 
 function courage_custom_slider_params() { 
 	
@@ -21,13 +21,13 @@ function courage_custom_slider_params() {
 	$params = array();
 	
 	// Define Slider Animation
-	if( isset($theme_options['slider_animation']) ) :
-		$params['animation'] = esc_attr($theme_options['slider_animation']);
-	endif;
+	$params['animation'] = $theme_options['slider_animation'];
+	
+	// Define Slider Speed
+	$params['speed'] = $theme_options['slider_speed'];
 	
 	// Passing Parameters to Javascript
 	wp_localize_script( 'courage-post-slider', 'courage_slider_params', $params );
-	
 	
 	// Set Navigation Menu Title
 	$nav_title = esc_html__( 'Menu', 'courage' );
@@ -38,6 +38,3 @@ function courage_custom_slider_params() {
 }
 
 endif;
-
-
-?>

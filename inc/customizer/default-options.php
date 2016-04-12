@@ -50,7 +50,8 @@ function courage_default_options() {
 		'post_navigation' 					=> false,
 		'slider_active_magazine' 			=> false,
 		'slider_active_blog' 				=> false,
-		'slider_animation' 					=> 'horizontal',
+		'slider_animation' 					=> 'slide',
+		'slider_speed' 						=> 7000,
 	);
 	
 	return $default_options;

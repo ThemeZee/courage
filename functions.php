@@ -29,7 +29,7 @@ function courage_enqueue_scripts() {
 		wp_enqueue_script( 'courage-flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array('jquery'), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script( 'courage-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'courage-flexslider' ) );
+		wp_enqueue_script( 'courage-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'courage-flexslider' ), '2.6.0' );
 
 	endif;
 
