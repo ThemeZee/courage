@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Courage\n"
 "Report-Msgid-Bugs-To: https://themezee.com/\n"
-"POT-Creation-Date: 2016-01-19 17:55+0100\n"
-"PO-Revision-Date: 2016-01-19 18:05+0100\n"
+"POT-Creation-Date: 2016-04-13 10:35+0100\n"
+"PO-Revision-Date: 2016-04-13 10:35+0100\n"
 "Last-Translator: \n"
 "Language-Team: ThemeZee <support@themezee.com>\n"
 "Language: de_DE\n"
@@ -32,11 +32,11 @@ msgstr ""
 msgid "Enter password to view comments."
 msgstr "Passwort eingeben, um Kommentare zu sehen."
 
-#: comments.php:20 inc/template-tags.php:140
+#: comments.php:20 inc/template-tags.php:171
 msgid "One comment"
 msgstr "Ein Kommentar"
 
-#: comments.php:20 inc/template-tags.php:140
+#: comments.php:20 inc/template-tags.php:171
 #, php-format
 msgid "% comments"
 msgstr "% Kommentare"
@@ -58,38 +58,35 @@ msgstr ""
 "hinzu. Die Slideshow zeigt alle Beiträge, die mit diesem Schlagwort getaggt "
 "sind."
 
-#: functions.php:111
+#: functions.php:119
 msgid "Main Navigation"
 msgstr "Hauptnavigation"
 
-#: functions.php:112
+#: functions.php:120
 msgid "Top Navigation"
 msgstr "Obere Navigation"
 
-#: functions.php:113
+#: functions.php:121
 msgid "Footer Navigation"
 msgstr "Footer Navigation"
 
-#: functions.php:116
+#: functions.php:124
 msgid "Social Icons"
 msgstr "Social Icons"
 
-#: functions.php:146 sidebar.php:14
+#: functions.php:154 sidebar.php:14
 msgid "Sidebar"
 msgstr "Sidebar"
 
-#: functions.php:148
-msgid ""
-"Appears on posts and pages except Magazine Homepage and Fullwidth template."
-msgstr ""
-"Erscheint auf allen Beiträgen und Seiten mit Ausnahme der Magazine Homepage "
-"und Fullwidth Templates."
+#: functions.php:156
+msgid "Appears on posts and pages except the full width template."
+msgstr "Erscheint auf allen Beiträgen und Seiten außer dem Fullwidth Template."
 
-#: functions.php:157
+#: functions.php:165
 msgid "Magazine Homepage"
 msgstr "Magazin Startseite"
 
-#: functions.php:159
+#: functions.php:167
 msgid ""
 "Appears on Magazine Homepage template only. You can use the Category Posts "
 "widgets here."
@@ -156,25 +153,25 @@ msgstr "Zeige hervorgehobene Beiträge in der Liste der letzten Beiträge."
 msgid "Number of Posts"
 msgstr "Anzahl der Beiträge"
 
-#: inc/template-tags.php:101
+#: inc/template-tags.php:132
 msgid "Edit Post"
 msgstr "Beitrag bearbeiten"
 
-#: inc/template-tags.php:127
+#: inc/template-tags.php:158
 #, php-format
 msgid "View all posts by %s"
 msgstr "Alle Beiträge von %s ansehen"
 
-#: inc/template-tags.php:140
+#: inc/template-tags.php:171
 msgid "Leave a comment"
 msgstr "Kommentar hinterlassen"
 
-#: inc/template-tags.php:303
+#: inc/template-tags.php:334
 #, php-format
 msgid "Powered by %1$s and %2$s."
 msgstr "Erstellt mit %1$s und %2$s."
 
-#: inc/template-tags.php:337
+#: inc/template-tags.php:368
 msgid ""
 "Please go to Appearance &#8594; Menus and create a new custom menu with "
 "custom links to all your social networks. Then click on \"Manage Locations\" "
@@ -184,19 +181,19 @@ msgstr ""
 "all deinen sozialen Netzwerken. Klicke danach auf den Tab 'Positionen "
 "verwalten' und weise deinem erstelltes Menü die \"Social Icons\" Position zu."
 
-#: inc/template-tags.php:354
+#: inc/template-tags.php:385
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: inc/template-tags.php:355 inc/template-tags.php:375
+#: inc/template-tags.php:386 inc/template-tags.php:406
 msgid "(Edit)"
 msgstr "(Bearbeiten)"
 
-#: inc/template-tags.php:370
+#: inc/template-tags.php:401
 msgid "Your comment is awaiting moderation."
 msgstr "Dein Kommentar wird überprüft."
 
-#: inc/template-tags.php:374
+#: inc/template-tags.php:405
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s am %2$s"
@@ -210,15 +207,15 @@ msgstr "Willkommen bei %1$s %2$s"
 msgid "Theme Info"
 msgstr "Theme Info"
 
-#: inc/theme-info.php:44 inc/customizer/customizer.php:111
+#: inc/theme-info.php:44 inc/customizer/customizer.php:128
 msgid "Theme Links"
 msgstr "Theme Links"
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:112
+#: inc/theme-info.php:45 inc/customizer/customizer.php:129
 msgid "https://themezee.com/themes/courage/"
 msgstr "https://themezee.com/de/themes/courage/"
 
-#: inc/theme-info.php:45 inc/customizer/customizer.php:113
+#: inc/theme-info.php:45 inc/customizer/customizer.php:130
 msgid "Theme Page"
 msgstr "Theme Seite"
 
@@ -231,16 +228,16 @@ msgid "Theme Demo"
 msgstr "Theme Demo"
 
 #: inc/theme-info.php:48 inc/theme-info.php:69
-#: inc/customizer/customizer.php:114
+#: inc/customizer/customizer.php:131
 msgid "https://themezee.com/docs/courage-documentation/"
 msgstr "https://themezee.com/de/docs/courage-dokumentation/"
 
 #: inc/theme-info.php:48 inc/theme-info.php:63
-#: inc/customizer/customizer.php:115
+#: inc/customizer/customizer.php:132
 msgid "Theme Documentation"
 msgstr "Theme Dokumentation"
 
-#: inc/theme-info.php:49 inc/customizer/customizer.php:117
+#: inc/theme-info.php:49 inc/customizer/customizer.php:134
 msgid "Rate this theme"
 msgstr "Theme bewerten"
 
@@ -320,14 +317,18 @@ msgid "Background"
 msgstr "Hintergrund"
 
 #: inc/customizer/customizer.php:49
+msgid "Display Site Title"
+msgstr "Zeige Titel der Website"
+
+#: inc/customizer/customizer.php:66
 msgid "Display Tagline below site title."
 msgstr "Zeige den Untertitel unter dem Seitentitel."
 
-#: inc/customizer/customizer.php:66
+#: inc/customizer/customizer.php:83
 msgid "Header Image Link"
 msgstr "Header-Bild Link"
 
-#: inc/customizer/customizer.php:83
+#: inc/customizer/customizer.php:100
 msgid "Hide header image on front page"
 msgstr "Verstecke Header-Bild auf der Startseite"
 
@@ -464,9 +465,9 @@ msgid "Post Meta"
 msgstr "Beitrags-Metadaten"
 
 #: inc/customizer/sections/customizer-post.php:148
-#: inc/widgets/widget-category-posts-boxed.php:317
-#: inc/widgets/widget-category-posts-columns.php:393
-#: inc/widgets/widget-category-posts-grid.php:356
+#: inc/widgets/widget-category-posts-boxed.php:297
+#: inc/widgets/widget-category-posts-columns.php:369
+#: inc/widgets/widget-category-posts-grid.php:336
 msgid "Display post date"
 msgstr "Zeige das Datum des Beitrags"
 
@@ -530,6 +531,10 @@ msgstr "Slide Effekt"
 msgid "Fade Effect"
 msgstr "Fade Effekt"
 
+#: inc/customizer/sections/customizer-slider.php:135
+msgid "Slider Speed (in ms)"
+msgstr "Slider Geschwindigkeit (in ms)"
+
 #: inc/customizer/sections/customizer-upgrade.php:14
 msgid "More Features"
 msgstr "Mehr Features"
@@ -547,62 +552,62 @@ msgstr ""
 msgid "Category Posts: Boxed (%s)"
 msgstr "Kategorie Beiträge: Box (%s)"
 
-#: inc/widgets/widget-category-posts-boxed.php:232
-#: inc/widgets/widget-category-posts-columns.php:270
-#: inc/widgets/widget-category-posts-grid.php:255
+#: inc/widgets/widget-category-posts-boxed.php:213
+#: inc/widgets/widget-category-posts-columns.php:247
+#: inc/widgets/widget-category-posts-grid.php:236
 msgid "View all posts"
 msgstr "Alle Beiträge ansehen"
 
-#: inc/widgets/widget-category-posts-boxed.php:244
-#: inc/widgets/widget-category-posts-columns.php:282
-#: inc/widgets/widget-category-posts-grid.php:267
+#: inc/widgets/widget-category-posts-boxed.php:225
+#: inc/widgets/widget-category-posts-columns.php:259
+#: inc/widgets/widget-category-posts-grid.php:248
 #, php-format
 msgid "View all posts from category %s"
 msgstr "Alle Beiträge in der Kategorie %s ansehen"
 
-#: inc/widgets/widget-category-posts-boxed.php:286
-#: inc/widgets/widget-category-posts-grid.php:311
+#: inc/widgets/widget-category-posts-boxed.php:266
+#: inc/widgets/widget-category-posts-grid.php:291
 msgid "Title:"
 msgstr "Titel:"
 
-#: inc/widgets/widget-category-posts-boxed.php:292
-#: inc/widgets/widget-category-posts-grid.php:317
+#: inc/widgets/widget-category-posts-boxed.php:272
+#: inc/widgets/widget-category-posts-grid.php:297
 msgid "Category:"
 msgstr "Kategorie:"
 
-#: inc/widgets/widget-category-posts-boxed.php:295
-#: inc/widgets/widget-category-posts-columns.php:337
-#: inc/widgets/widget-category-posts-columns.php:358
-#: inc/widgets/widget-category-posts-grid.php:320
+#: inc/widgets/widget-category-posts-boxed.php:275
+#: inc/widgets/widget-category-posts-columns.php:313
+#: inc/widgets/widget-category-posts-columns.php:334
+#: inc/widgets/widget-category-posts-grid.php:300
 msgid "All Categories"
 msgstr "Alle Kategorien"
 
-#: inc/widgets/widget-category-posts-boxed.php:309
-#: inc/widgets/widget-category-posts-grid.php:348
+#: inc/widgets/widget-category-posts-boxed.php:289
+#: inc/widgets/widget-category-posts-grid.php:328
 msgid "Link Widget Title to Category Archive page"
 msgstr "Verlinke den Widget Titel zur Kategorie Archiv Seite"
 
-#: inc/widgets/widget-category-posts-boxed.php:314
-#: inc/widgets/widget-category-posts-columns.php:390
-#: inc/widgets/widget-category-posts-grid.php:353
+#: inc/widgets/widget-category-posts-boxed.php:294
+#: inc/widgets/widget-category-posts-columns.php:366
+#: inc/widgets/widget-category-posts-grid.php:333
 msgid "Post Meta:"
 msgstr "Beitrags-Metadaten:"
 
-#: inc/widgets/widget-category-posts-boxed.php:316
-#: inc/widgets/widget-category-posts-columns.php:392
-#: inc/widgets/widget-category-posts-grid.php:355
+#: inc/widgets/widget-category-posts-boxed.php:296
+#: inc/widgets/widget-category-posts-columns.php:368
+#: inc/widgets/widget-category-posts-grid.php:335
 msgid "Hide post meta"
 msgstr "Beitrags-Metadaten ausblenden"
 
-#: inc/widgets/widget-category-posts-boxed.php:318
-#: inc/widgets/widget-category-posts-columns.php:394
-#: inc/widgets/widget-category-posts-grid.php:357
+#: inc/widgets/widget-category-posts-boxed.php:298
+#: inc/widgets/widget-category-posts-columns.php:370
+#: inc/widgets/widget-category-posts-grid.php:337
 msgid "Display date and author"
 msgstr "Zeige Datum und Autor"
 
-#: inc/widgets/widget-category-posts-boxed.php:319
-#: inc/widgets/widget-category-posts-columns.php:395
-#: inc/widgets/widget-category-posts-grid.php:358
+#: inc/widgets/widget-category-posts-boxed.php:299
+#: inc/widgets/widget-category-posts-columns.php:371
+#: inc/widgets/widget-category-posts-grid.php:338
 msgid "Display date and comments"
 msgstr "Zeige Datum und Kommentare"
 
@@ -619,32 +624,32 @@ msgstr ""
 msgid "Category Posts: 2 Columns (%s)"
 msgstr "Kategorie Beiträge: 2 Spalten (%s)"
 
-#: inc/widgets/widget-category-posts-columns.php:328
+#: inc/widgets/widget-category-posts-columns.php:304
 msgid "Left Category Title:"
 msgstr "Titel der linken Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:334
+#: inc/widgets/widget-category-posts-columns.php:310
 msgid "Left Category:"
 msgstr "Linke Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:349
+#: inc/widgets/widget-category-posts-columns.php:325
 msgid "Right Category Title:"
 msgstr "Titel der rechten Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:355
+#: inc/widgets/widget-category-posts-columns.php:331
 msgid "Right Category:"
 msgstr "Rechte Kategorie:"
 
-#: inc/widgets/widget-category-posts-columns.php:370
-#: inc/widgets/widget-category-posts-grid.php:332
+#: inc/widgets/widget-category-posts-columns.php:346
+#: inc/widgets/widget-category-posts-grid.php:312
 msgid "Number of posts:"
 msgstr "Anzahl der Beiträge:"
 
-#: inc/widgets/widget-category-posts-columns.php:378
+#: inc/widgets/widget-category-posts-columns.php:354
 msgid "Highlight first post (big image + excerpt)"
 msgstr "Ersten Beitrag hervorheben (großes Bild + Textauszug)"
 
-#: inc/widgets/widget-category-posts-columns.php:385
+#: inc/widgets/widget-category-posts-columns.php:361
 msgid "Link Category Titles to Category Archive pages"
 msgstr "Verlinke die Kategorie Titel zu den Kategorie Archiv Seiten"
 
@@ -661,11 +666,11 @@ msgstr ""
 msgid "Category Posts: Grid (%s)"
 msgstr "Kategorie Beiträge: Raster (%s)"
 
-#: inc/widgets/widget-category-posts-grid.php:334
+#: inc/widgets/widget-category-posts-grid.php:314
 msgid "Please chose an even number (2, 4, 6, 8)."
 msgstr "Bitte wähle eine gerade Anzahl (2, 4, 6, 8)."
 
-#: inc/widgets/widget-category-posts-grid.php:341
+#: inc/widgets/widget-category-posts-grid.php:321
 msgid "Display as small posts grid with thumbnails"
 msgstr "Zeige Beiträge in kleinem Raster mit Thumbnails"
 
@@ -778,9 +783,6 @@ msgstr "Zeige Beiträge in kleinem Raster mit Thumbnails"
 
 #~ msgid "Latest Posts"
 #~ msgstr "Letzte Beiträge"
-
-#~ msgid "Display Category Titles"
-#~ msgstr "Zeige Kategorien als Titel"
 
 #~ msgid ""
 #~ "Displays a single post from a selected category. Please use this widget "
@@ -937,9 +939,6 @@ msgstr "Zeige Beiträge in kleinem Raster mit Thumbnails"
 
 #~ msgid "Slider Category"
 #~ msgstr "Slider Kategorie"
-
-#~ msgid "Slider Speed (in ms)"
-#~ msgstr "Slider Geschwindigkeit (in ms)"
 
 #~ msgid "Display post excerpt and read more button"
 #~ msgstr "Textauszug und Weiterlesen Button anzeigen"

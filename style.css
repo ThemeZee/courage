@@ -2,7 +2,7 @@
 Theme Name: Courage
 Theme URI: https://themezee.com/themes/courage/
 Description: Courage is a great way to start your personal blog or magazine website today. The theme is very easy to use and looks awesome on every device. It includes a beautiful featured post slideshow and a clean and flexible Magazine Homepage template. Hope you enjoy it!
-Version: 1.2.4
+Version: 1.2.5
 Author: ThemeZee
 Author URI: https://themezee.com
 Tags: two-columns, light, blue, custom-background, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, silver, white, green, gray
@@ -181,20 +181,22 @@ input, textarea, select {
 -------------------------------------------------------------- */
 #logo {
 	float: left;
-	margin-top: 0.3em;
 	max-width: 100%;
 	height: auto;
 }
 #logo .site-title {
 	float: left;
+	margin-top: 0.25em;
 	font-size: 2.7em;
 	color: #2277bb;
 	font-family: 'Fjalla One', Tahoma, Verdana, Arial;
 }
-#logo a:hover {
-	text-decoration: none;
+#logo .site-title a:link, 
+#logo .site-title a:visited {
+	color: #2277bb;
 }
-#logo a:hover .site-title {
+#logo .site-title a:hover,
+#logo .site-title a:active {
 	color: #252525;
 	text-decoration: none;
 }
@@ -204,6 +206,14 @@ input, textarea, select {
 	line-height: 1.4em;
 	font-size: 1.2em;
 	color: #444;
+}
+#logo .custom-logo {
+	float: left;
+	margin: 0 1.5em 0 0;
+	padding: 0;
+	border: none;
+	vertical-align: top;
+	max-width: 100%;
 }
 
 /* Custom Header Image */
@@ -1796,7 +1806,8 @@ embed, iframe, object, video {
 		text-align: center;
 		width: 100%;
 	}
-	#logo .site-title {
+	#logo .site-title,
+	#logo .custom-logo {
 		float: none;
 	}
 	#logo .site-description {
