@@ -8,7 +8,8 @@ class Courage_Category_Posts_Boxed_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'courage_category_posts_boxed', 
-			'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'courage' )
+			'description' => esc_html__( 'Displays your posts from a selected category in a boxed layout. Please use this widget ONLY in the Magazine Homepage widget area.', 'courage' ),
+			'customize_selective_refresh' => true,
 		);
 		parent::__construct('courage_category_posts_boxed', sprintf( esc_html__( 'Category Posts: Boxed (%s)', 'courage' ), wp_get_theme()->Name ), $widget_ops);
 		

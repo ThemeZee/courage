@@ -8,7 +8,8 @@ class Courage_Category_Posts_Columns_Widget extends WP_Widget {
 		// Setup Widget
 		$widget_ops = array(
 			'classname' => 'courage_category_posts_columns', 
-			'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'courage' )
+			'description' => esc_html__( 'Displays your posts from two selected categories. Please use this widget ONLY in the Magazine Homepage widget area.', 'courage' ),
+			'customize_selective_refresh' => true,
 		);
 		parent::__construct('courage_category_posts_columns', sprintf( esc_html__( 'Category Posts: 2 Columns (%s)', 'courage' ), wp_get_theme()->Name ), $widget_ops);
 		
