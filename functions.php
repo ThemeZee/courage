@@ -9,23 +9,23 @@ function courage_enqueue_scripts() {
 
 	// Get Theme Options from Database
 	$theme_options = courage_theme_options();
-	
+
 	// Get Theme Version
 	$theme_version = wp_get_theme()->get( 'Version' );
-	
+
 	// Register and Enqueue Stylesheet
 	wp_enqueue_style( 'courage-stylesheet', get_stylesheet_uri(), array(), $theme_version );
-	
+
 	// Register Genericons
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons/genericons.css', array(), '3.4.1' );
-	
+
 	// Register and Enqueue HTML5shiv to support HTML5 elements in older IE versions
 	wp_enqueue_script( 'html5shiv', get_template_directory_uri() . '/js/html5shiv.min.js', array(), '3.7.3' );
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script( 'courage-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160421' );
-		
+	wp_enqueue_script( 'courage-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160719' );
+
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( true == $theme_options['slider_active_blog'] or true == $theme_options['slider_active_magazine'] or is_page_template( 'template-slider.php' ) ) :
 
@@ -54,25 +54,25 @@ function courage_enqueue_scripts() {
 // Retrieve Font URL to register default Google Fonts
 function courage_google_fonts_url() {
     $fonts_url = '';
-	
+
 	// Get Theme Options from Database
 	$theme_options = courage_theme_options();
-	
+
 	// Only embed Google Fonts if not deactivated
 	if ( ! ( isset($theme_options['deactivate_google_fonts']) and $theme_options['deactivate_google_fonts'] == true ) ) :
-		
+
 		// Define Default Fonts
 		$font_families = array('Lato', 'Fjalla One');
-		
+
 		// Set Google Font Query Args
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),
 		);
-		
+
 		// Create Fonts URL
 		$fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
-		
+
 	endif;
 
     return apply_filters( 'courage_google_fonts_url', $fonts_url );
@@ -88,7 +88,7 @@ function courage_setup() {
 	global $content_width;
 	if ( ! isset( $content_width ) )
 		$content_width = 860;
-	
+
 	// init Localization
 	load_theme_textdomain('courage', get_template_directory() . '/languages' );
 
@@ -96,7 +96,7 @@ function courage_setup() {
 	add_theme_support('automatic-feed-links');
 	add_theme_support('title-tag');
 	add_editor_style();
-	
+
 	// Add Post Thumbnails
 	add_theme_support('post-thumbnails');
 	set_post_thumbnail_size( 840, 200, true );
@@ -111,14 +111,14 @@ function courage_setup() {
 		'flex-height' => true,
 		'flex-width' => true,
 	) ) );
-	
+
 	// Add Custom Header
 	add_theme_support('custom-header', array(
 		'header-text' => false,
 		'width'	=> 1320,
 		'height' => 200,
 		'flex-height' => true));
-		
+
 	// Add Theme Support for wooCommerce
 	add_theme_support( 'woocommerce' );
 
@@ -126,10 +126,10 @@ function courage_setup() {
 	register_nav_menu( 'primary', esc_html__( 'Main Navigation', 'courage' ) );
 	register_nav_menu( 'secondary', esc_html__( 'Top Navigation', 'courage' ) );
 	register_nav_menu( 'footer', esc_html__( 'Footer Navigation', 'courage' ) );
-	
+
 	// Register Social Icons Menu
 	register_nav_menu( 'social', esc_html__( 'Social Icons', 'courage' ) );
-	
+
 	// Add Theme Support for Selective Refresh in Customizer
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -140,13 +140,13 @@ function courage_setup() {
 add_action( 'after_setup_theme', 'courage_add_image_sizes' );
 
 function courage_add_image_sizes() {
-	
+
 	// Add Custom Header Image Size
 	add_image_size( 'courage-header-image', 1320, 250, true);
-	
+
 	// Add Slider Image Size
 	add_image_size('courage-slider-image', 1320, 380, true);
-	
+
 	// Add Category Post Widget image sizes
 	add_image_size('courage-category-posts-widget-small', 80, 80, true);
 	add_image_size('courage-category-posts-widget-big', 540, 180, true);
@@ -169,7 +169,7 @@ function courage_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle"><span>',
 		'after_title' => '</span></h3>',
 	));
-	
+
 	// Register Magazine Homepage
 	register_sidebar( array(
 		'name' => esc_html__( 'Magazine Homepage', 'courage' ),
