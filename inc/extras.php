@@ -8,7 +8,7 @@
 
 // Add Default Menu Fallback Function
 function courage_default_menu() {
-	echo '<ul id="mainnav-menu" class="menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
+	echo '<ul id="mainnav-menu" class="main-navigation-menu menu">'. wp_list_pages('title_li=&echo=0') .'</ul>';
 }
 
 
@@ -25,15 +25,15 @@ function courage_get_featured_content() {
  * @return array
  */
 function courage_body_classes( $classes ) {
-	
+
 	// Get Theme Options from Database
 	$theme_options = courage_theme_options();
-		
+
 	// Switch Sidebar Layout to left
 	if ( isset($theme_options['layout']) and $theme_options['layout'] == 'left-sidebar' ) :
 		$classes[] = 'sidebar-left';
 	endif;
-	
+
 	// Add Theme Design class
 	if ( isset($theme_options['design']) and $theme_options['design'] == 'boxed' ) :
 		$classes[] = 'boxed-design';
@@ -65,7 +65,7 @@ function courage_frontpage_category_excerpt_length($length) {
 // Change Excerpt More
 add_filter('excerpt_more', 'courage_excerpt_more');
 function courage_excerpt_more($more) {
-    
+
 	// Get Theme Options from Database
 	$theme_options = courage_theme_options();
 
