@@ -26,6 +26,9 @@ For more information about Courage please go to https://themezee.com/themes/cour
 
 == Changelog ==
 
+= 1.3.0 =
+* fixed dropdown menus on mobile navigation menus
+
 = 1.2.9 =
 * fixed styling of main navigation menu with default pages
 
