@@ -26,17 +26,17 @@ function courage_customize_register_options( $wp_customize ) {
 		'capability'     => 'edit_theme_options',
 		'theme_supports' => '',
 		'title'          => esc_html__( 'Theme Options', 'courage' ),
-		'description'    => '',
+		'description'    => courage_customize_theme_links(),
 	) );
-	
+
 	// Add postMessage support for site title and description.
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	
+
 	// Change default background section
 	$wp_customize->get_control( 'background_color'  )->section   = 'background_image';
 	$wp_customize->get_section( 'background_image'  )->title     = esc_html__( 'Background', 'courage' );
-	
+
 	// Add Display Site Title Setting
 	$wp_customize->add_setting( 'courage_theme_options[site_title]', array(
         'default'           => true,
@@ -53,7 +53,7 @@ function courage_customize_register_options( $wp_customize ) {
 		'priority' => 10
 		)
 	);
-	
+
 	// Add Header Tagline option
 	$wp_customize->add_setting( 'courage_theme_options[header_tagline]', array(
         'default'           => false,
@@ -70,7 +70,7 @@ function courage_customize_register_options( $wp_customize ) {
 		'priority' => 11
 		)
 	);
-	
+
 	// Add Header Image Link
 	$wp_customize->add_setting( 'courage_theme_options[custom_header_link]', array(
         'default'           => '',
@@ -87,7 +87,7 @@ function courage_customize_register_options( $wp_customize ) {
 		'priority' => 10
 		)
 	);
-	
+
 	// Add Custom Header Hide Checkbox
 	$wp_customize->add_setting( 'courage_theme_options[custom_header_hide]', array(
         'default'           => false,
@@ -104,7 +104,7 @@ function courage_customize_register_options( $wp_customize ) {
 		'priority' => 15
 		)
 	);
-	
+
 }
 
 
@@ -116,32 +116,55 @@ function courage_customize_preview_js() {
 }
 
 
-// Embed JS file for Customizer Controls
-add_action( 'customize_controls_enqueue_scripts', 'courage_customize_controls_js' );
-
-function courage_customize_controls_js() {
-	
-	wp_enqueue_script( 'courage-customizer-controls', get_template_directory_uri() . '/js/customizer-controls.js', array(), '20151202', true );
-	
-	// Localize the script
-	wp_localize_script( 'courage-customizer-controls', 'courage_theme_links', array(
-		'title'	=> esc_html__( 'Theme Links', 'courage' ),
-		'themeURL'	=> esc_url( __( 'https://themezee.com/themes/courage/', 'courage' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=courage&utm_content=theme-page' ),
-		'themeLabel'	=> esc_html__( 'Theme Page', 'courage' ),
-		'docuURL'	=> esc_url( __( 'https://themezee.com/docs/courage-documentation/', 'courage' ) . '?utm_source=customizer&utm_medium=textlink&utm_campaign=courage&utm_content=documentation' ),
-		'docuLabel'	=>  esc_html__( 'Theme Documentation', 'courage' ),
-		'rateURL'	=> esc_url( 'http://wordpress.org/support/view/theme-reviews/courage?filter=5' ),
-		'rateLabel'	=> esc_html__( 'Rate this theme', 'courage' ),
-		)
-	);
-
-}
-
-
 // Embed CSS styles for Theme Customizer
 add_action( 'customize_controls_print_styles', 'courage_customize_preview_css' );
 
 function courage_customize_preview_css() {
-	wp_enqueue_style( 'courage-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20151202' );
+	wp_enqueue_style( 'courage-customizer-css', get_template_directory_uri() . '/css/customizer.css', array(), '20160915' );
 
+}
+
+/**
+ * Returns Theme Links
+ */
+function courage_customize_theme_links() {
+
+	ob_start();
+	?>
+
+		<div class="theme-links">
+
+			<span class="customize-control-title"><?php esc_html_e( 'Theme Links', 'courage' ); ?></span>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/courage/', 'courage' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=courage&utm_content=theme-page" target="_blank">
+					<?php esc_html_e( 'Theme Page', 'courage' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="http://preview.themezee.com/courage/?utm_source=theme-info&utm_medium=textlink&utm_campaign=courage&utm_content=demo" target="_blank">
+					<?php esc_html_e( 'Theme Demo', 'courage' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/courage-documentation/', 'courage' ) ); ?>?utm_source=customizer&utm_medium=textlink&utm_campaign=courage&utm_content=documentation" target="_blank">
+					<?php esc_html_e( 'Theme Documentation', 'courage' ); ?>
+				</a>
+			</p>
+
+			<p>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/courage/reviews/?filter=5', 'courage' ) ); ?>" target="_blank">
+					<?php esc_html_e( 'Rate this theme', 'courage' ); ?>
+				</a>
+			</p>
+
+		</div>
+
+	<?php
+	$theme_links = ob_get_contents();
+	ob_end_clean();
+
+	return $theme_links;
 }

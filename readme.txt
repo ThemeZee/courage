@@ -26,6 +26,10 @@ For more information about Courage please go to https://themezee.com/themes/cour
 
 == Changelog ==
 
+= 1.3.2 =
+* fixed mobile menus on RTL language sites
+* moved Theme Links to Theme Options panel dropdown
+
 = 1.3.1 =
 * added Right-to-Left language support
 
