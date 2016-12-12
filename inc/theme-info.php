@@ -45,7 +45,7 @@ function courage_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'courage' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/courage/', 'courage' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=courage&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'courage' ); ?></a>
-				<a href="http://preview.themezee.com/courage/?utm_source=theme-info&utm_medium=textlink&utm_campaign=courage&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'courage' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=courage&utm_source=theme-info&utm_medium=textlink&utm_campaign=courage&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'courage' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/courage-documentation/', 'courage' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=courage&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'courage' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/courage/reviews/?filter=5', 'courage' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'courage' ); ?></a>
 			</p>
@@ -80,7 +80,7 @@ function courage_theme_info_page() {
 							<?php printf( esc_html__( '%s makes use of the Customizer for all theme settings. Click on "Customize Theme" to open the Customizer now.', 'courage' ), $theme->get( 'Name' ) ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'customize.php' ); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'courage' ); ?></a>
+							<a href="<?php echo wp_customize_url(); ?>" class="button button-primary"><?php esc_html_e( 'Customize Theme', 'courage' ); ?></a>
 						</p>
 					</div>
 
@@ -130,7 +130,7 @@ function courage_theme_info_page() {
 							<?php esc_html_e( 'Extend the functionality of your WordPress website with our free and easy to use plugins.', 'courage' ); ?>
 						</p>
 						<p>
-							<a href="<?php echo admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ); ?>" class="button button-secondary">
+							<a href="<?php echo esc_url( admin_url( 'plugin-install.php?tab=search&type=author&s=themezee' ) ); ?>" class="button button-secondary">
 								<?php esc_html_e( 'Install Plugins', 'courage' ); ?>
 							</a>
 						</p>
@@ -172,7 +172,7 @@ function courage_theme_info_page_css( $hook ) {
 	}
 
 	// Embed theme info css style.
-	wp_enqueue_style( 'courage-theme-info-css', get_template_directory_uri() .'/css/theme-info.css' );
+	wp_enqueue_style( 'courage-theme-info-css', get_template_directory_uri() . '/css/theme-info.css' );
 
 }
 add_action( 'admin_enqueue_scripts', 'courage_theme_info_page_css' );
