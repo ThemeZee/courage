@@ -45,7 +45,7 @@ function courage_theme_info_page() {
 		<div class="important-links clearfix">
 			<p><strong><?php esc_html_e( 'Theme Links', 'courage' ); ?>:</strong>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/themes/courage/', 'courage' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=courage&utm_content=theme-page' ); ?>" target="_blank"><?php esc_html_e( 'Theme Page', 'courage' ); ?></a>
-				<a href="http://preview.themezee.com/?demo=courage&utm_source=theme-info&utm_medium=textlink&utm_campaign=courage&utm_content=demo" target="_blank"><?php esc_html_e( 'Theme Demo', 'courage' ); ?></a>
+				<a href="http://preview.themezee.com/?demo=courage&utm_source=theme-info&utm_campaign=courage" target="_blank"><?php esc_html_e( 'Theme Demo', 'courage' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://themezee.com/docs/courage-documentation/', 'courage' ) . '?utm_source=theme-info&utm_medium=textlink&utm_campaign=courage&utm_content=documentation' ); ?>" target="_blank"><?php esc_html_e( 'Theme Documentation', 'courage' ); ?></a>
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/support/theme/courage/reviews/?filter=5', 'courage' ) ); ?>" target="_blank"><?php esc_html_e( 'Rate this theme', 'courage' ); ?></a>
 			</p>
