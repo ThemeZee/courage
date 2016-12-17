@@ -26,6 +26,11 @@ For more information about Courage please go to https://themezee.com/themes/cour
 
 == Changelog ==
 
+= 1.3.3 =
+* added editor shortcuts and instant live preview for site title and tagline in Customizer
+* improved styling of footer navigation menu
+* changed demo links in Customizer and Theme Info
+
 = 1.3.2 =
 * fixed mobile menus on RTL language sites
 * moved Theme Links to Theme Options panel dropdown
