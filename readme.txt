@@ -26,6 +26,9 @@ For more information about Courage please go to https://themezee.com/themes/cour
 
 == Changelog ==
 
+= 1.3.4 =
+* added Magazine Homepage widgets to blog index
+
 = 1.3.3 =
 * added editor shortcuts and instant live preview for site title and tagline in Customizer
 * improved styling of footer navigation menu
