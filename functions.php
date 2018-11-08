@@ -3,7 +3,7 @@
 /*==================================== THEME SETUP ====================================*/
 
 // Load default style.css and Javascripts
-add_action('wp_enqueue_scripts', 'courage_enqueue_scripts');
+add_action( 'wp_enqueue_scripts', 'courage_enqueue_scripts' );
 
 function courage_enqueue_scripts() {
 
@@ -33,10 +33,10 @@ function courage_enqueue_scripts() {
 		wp_enqueue_style( 'courage-flexslider', get_template_directory_uri() . '/css/flexslider.css' );
 
 		// FlexSlider JS
-		wp_enqueue_script( 'flexslider', get_template_directory_uri() .'/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
+		wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array( 'jquery' ), '2.6.0' );
 
 		// Register and enqueue slider.js
-		wp_enqueue_script( 'courage-post-slider', get_template_directory_uri() .'/js/slider.js', array( 'flexslider' ), '2.6.0' );
+		wp_enqueue_script( 'courage-post-slider', get_template_directory_uri() . '/js/slider.js', array( 'flexslider' ), '2.6.0' );
 
 	endif;
 
@@ -51,12 +51,19 @@ function courage_enqueue_scripts() {
  * Enqueue custom fonts.
  */
 function courage_custom_fonts() {
-
-	// Register and Enqueue Theme Fonts.
 	wp_enqueue_style( 'courage-custom-fonts', get_template_directory_uri() . '/css/custom-fonts.css', array(), '20180413' );
-
 }
 add_action( 'wp_enqueue_scripts', 'courage_custom_fonts', 1 );
+add_action( 'enqueue_block_editor_assets', 'courage_custom_fonts', 1 );
+
+
+/**
+ * Enqueue editor styles for the new Gutenberg Editor.
+ */
+function courage_block_editor_assets() {
+	wp_enqueue_style( 'courage-editor-styles', get_template_directory_uri() . '/css/gutenberg-styles.css', array(), '20181102', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'courage_block_editor_assets' );
 
 
 // Setup Function: Registers support for various WordPress features
@@ -66,38 +73,40 @@ function courage_setup() {
 
 	// Set Content Width
 	global $content_width;
-	if ( ! isset( $content_width ) )
+	if ( ! isset( $content_width ) ) {
 		$content_width = 860;
+	}
 
 	// init Localization
-	load_theme_textdomain('courage', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'courage', get_template_directory() . '/languages' );
 
 	// Add Theme Support
-	add_theme_support('automatic-feed-links');
-	add_theme_support('title-tag');
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'title-tag' );
 	add_editor_style();
 
 	// Add Post Thumbnails
-	add_theme_support('post-thumbnails');
+	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 840, 200, true );
 
 	// Add Custom Background
-	add_theme_support('custom-background', array('default-color' => 'e5e5e5'));
+	add_theme_support( 'custom-background', array( 'default-color' => 'e5e5e5' ) );
 
 	// Set up the WordPress core custom logo feature
 	add_theme_support( 'custom-logo', apply_filters( 'courage_custom_logo_args', array(
-		'height' => 60,
-		'width' => 300,
+		'height'      => 60,
+		'width'       => 300,
 		'flex-height' => true,
-		'flex-width' => true,
+		'flex-width'  => true,
 	) ) );
 
 	// Add Custom Header
-	add_theme_support('custom-header', array(
+	add_theme_support( 'custom-header', array(
 		'header-text' => false,
-		'width'	=> 1320,
-		'height' => 200,
-		'flex-height' => true));
+		'width'       => 1320,
+		'height'      => 200,
+		'flex-height' => true,
+	) );
 
 	// Add Theme Support for wooCommerce
 	add_theme_support( 'woocommerce' );
@@ -113,6 +122,34 @@ function courage_setup() {
 	// Add Theme Support for Selective Refresh in Customizer
 	add_theme_support( 'customize-selective-refresh-widgets' );
 
+	// Add custom color palette for Gutenberg.
+	add_theme_support( 'editor-color-palette', array(
+		array(
+			'name'  => esc_html_x( 'Primary', 'Gutenberg Color Palette', 'courage' ),
+			'slug'  => 'primary',
+			'color' => apply_filters( 'courage_primary_color', '#2277bb' ),
+		),
+		array(
+			'name'  => esc_html_x( 'White', 'Gutenberg Color Palette', 'courage' ),
+			'slug'  => 'white',
+			'color' => '#ffffff',
+		),
+		array(
+			'name'  => esc_html_x( 'Light Gray', 'Gutenberg Color Palette', 'courage' ),
+			'slug'  => 'light-gray',
+			'color' => '#f0f0f0',
+		),
+		array(
+			'name'  => esc_html_x( 'Dark Gray', 'Gutenberg Color Palette', 'courage' ),
+			'slug'  => 'dark-gray',
+			'color' => '#777777',
+		),
+		array(
+			'name'  => esc_html_x( 'Black', 'Gutenberg Color Palette', 'courage' ),
+			'slug'  => 'black',
+			'color' => '#353535',
+		),
+	) );
 }
 
 
@@ -122,15 +159,14 @@ add_action( 'after_setup_theme', 'courage_add_image_sizes' );
 function courage_add_image_sizes() {
 
 	// Add Custom Header Image Size
-	add_image_size( 'courage-header-image', 1320, 250, true);
+	add_image_size( 'courage-header-image', 1320, 250, true );
 
 	// Add Slider Image Size
-	add_image_size('courage-slider-image', 1320, 380, true);
+	add_image_size( 'courage-slider-image', 1320, 380, true );
 
 	// Add Category Post Widget image sizes
-	add_image_size('courage-category-posts-widget-small', 80, 80, true);
-	add_image_size('courage-category-posts-widget-big', 540, 180, true);
-
+	add_image_size( 'courage-category-posts-widget-small', 80, 80, true );
+	add_image_size( 'courage-category-posts-widget-big', 540, 180, true );
 }
 
 
@@ -160,7 +196,6 @@ function courage_register_sidebars() {
 		'before_title' => '<h3 class="widgettitle">',
 		'after_title' => '</h3>',
 	));
-
 }
 
 
