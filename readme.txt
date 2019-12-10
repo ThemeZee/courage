@@ -26,6 +26,9 @@ For more information about Courage please go to https://themezee.com/themes/cour
 
 == Changelog ==
 
+= 1.5.2 =
+* fixed missing slider tag bug in WordPress Block Editor
+
 = 1.5.1 =
 * added font display swap to default theme fonts
 
