@@ -26,6 +26,9 @@ For more information about Courage please go to https://themezee.com/themes/cour
 
 == Changelog ==
 
+= 1.5.3 =
+* added Skip-to-Content link for improved accessibility
+
 = 1.5.2 =
 * fixed missing slider tag bug in WordPress Block Editor
 
