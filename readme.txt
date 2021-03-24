@@ -4,7 +4,7 @@ Theme URI: https://themezee.com/themes/courage/
 Contributors: themezee
 Tags: two-columns, light, purple, custom-background, custom-header, custom-menu, editor-style, blog, entertainment, news, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, fluid-layout, responsive-layout, one-column, left-sidebar, right-sidebar, three-columns, black, red, blue, silver, white, green, gray
 Requires at least: 5.2
-Tested up to: 5.5
+Tested up to: 5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ For more information about Courage please go to https://themezee.com/themes/cour
 5. Navigate to Appearance > Customize in your admin panel and customize to taste.
 
 == Changelog ==
+
+= 1.5.6 =
+* fixed PHP warning in wp_localize_script
 
 = 1.5.5 =
 * fixed lazy loading bug for slider images

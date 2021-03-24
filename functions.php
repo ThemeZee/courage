@@ -24,7 +24,7 @@ function courage_enqueue_scripts() {
 	wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 	// Register and enqueue navigation.js
-	wp_enqueue_script( 'courage-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20160719' );
+	wp_enqueue_script( 'courage-jquery-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20210324' );
 
 	// Register and Enqueue FlexSlider JS and CSS if necessary
 	if ( true == $theme_options['slider_active_blog'] or true == $theme_options['slider_active_magazine'] or is_page_template( 'template-slider.php' ) ) :

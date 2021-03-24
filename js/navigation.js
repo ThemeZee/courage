@@ -116,7 +116,7 @@
 			menuID: "mainnav-menu",
 			toggleID: "mainnav-toggle",
 			toggleClass: "nav-toggle",
-			toggleText: courage_mainnav_title,
+			toggleText: courage_mainnav_title.text,
 			maxWidth: "60em"
 		});
 
