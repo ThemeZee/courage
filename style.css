@@ -2,7 +2,7 @@
 Theme Name: Courage
 Theme URI: https://themezee.com/themes/courage/
 Description: Courage is a great way to start your personal blog or magazine website today. The theme is very easy to use and looks awesome on every device. It includes a beautiful featured post slideshow and a clean and flexible Magazine Homepage template. Hope you enjoy it!
-Version: 1.5.6
+Version: 1.5.7
 Requires at least: 5.2
 Tested up to: 5.7
 Requires PHP: 5.6
@@ -1368,7 +1368,8 @@ embed, iframe, object, video {
 	border-radius: 1.5em;
 }
 
-#social-icons-menu li a .screen-reader-text {
+#social-icons-menu li a .screen-reader-text,
+.social-icons-menu li a .icon {
 	display: none;
 }
 .social-icons-wrap .social-icons-hint {
